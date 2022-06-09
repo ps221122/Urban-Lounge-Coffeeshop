@@ -5,21 +5,23 @@ import colors from './config/colors';
 import RootNavigation from './root/RootNavigation';
 
 
-const backgroundImage = { uri: "https://i.picsum.photos/id/23/3887/4899.jpg?hmac=2fo1Y0AgEkeL2juaEBqKPbnEKm_5Mp0M2nuaVERE6eE" };
+const backgroundImage = { uri: "https://i.picsum.photos/id/137/4752/3168.jpg?hmac=dGsgAtPkFewFByZXZOmSg0U7Mohr43GyVu3n1AHVIyg" };
 
 const App = () => {
   const [isSplashOn, onChangeIsSplashOn] = useState(true);
   setTimeout(() => {
     onChangeIsSplashOn(false);
   }, 5000);
+
   return (
+    
     <ImageBackground resizeMode='cover'
       style={styles.background}
       source={backgroundImage}>
       {isSplashOn
         ? (
 
-          <Text style={styles.text}>Stonkspizza's</Text>
+          <Text style={styles.text}>Urban Lounge</Text>
         )
         : (<RootNavigation />)
       }
