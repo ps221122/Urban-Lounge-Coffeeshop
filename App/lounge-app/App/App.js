@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, ImageBackground } from 'react-native';
-import colors from './config/colors';
-import RootNavigation from './root/RootNavigation';
+import RootNavigation from './Root/RootNavigation';
+
 
 
 const backgroundImage = { uri: "https://i.picsum.photos/id/137/4752/3168.jpg?hmac=dGsgAtPkFewFByZXZOmSg0U7Mohr43GyVu3n1AHVIyg" };
+
+
+
 
 const App = () => {
   const [isSplashOn, onChangeIsSplashOn] = useState(true);
@@ -14,7 +17,6 @@ const App = () => {
   }, 5000);
 
   return (
-    
     <ImageBackground resizeMode='cover'
       style={styles.background}
       source={backgroundImage}>
@@ -36,11 +38,13 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "white",
-    fontSize: 42,
-    lineHeight: 80,
-    fontWeight: "bold",
+    fontSize: 40,
+    lineHeight: 70,
+    fontWeight: "600",
     textAlign: "center",
     backgroundColor: "#000000c0",
+    fontStyle: 'italic',
+
   },
   // container: {
   //   flex: 1,

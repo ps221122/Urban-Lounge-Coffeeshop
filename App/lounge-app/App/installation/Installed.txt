@@ -1,0 +1,39 @@
+npm i react-native-vector-icons
+
+npm i redux
+
+npm i react-redux
+
+npm i tslib
+
+npm i react-native-bouncy-checkbox
+
+npm install @react-navigation/native
+
+expo install react-native-screens react-native-safe-area-context
+
+npm install react-native-screens react-native-safe-area-context
+
+npm install @react-navigation/native-stack
+
+npm i hooks
+
+npm i firebase@8.10.0
+
+expo install react-native-gesture-handler
+
+expo install @react-native-masked-view/masked-view
+
+npm install @react-native-masked-view/masked-view
+
+npm i react-divider
+
+npm i react-native-divider
+
+npm install @react-native-material/core
+
+
+npm install react-native-google-places-autocomplete --save
+
+
+npm install --save react-native-bing-maps

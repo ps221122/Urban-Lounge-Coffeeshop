@@ -101,4 +101,6 @@ export default {
     silver: '#ecebff',
     bubbleGum: '#ff77e9',
     bermuda: '#78dcca',
+    DarkGray: '#A9A9A9',
+    DimGray:'#696969',
 }
