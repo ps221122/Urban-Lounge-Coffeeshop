@@ -5,7 +5,7 @@ import colors from '../../Config/colors';
 const DinnerScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>DinnerScreen</Text>
+      <Text>Dinner</Text>
     </View>
   )
 }
