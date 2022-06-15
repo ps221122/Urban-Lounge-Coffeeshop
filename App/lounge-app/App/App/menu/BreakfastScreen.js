@@ -161,12 +161,9 @@ const BreakfastScreen = () => {
 
 
 const FoodInfo = (props) => {
-    const [count, setCount] = useState(0);
-    const onPressPlus = () => setCount(prevCount => prevCount + 1);
-    const onPressMinus = () => setCount(prevCount => prevCount - 1);
-    var InCart = props.foodList.inCart;
-    // InCart = count;
-
+    var [count, setCount] = useState(1);
+    var onPressPlus = () => setCount(prevCount => prevCount + 1);
+    var onPressMinus = () => setCount(prevCount => prevCount - 1);
     return (
         <View style={{ width: 240, justifyContent: 'space-evenly', }}>
 
@@ -186,7 +183,7 @@ const FoodInfo = (props) => {
                 <TouchableOpacity style={styles.outerQuantityButton} onPress={onPressPlus}>
                     <MaterialCommunityIcons name='plus' color={colors.DimGray} style={styles.quantityText} />
                 </TouchableOpacity>
-                <Text style={styles.quantityText}>{InCart => count}</Text>
+                <Text style={styles.quantityText}>{props.foodList.inCart=count}</Text>
                 <TouchableOpacity style={styles.outerQuantityButton} onPress={onPressMinus}>
                     <MaterialCommunityIcons name='minus' color={colors.DimGray} style={styles.quantityText} />
                 </TouchableOpacity>
