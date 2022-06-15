@@ -102,5 +102,7 @@ export default {
     bubbleGum: '#ff77e9',
     bermuda: '#78dcca',
     DarkGray: '#A9A9A9',
-    DimGray:'#696969',
+    DimGray: '#696969',
+    GhostWhite: '#F8F8FF',
+    Gainsboro:'#DCDCDC',
 }
