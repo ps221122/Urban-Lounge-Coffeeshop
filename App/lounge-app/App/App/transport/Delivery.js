@@ -13,10 +13,6 @@ const Delivery = () => {
   const [userStreetNum, setUserStreetNum] = useState("");
   const [userUnitNum, setUserUnitNum] = useState("");
 
-
-
-  
-  // [userPostCode, userStreetNum, userUnitNum];
   return (
     <View style={styles.outercontainerForm}>
       <View style={styles.innerFormViews}>

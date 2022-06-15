@@ -1,15 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import MainNavigation from "../App/navigation/MainNavigation";
+import Header from './components/Header';
+
+
+
 
 const BlankScreen = ({ route }) => {
-    const arr = [route.params.location];
-    JSON.stringify(arr);
-    console.log();
     return (
         <View style={styles.container}>
-            {arr.map((item, i) => (
-                <Text key={i}>{item.postCode}</Text>
-            ))}
+            <Header route={route} />
+            <MainNavigation />
         </View>
     )
 }
@@ -18,9 +19,11 @@ const BlankScreen = ({ route }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
-        padding: 20,
-        justifyContent: 'center',
+        // alignItems: 'flex-end',
+        // padding: 20,
+        // justifyContent: 'space-between',
+        // alignSelf:'center'
+        // alignContent: 'center'
     },
 })
 

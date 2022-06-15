@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import colors from '../../Config/colors';
 import BlankScreen from '../BlankScreen';
+import Header from "../components/Header";
 
 
 
@@ -339,8 +340,8 @@ const PickUp = ({ navigation }) => {
     <SafeAreaView>
       <ScrollView showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
         {restaurantLocation.map((location, index) => (
-          <TouchableOpacity key={index} onPress={() =>navigation.navigate("BlankScreen", {
-           location,
+          <TouchableOpacity key={index} onPress={() => navigation.navigate("BlankScreen", {
+            location,
           })}>
             <Divider />
             <LocationInfo location={location} />

@@ -37,3 +37,13 @@ npm install react-native-google-places-autocomplete --save
 
 
 npm install --save react-native-bing-maps
+
+npm install @react-navigation/material-top-tabs react-native-tab-view
+
+npm install @react-navigation/bottom-tabs
+
+
+npm install @rneui/themed @rneui/base
+
+
+npm install @rneui/base@edge @rneui/themed@edge
