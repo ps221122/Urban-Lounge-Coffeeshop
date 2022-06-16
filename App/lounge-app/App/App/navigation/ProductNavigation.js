@@ -18,19 +18,22 @@ const ProductNav = () => {
     return (
         <Tab.Navigator initialRouteName='WeedScreen'
             screenOptions={{
-            tabBarLabelStyle: { fontSize: Platform.OS === 'android' ? 15 : 15, },
-            tabBarItemStyle: { width: 60, },
-            tabBarActiveTintColor: '#228B22',
-            tabBarInactiveTintColor: 'black',
-            tabBarBounces: true,
-            tabBarShowLabel: true,}}>
-            
+                tabBarLabelStyle: { fontSize: Platform.OS === 'android' ? 15 : 15, },
+              
+                tabBarActiveTintColor: '#228B22',
+                tabBarInactiveTintColor: 'black',
+                tabBarBounces: true,
+                tabBarShowLabel: true,
+            }}>
+
             <Tab.Screen name='WeedScreen' component={WeedScreen}
-                options={{
-                    tabBarLabel: "WeedScreen",
-                    tabBarIcon: ({ color }) => (
-                        <MaterialCommunityIcons name='cannabis' color={color} size={26} />),
-                }} />
+                options={{ tabBarLabel: "Weed", }} />
+
+            <Tab.Screen name='HasjScreen' component={HasjScreen}
+                options={{ tabBarLabel: "Hasj", }} />
+
+            <Tab.Screen name='AccessoriesScreen' component={AccessoriesScreen}
+                options={{ tabBarLabel: "Accessories", }} />
         </Tab.Navigator>
         // <Text>hiiiiiiiiiiiiiiiiiiiiiiii</Text>
     )

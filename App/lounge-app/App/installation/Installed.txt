@@ -47,3 +47,5 @@ npm install @rneui/themed @rneui/base
 
 
 npm install @rneui/base@edge @rneui/themed@edge
+
+expo doctor --fix-dependencies
