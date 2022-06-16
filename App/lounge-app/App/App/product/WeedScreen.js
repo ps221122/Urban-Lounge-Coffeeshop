@@ -1,14 +1,25 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 const WeedScreen = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>WeedScreen</Text>
     </View>
   )
 }
 
-export default WeedScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
+    alignSelf: 'baseline',
+    backgroundColor: 'pink'
+  },
+})
+
+
+export default WeedScreen;

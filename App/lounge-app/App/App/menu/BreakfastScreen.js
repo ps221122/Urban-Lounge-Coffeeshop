@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Image, TextInput, Switch, ScrollView, FlatList } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView, Alert, } from 'react-native';
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { Divider } from '@rneui/themed';
@@ -17,7 +17,7 @@ const productsOntbijt = [
         price: '€6.95',
         description: 'The Caribbean flavors of these coconut pancakes with fried pineapple in a sauce of brown sugar, cinnamon and rum.',
         time: "15 min",
-        inCart: 1,
+        inCart: 0,
     },
     {
         productvalue: "2",
@@ -26,7 +26,7 @@ const productsOntbijt = [
         price: '€7.95',
         description: 'French Toast I really think is pure comfort food.',
         time: "14 min",
-        inCart: 1,
+        inCart: 0,
     },
     {
         productvalue: "3",
@@ -35,7 +35,7 @@ const productsOntbijt = [
         price: '€8.99',
         description: 'Elvis Waffles! Delicious soft waffles topped with banana, peanut butter and caramelized bacon.',
         time: "18 min",
-        inCart: 1,
+        inCart: 0,
     },
     {
         productvalue: "4",
@@ -44,7 +44,7 @@ const productsOntbijt = [
         price: '€8.99',
         description: 'An old favorite among Jamaicans, cornmeal porridge is a go-to meal if you want a hearty, healthy start to the day..',
         time: "25 min",
-        inCart: 1,
+        inCart: 0,
     },
     {
         productvalue: "5",
@@ -53,7 +53,7 @@ const productsOntbijt = [
         price: '€9.95',
         description: 'Saltfish and ackee is the national dish of Jamaica and is traditionally served with these dumplings.',
         time: "23 min",
-        inCart: 1,
+        inCart: 0,
     },
     {
         productvalue: "6",
@@ -62,7 +62,7 @@ const productsOntbijt = [
         price: '€9.99',
         description: 'Fried eggs and plantain with butter toasted bread with chocolate & or coffee',
         time: "16 min",
-        inCart: 1,
+        inCart: 0,
     },
     {
         productvalue: "7",
@@ -71,7 +71,7 @@ const productsOntbijt = [
         price: '€9.85',
         description: 'Pastries,Eggs,Bacon,Yogurt,Jams and spreads,Fruit',
         time: "09 min",
-        inCart: 1,
+        inCart: 0,
     },
     {
         productvalue: "8",
@@ -80,7 +80,7 @@ const productsOntbijt = [
         price: '€10.95',
         description: 'Spice up your morning with bell pepper, onions, fluffy scrambled eggs, sausage and melty cheese, all wrapped in a soft tortilla.',
         time: "10 min",
-        inCart: 1,
+        inCart: 0,
     },
     {
         productvalue: "9",
@@ -89,7 +89,7 @@ const productsOntbijt = [
         price: '€10.99',
         description: 'But when its cooked, its not only an excellent choice - its also very tasty.And this particular recipe is particularly good.',
         time: "29 min",
-        inCart: 1,
+        inCart: 0,
     },
     {
         productvalue: "10",
@@ -98,7 +98,7 @@ const productsOntbijt = [
         price: '€12.34',
         description: 'Delicious scrambled eggs, bread and sausage muffin. You can also ask for it with hash browns and a nourishing orange juice or an aromatic coffee.',
         time: "28 min",
-        inCart: 1,
+        inCart: 0,
     },
     {
         productvalue: "11",
@@ -107,7 +107,7 @@ const productsOntbijt = [
         price: '€12.95',
         description: 'Breakfast pizza with avocado and fried egg with hot coffee or chocolate milk',
         time: "08 min",
-        inCart: 1,
+        inCart: 0,
     },
     {
         productvalue: "12",
@@ -116,7 +116,7 @@ const productsOntbijt = [
         price: '€12.96',
         description: 'Hallaca is a traditional dish from Venezuela that looks like a tamal but differs in taste, texture, ingredients and cultural significance',
         time: "25 min",
-        inCart: 1,
+        inCart: 0,
     },
 ];
 
@@ -164,6 +164,13 @@ const FoodInfo = (props) => {
     var [count, setCount] = useState(1);
     var onPressPlus = () => setCount(prevCount => prevCount + 1);
     var onPressMinus = () => setCount(prevCount => prevCount - 1);
+    if (count <= 0) {
+        count = + 1;
+    }
+    else if (count >= 50) {
+        Alert.alert("please call Urban Lounge Coffeeshop for a large order")
+        count=50;
+    }
     return (
         <View style={{ width: 240, justifyContent: 'space-evenly', }}>
 
@@ -183,7 +190,7 @@ const FoodInfo = (props) => {
                 <TouchableOpacity style={styles.outerQuantityButton} onPress={onPressPlus}>
                     <MaterialCommunityIcons name='plus' color={colors.DimGray} style={styles.quantityText} />
                 </TouchableOpacity>
-                <Text style={styles.quantityText}>{props.foodList.inCart=count}</Text>
+                <Text style={styles.quantityText}>{props.foodList.inCart = count}</Text>
                 <TouchableOpacity style={styles.outerQuantityButton} onPress={onPressMinus}>
                     <MaterialCommunityIcons name='minus' color={colors.DimGray} style={styles.quantityText} />
                 </TouchableOpacity>
@@ -198,8 +205,6 @@ const FoodImage = (props) => (
         <Image source={{ uri: props.foodList.tag }} style={styles.image} />
     </View>
 )
-
-
 
 
 const styles = StyleSheet.create({
@@ -270,7 +275,8 @@ const styles = StyleSheet.create({
         fontSize: 18,
         color: colors.Cherry,
     },
-
-
 })
+
+
+
 export default BreakfastScreen;
