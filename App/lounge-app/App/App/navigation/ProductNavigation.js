@@ -14,23 +14,26 @@ const Tab = createMaterialTopTabNavigator();
 
 
 
-const ProductNav = () => {
+const ProductNavigation = () => {
     return (
         <Tab.Navigator initialRouteName='WeedScreen'
             screenOptions={{
                 tabBarLabelStyle: { fontSize: Platform.OS === 'android' ? 15 : 15, },
-              
                 tabBarActiveTintColor: '#228B22',
                 tabBarInactiveTintColor: 'black',
                 tabBarBounces: true,
                 tabBarShowLabel: true,
+                tabBarStyle: {
+                    marginTop: 41,
+                    marginBottom: 0,
+                },
             }}>
 
             <Tab.Screen name='WeedScreen' component={WeedScreen}
-                options={{ tabBarLabel: "Weed", }} />
+                options={{ tabBarLabel: "Weed" }} />
 
             <Tab.Screen name='HasjScreen' component={HasjScreen}
-                options={{ tabBarLabel: "Hasj", }} />
+                options={{ tabBarLabel: "Hash", }} />
 
             <Tab.Screen name='AccessoriesScreen' component={AccessoriesScreen}
                 options={{ tabBarLabel: "Accessories", }} />
@@ -39,7 +42,7 @@ const ProductNav = () => {
     )
 }
 
-const ProductNavigation = () => {
+const ProductNav = () => {
     return (
         <NavigationContainer independent={true}>
             <ProductNav />

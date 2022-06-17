@@ -3,19 +3,21 @@ import { Text, View, StyleSheet } from 'react-native';
 import SearchTab from "../components/SearchTab";
 import ProductNavigation from '../navigation/ProductNavigation';
 
-const BlankScreen = () => {
+const ProductScreen = () => {
   return (
-    <View>
-      {/* <SearchTab /> */}
-      <ProductNavigation/>
+    <View style={styles.container}>
+      <SearchTab />
+      <ProductNavigation />
     </View>
   )
 }
 
 
 const styles = StyleSheet.create({
-
+  container: {
+    flex: 1,
+  },
 })
 
 
-export default BlankScreen;
+export default ProductScreen;

@@ -31,6 +31,7 @@ const MenuNav = () => {
                 tabBarShowLabel: false,
                 tabBarStyle: {
                     marginTop: 41,
+                    marginBottom: 0,
                 },
             }}>
             <Tab.Screen name='BreakfastScreen' component={BreakfastScreen}

@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { Divider } from '@rneui/themed';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
-import colors from '../../Config/colors'
+import colors from '../../Config/colors';
 
 
 

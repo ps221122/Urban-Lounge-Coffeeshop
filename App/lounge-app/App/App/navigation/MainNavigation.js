@@ -6,7 +6,7 @@ import MenuScreen from "../menu/MenuScreen";
 import CartScreen from '../Payment/CartScreen';
 import InfoScreen from '../Info/InfoScreen';
 import SignInScreen from '../Users/SignInScreen';
-import BlankScreen from '../product/BlankScreen';
+import ProductScreen from '../product/ProductScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -34,10 +34,10 @@ const TabMenu = () => {
             <MaterialCommunityIcons name='silverware-fork-knife' color={color} size={30} />),
         }} />
 
-      <Tab.Screen name='weed' component={BlankScreen}
+      <Tab.Screen name='weed' component={ProductScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name='cannabis' color={color} size={30} />),
+            <MaterialCommunityIcons name='smoke' color={color} size={30} />),
         }} />
 
       <Tab.Screen name='CheckOut' component={CartScreen}
