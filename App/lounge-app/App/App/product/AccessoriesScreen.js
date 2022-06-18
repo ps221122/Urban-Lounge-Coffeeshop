@@ -1,21 +1,30 @@
 import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, Text, View, TouchableOpacity, ScrollView, Platform, Switch, } from 'react-native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import PaperScreen from '../product/accessoriesScreen/PaperScreen';
+import ConesScreen from '../product/accessoriesScreen/ConesScreen';
+import GearScreen from '../product/accessoriesScreen/GearScreen';
+import TipsScreen from '../product/accessoriesScreen/TipsScreen';
+import TraysScreen from '../product/accessoriesScreen/TraysScreen';
+
+
+
+
 
 const AccessoriesScreen = ({ navigation }) => {
   return (
     <ScrollView showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
       <View style={styles.container}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Paper')}>
           <View style={styles.outerButtonLook}>
             <Text style={styles.title}>Papers</Text>
             <MaterialCommunityIcons name='chevron-right' color={'gray'} size={30} />
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Cones')}>
           <View style={styles.outerButtonLook}>
             <Text style={styles.title}>Cones</Text>
             <MaterialCommunityIcons name='chevron-right' color={'gray'} size={30} />
@@ -23,21 +32,21 @@ const AccessoriesScreen = ({ navigation }) => {
         </TouchableOpacity>
 
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Tips')}>
           <View style={styles.outerButtonLook}>
             <Text style={styles.title}>Tips</Text>
             <MaterialCommunityIcons name='chevron-right' color={'gray'} size={30} />
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Trays')}>
           <View style={styles.outerButtonLook}>
             <Text style={styles.title}>Raw Rolling Trays</Text>
             <MaterialCommunityIcons name='chevron-right' color={'gray'} size={30} />
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Gear')}>
           <View style={styles.outerButtonLook}>
             <Text style={styles.title}>Gear</Text>
             <MaterialCommunityIcons name='chevron-right' color={'gray'} size={30} />
@@ -48,6 +57,25 @@ const AccessoriesScreen = ({ navigation }) => {
   )
 }
 
+const Stack = createStackNavigator();
+
+const AccessoriesNavigation = () => {
+  const screenOptions = {
+    headerShown: false,
+  };
+  return (
+    <NavigationContainer independent={true}>
+      <Stack.Navigator initialRouteName="Home" screenOptions={screenOptions}>
+        <Stack.Screen name='AccessoriesScreen' component={AccessoriesScreen} />
+        <Stack.Screen name='Paper' component={PaperScreen} />
+        <Stack.Screen name='Cones' component={ConesScreen} />
+        <Stack.Screen name='Gear' component={GearScreen} />
+        <Stack.Screen name='Trays' component={TraysScreen} />
+        <Stack.Screen name='Tips' component={TipsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -77,4 +105,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AccessoriesScreen;
+export default AccessoriesNavigation;
