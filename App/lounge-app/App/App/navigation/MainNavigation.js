@@ -7,6 +7,7 @@ import CartScreen from '../Payment/CartScreen';
 import InfoScreen from '../Info/InfoScreen';
 import SignInScreen from '../Users/SignInScreen';
 import ProductScreen from '../product/ProductScreen';
+import colors from '../../Config/colors';
 
 const Tab = createBottomTabNavigator();
 
@@ -14,15 +15,19 @@ const TabMenu = () => {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarShowLabel: true,
+        tabBarShowLabel: false,
         headerShown: false,
-        tabBarActiveTintColor: 'red',
+        tabBarActiveTintColor: colors.secondary,
         tabBarInactiveTintColor: 'black',
         tabBarStyle: {
           borderTopWidth: 0,
-          backgroundColor: "green",
+          backgroundColor: colors.BabyBlue,
           elevation: 0,
-          borderRadius: 45,
+          borderRadius: 5,
+          shadowColor: '#171717',
+          shadowOffset: { width: -2, height: 5 },
+          shadowOpacity: 0.2,
+          shadowRadius: 3,
         },
 
 
@@ -37,7 +42,7 @@ const TabMenu = () => {
       <Tab.Screen name='weed' component={ProductScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name='smoke' color={color} size={30} />),
+            <MaterialCommunityIcons name='balloon' color={color} size={30} />),
         }} />
 
       <Tab.Screen name='CheckOut' component={CartScreen}

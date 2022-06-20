@@ -36,7 +36,7 @@ const ProductNavigation = () => {
                 options={{ tabBarLabel: "Hash", }} />
 
             <Tab.Screen name='AccessoriesScreen' component={AccessoriesScreen}
-                options={{ tabBarLabel: "Accessories", }} />
+                options={{ tabBarLabel: "Accessories" }} />
         </Tab.Navigator>
         // <Text>hiiiiiiiiiiiiiiiiiiiiiiii</Text>
     )

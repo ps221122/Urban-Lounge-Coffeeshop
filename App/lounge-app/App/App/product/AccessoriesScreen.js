@@ -8,6 +8,7 @@ import ConesScreen from '../product/accessoriesScreen/ConesScreen';
 import GearScreen from '../product/accessoriesScreen/GearScreen';
 import TipsScreen from '../product/accessoriesScreen/TipsScreen';
 import TraysScreen from '../product/accessoriesScreen/TraysScreen';
+import colors from '../../Config/colors'
 
 
 
@@ -62,16 +63,18 @@ const Stack = createStackNavigator();
 const AccessoriesNavigation = () => {
   const screenOptions = {
     headerShown: false,
+  
+
   };
   return (
     <NavigationContainer independent={true}>
       <Stack.Navigator initialRouteName="Home" screenOptions={screenOptions}>
-        <Stack.Screen name='AccessoriesScreen' component={AccessoriesScreen} />
-        <Stack.Screen name='Paper' component={PaperScreen} />
-        <Stack.Screen name='Cones' component={ConesScreen} />
-        <Stack.Screen name='Gear' component={GearScreen} />
-        <Stack.Screen name='Trays' component={TraysScreen} />
-        <Stack.Screen name='Tips' component={TipsScreen} />
+        <Stack.Screen name='Accessories' component={AccessoriesScreen} />
+        <Stack.Screen name='Paper' component={PaperScreen} options={{ headerShown: true, }} />
+        <Stack.Screen name='Cones' component={ConesScreen} options={{ headerShown: true }} />
+        <Stack.Screen name='Gear' component={GearScreen} options={{ headerShown: true }} />
+        <Stack.Screen name='Trays' component={TraysScreen} options={{ headerShown: true }} />
+        <Stack.Screen name='Tips' component={TipsScreen} options={{ headerShown: true }} />
       </Stack.Navigator>
     </NavigationContainer>
   )
@@ -102,6 +105,11 @@ const styles = StyleSheet.create({
     fontSize: Platform.OS === 'android' ? 21 : 21,
     fontWeight: '500',
     padding: Platform.OS === 'android' ? 0 : 20,
+  },
+  navigationBackButton: {
+    fontSize: 30,
+    marginTop: Platform.OS === 'android' ? 35 : -45,
+    color: colors.Azure,
   },
 });
 

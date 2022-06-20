@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView, } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView, Alert, Platform, } from 'react-native';
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { Divider } from '@rneui/themed';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
-import colors from '../../Config/colors'
+import colors from '../../Config/colors';
 
 
 
@@ -236,7 +236,7 @@ const styles = StyleSheet.create({
   productItemView: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    margin: 15,
+    margin: 10,
 
   },
   shadowProp: {
@@ -246,7 +246,7 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
   },
   image: {
-    width: 110,
+    width: Platform.OS === "android" ? 70 : 110,
     height: 120,
     borderRadius: 15,
     marginRight: 5,
@@ -270,14 +270,15 @@ const styles = StyleSheet.create({
     marginTop: 7,
   },
   description: {
-    fontSize: 13,
+    fontSize: Platform.OS === "android" ? 12 : 13,
   },
   time: {
     marginTop: 5,
-    fontSize: 18,
+    fontSize: 16,
     color: colors.Cherry,
   },
 })
+
 
 
 

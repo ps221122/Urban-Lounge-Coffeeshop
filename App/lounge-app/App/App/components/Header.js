@@ -1,12 +1,12 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View, StatusBar, Platform } from 'react-native';
 import { Divider } from 'react-native-flex-layout';
 
 const Header = ({ route }) => {
     const arr = [route.params.location];
     JSON.stringify(arr)
     return (
-        <SafeAreaView>
+        <SafeAreaView style={styles.mainContainer}>
             <View style={styles.headerLocation}>
                 {arr.map((item, i) => (
                     <View style={{ flexDirection: 'row' }} key={i}>
@@ -21,6 +21,9 @@ const Header = ({ route }) => {
 }
 
 const styles = StyleSheet.create({
+    mainContainer: {
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    },
     headerLocation: {
         alignItems: 'center',
     },

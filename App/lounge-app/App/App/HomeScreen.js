@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, Platform, StatusBar } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
@@ -16,9 +16,9 @@ import PickUp from "../App/transport/PickUp"
 const HomeScreen = ({ navigation }) => {
   const imageLogo = { uri: "https://e7.pngegg.com/pngimages/336/687/png-clipart-black-and-white-illustration-triskelion-spiral-scalable-graphics-celtic-triple-spiral-spiral-monochrome.png" };
 
-  const comfyFood = { uri: "https://i.pinimg.com/originals/16/37/57/1637570b69c9d0e9db4cf4ac20462f73.jpg" };
+  const comfyFood = { uri: "https://cdn.pixabay.com/photo/2019/12/25/17/55/cinnamon-roll-4719023_960_720.jpg" };
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.mainContainer}>
       <View style={styles.container}>
         <Image source={imageLogo} style={styles.image} />
         <Text style={styles.title}>Urban Lounge Coffeeshop</Text>
@@ -65,6 +65,9 @@ const TransportNavigation = () => {
 }
 
 const styles = StyleSheet.create({
+  mainContainer: {
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  },
   container: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -93,7 +96,7 @@ const styles = StyleSheet.create({
   },
   comyFoodImage: {
     width: 405,
-    height: 435,
+    height: Platform.OS === "android" ? 400 : 435,
     borderRadius: 10,
     opacity: 0.9,
   },

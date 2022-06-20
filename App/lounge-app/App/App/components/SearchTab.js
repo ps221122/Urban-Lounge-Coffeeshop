@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Platform } from 'react-native';
 import { SearchBar } from '@rneui/themed'
 import colors from '../../Config/colors';
 
@@ -10,11 +10,10 @@ const SearchTab = () => {
         <View>
             <SearchBar placeholder='Type Here...'
                 round='true'
+                platform='default'
                 lightTheme='true'
-                showCancel='true'
                 value={search} onChangeText={(search) => setSearch(search)}
-                containerStyle={styles.searchBar}
-                underlineColorAndroid="transparent" />
+                containerStyle={styles.searchBar} />
         </View>
     )
 }
