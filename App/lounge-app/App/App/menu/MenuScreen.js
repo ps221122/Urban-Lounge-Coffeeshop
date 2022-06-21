@@ -4,7 +4,7 @@ import SearchTab from '../components/SearchTab';
 import ViewCart from '../components/ViewCart';
 import MenuNavigation from '../navigation/MenuNavigation';
 
-const MenuScreen = ({ navigation, route }) => {
+const MenuScreen = ({ navigation }) => {
   return (
     <View style={{ flex: 1, }}>
       <SearchTab />

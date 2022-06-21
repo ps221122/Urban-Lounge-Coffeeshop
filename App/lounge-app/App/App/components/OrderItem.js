@@ -1,10 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View, Alert, TouchableOpacity, TextInput } from 'react-native';
+import colors from '../../Config/colors';
+
 
 const OrderItem = ({ item }) => {
-    const { name, price, incart } = item;
+    const { name, price, inCart } = item;
     return (
         <View style={styles.orderView}>
+            <Text style={styles.orderAmount}>{inCart}</Text>
             <Text style={styles.orderTextTitle}>{name}</Text>
             <Text style={styles.orderTextPrice}>{price}</Text>
         </View>
@@ -14,13 +17,8 @@ const OrderItem = ({ item }) => {
 
 const styles = StyleSheet.create({
     orderAmount: {
-        borderColor: 'gray',
-        backgroundColor: 'gray',
-        borderRadius: 15,
-        borderWidth: 1,
-        width: 20,
-        alignItems: 'center',
-        height: 20,
+        color: colors.Cherry,
+        fontSize:15,
     },
     orderView: {
         flexDirection: "row",

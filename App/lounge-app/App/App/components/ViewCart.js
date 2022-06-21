@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
-import { View, Text, TouchableOpacity, Modal, StyleSheet, ScrollView } from "react-native";
+import { View, Text, TouchableOpacity, Modal, StyleSheet, ScrollView,AsyncStorage } from "react-native";
 import { useSelector } from "react-redux";
 import { Divider } from '@rneui/themed';
+import { addItem } from '../../Service/ItemService';
 import OrderItem from "./OrderItem";
 
 
-const ViewCart = ({ navigation }) => {
+const ViewCart = ({ navigation, route }) => {
     const [modalVisible, setModalVisible] = useState(false);
 
     const { items } = useSelector(
@@ -24,15 +25,43 @@ const ViewCart = ({ navigation }) => {
 
 
     const addOrderToFirebase = () => {
-        // const db = firebase.firestore();
-        // db.collection("orders")
-        //     .add({
-        //         items: items,
-        //         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-        //     })
-        // setModalVisible(false);
-        // console.log("hi how are you doing");
+        showDate();
+
+
+
+        // addItem([date,
+
+        //     items,
+        // ]);
     };
+
+
+    const [date, setDateTime] = useState('');
+    const showDate = () => {
+
+        //Get Current Date
+        var date = new Date().getDate();
+
+        //Get Current Month
+        var month = new Date().getMonth() + 1;
+
+        //Get Current Year
+        var year = new Date().getFullYear();
+
+        //Get Current Time Hours
+        var hours = new Date().getHours();
+
+        //Get Current Time Minutes
+        var min = new Date().getMinutes();
+
+        //Get Current Time Seconds
+        var sec = new Date().getSeconds();
+
+        var finalObject = date + '/' + month + '/' + year + ' ' + hours + ':' + min + ':' + sec;
+
+        setDateTime(finalObject);
+
+    }
 
     const checkoutModalContent = () => {
         return (
@@ -45,7 +74,6 @@ const ViewCart = ({ navigation }) => {
                         </View>
                         <Divider />
                         <ScrollView>
-
                             {items.map((item, index) => (
                                 <OrderItem key={index} item={item} />
                             ))}
@@ -53,7 +81,7 @@ const ViewCart = ({ navigation }) => {
                         <View style={styles.subtotalContainer}>
                             <Text style={styles.subtotalText}>Subtotal</Text>
                             <Divider />
-                            <Text>{totalUSD}</Text>
+                            <Text></Text>
                         </View>
                         <View style={styles.modalContainerInner}>
                             <TouchableOpacity onPress={() => { addOrderToFirebase(); }} style={styles.touchableModalView}>
