@@ -63,7 +63,7 @@ const Stack = createStackNavigator();
 const AccessoriesNavigation = () => {
   const screenOptions = {
     headerShown: false,
-  
+   
 
   };
   return (

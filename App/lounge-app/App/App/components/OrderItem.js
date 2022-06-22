@@ -4,12 +4,16 @@ import colors from '../../Config/colors';
 
 
 const OrderItem = ({ item }) => {
-    const { name, price, inCart } = item;
+    var { name, price, inCart } = item;
+    var priceNum = parseFloat(price.substring(1));
+    var productPriceItem = priceNum * inCart;
+    var subTotalPrice = "€" + productPriceItem;
+    // console.log(subTotalPrice);
     return (
         <View style={styles.orderView}>
             <Text style={styles.orderAmount}>{inCart}</Text>
             <Text style={styles.orderTextTitle}>{name}</Text>
-            <Text style={styles.orderTextPrice}>{price}</Text>
+            <Text style={styles.orderTextPrice}>{subTotalPrice}</Text>
         </View>
     )
 }
@@ -18,7 +22,7 @@ const OrderItem = ({ item }) => {
 const styles = StyleSheet.create({
     orderAmount: {
         color: colors.Cherry,
-        fontSize:15,
+        fontSize: 15,
     },
     orderView: {
         flexDirection: "row",

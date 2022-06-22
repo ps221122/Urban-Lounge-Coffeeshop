@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { View, Text, TouchableOpacity, Modal, StyleSheet, ScrollView,AsyncStorage } from "react-native";
+import { View, Text, TouchableOpacity, Modal, StyleSheet, ScrollView, AsyncStorage } from "react-native";
 import { useSelector } from "react-redux";
 import { Divider } from '@rneui/themed';
 import { addItem } from '../../Service/ItemService';
@@ -13,26 +13,25 @@ const ViewCart = ({ navigation, route }) => {
     const { items } = useSelector(
         (state) => state.cartReducer.selectedItems
     );
+    var InCart = items
+        .map((item) => Number(item.inCart));
 
-    const total = items
+    var productPrice = items
         .map((item) => Number(item.price.replace("€", "")))
-        .reduce((prev, curr) => prev + curr, 0);
 
-    const totalUSD = total.toLocaleString("nl", {
-        style: "currency",
-        currency: "EUR",
-    });
+    var subTotal = productPrice * InCart;
+
+    subTotal.toFixed(2);
 
 
     const addOrderToFirebase = () => {
         showDate();
 
+        addItem([date,
 
+            items,
+        ]);
 
-        // addItem([date,
-
-        //     items,
-        // ]);
     };
 
 
@@ -87,7 +86,7 @@ const ViewCart = ({ navigation, route }) => {
                             <TouchableOpacity onPress={() => { addOrderToFirebase(); }} style={styles.touchableModalView}>
                                 <Text style={styles.CheckoutModalButton}>CheckOut</Text>
                                 <Text style={styles.innerModalText}>
-                                    {total ? totalUSD : ""}
+
                                 </Text>
                             </TouchableOpacity>
                         </View>
@@ -105,12 +104,12 @@ const ViewCart = ({ navigation, route }) => {
                 transparent={true}
                 onRequestClose={() => setModalVisible(false)}>
                 {checkoutModalContent()}</Modal>
-            {total ? (
+            {subTotal ? (
                 <View style={styles.outerView}>
                     <View style={styles.outerInnerView}>
                         <TouchableOpacity style={styles.touchableView} onPress={() => setModalVisible(true)}>
                             <Text style={styles.textFont}>ViewCart</Text>
-                            <Text style={styles.textPriceFont}>{totalUSD}</Text>
+                            <Text style={styles.textPriceFont}></Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -118,7 +117,6 @@ const ViewCart = ({ navigation, route }) => {
         </>
     )
 }
-
 
 
 const styles = StyleSheet.create({
@@ -170,7 +168,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
     },
     modalHeaderCloseButton: {
-        fontSize: 20,
+        fontSize: 25,
         color: 'red',
         fontWeight: '800',
     },

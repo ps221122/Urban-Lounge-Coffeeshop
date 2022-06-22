@@ -11,5 +11,14 @@ const firebaseConfig = {
     databaseURL: "https://fir-2-6d88b-default-rtdb.firebaseio.com/",
 };
 
-let app = firebase.initializeApp(firebaseConfig);
-export const db = app.database();
+if (firebase.apps.length === 0) {
+    app = firebase.initializeApp(firebaseConfig);
+}
+else {
+    app= firebase.app()
+}
+const auth = firebase.auth()
+export { auth };
+
+// let app = firebase.initializeApp(firebaseConfig);
+// export const db = app.database();
