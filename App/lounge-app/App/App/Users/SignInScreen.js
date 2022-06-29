@@ -6,7 +6,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { auth } from '../../Config/db';
 import { useEffect } from 'react';
 import { Input, Icon } from '@rneui/themed';
-import { signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 import Divider from 'react-native-divider';
 import SignUpScreen from "./SignUpScreen";
 import ProfileScreen from "./ProfileScreen";
@@ -41,13 +40,13 @@ const SignInScreen = ({ navigation }) => {
 
   const forgotPassword = () => {
     console.log("reset email sent to " + email);
-    sendPasswordResetEmail(auth, email, null)
-      .then(() => {
-        alert("reset email sent to " + email);
-      })
-      .catch(function (e) {
-        console.log(e);
-      });
+    // sendPasswordResetEmail(auth, email, null)
+    //   .then(() => {
+    //     alert("reset email sent to " + email);
+    //   })
+    //   .catch(function (e) {
+    //     console.log(e);
+    //   });
   };
   
 

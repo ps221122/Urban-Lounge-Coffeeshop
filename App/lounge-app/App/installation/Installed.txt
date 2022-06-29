@@ -49,3 +49,16 @@ npm install @rneui/themed @rneui/base
 npm install @rneui/base@edge @rneui/themed@edge
 
 expo doctor --fix-dependencies
+
+
+npm i @react-native-picker/picker
+
+npm i expo-image-picker
+
+
+npm i react-native-linear-gradient
+
+
+expo install expo-linear-gradient
+
+npm i react-native-curved-bottom-bar@1.1.3

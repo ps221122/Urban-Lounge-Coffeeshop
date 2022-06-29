@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, ImageBackground } from 'react-native';
 import RootNavigation from './Root/RootNavigation';
-
+import { LogBox } from 'react-native';
 
 
 const backgroundImage = { uri: "https://i.picsum.photos/id/137/4752/3168.jpg?hmac=dGsgAtPkFewFByZXZOmSg0U7Mohr43GyVu3n1AHVIyg" };
@@ -11,6 +11,7 @@ const backgroundImage = { uri: "https://i.picsum.photos/id/137/4752/3168.jpg?hma
 
 
 const App = () => {
+  LogBox.ignoreAllLogs();
   const [isSplashOn, onChangeIsSplashOn] = useState(true);
   setTimeout(() => {
     onChangeIsSplashOn(false);

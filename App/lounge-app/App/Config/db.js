@@ -20,5 +20,5 @@ else {
 const auth = firebase.auth()
 export { auth };
 
-// let app = firebase.initializeApp(firebaseConfig);
-// export const db = app.database();
+let app = firebase.initializeApp(firebaseConfig);
+export const db = app.database();

@@ -27,8 +27,8 @@ const ViewCart = ({ navigation, route }) => {
     const addOrderToFirebase = () => {
         showDate();
 
-        addItem([date,
-
+        addItem([
+            // date,
             items,
         ]);
 

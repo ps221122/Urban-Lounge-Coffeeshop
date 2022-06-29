@@ -44,7 +44,7 @@ const productHasj = [
     name: 'Harlequin',
     description: "Harlequin, known for its high CBD content, pain relief, as well as its anti-inflammatory and anti-seizure properties, is a Sativa dominant landrace strain that was only really discovered and preserved, like most other CBD strains, due to the demand of cannabinoid potency testing within the legal regulated industry.",
     strain: '💪💪',
-    image: "https://i0.wp.com/pure-extract-cbd.com/wp-content/uploads/PEC_Harlequin-IND.jpg?fit=1000%2C1000&ssl=1",
+    image: "https://sklepsativa.pl/environment/cache/images/300_300_productGfx_1743/Susz-konopny-Harlequin.jpg",
     price: '€7.00',
     inCart: 0,
   },
