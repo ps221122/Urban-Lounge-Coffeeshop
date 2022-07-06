@@ -18,6 +18,7 @@ const productsPizza = [
     description: 'Tomato sauce, mozzarella, Gouda and cheddar cheese mix & soft French cheese.',
     time: "23 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "2",
@@ -27,6 +28,7 @@ const productsPizza = [
     description: 'Tomato sauce, mozzarella, mushrooms, grilled beef, Gouda and cheddar cheese mix, soft French cheese & spring onion.',
     time: "11 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "3",
@@ -36,6 +38,7 @@ const productsPizza = [
     description: 'Crème frache, BBQ swirl, mozzarella, grilled beef, bacon, ham, onion and spring onion.',
     time: "36 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "4",
@@ -45,6 +48,7 @@ const productsPizza = [
     description: 'BBQ sauce, mozzarella, bacon, ham, grilled chicken, minced beef, bell pepper & onion.',
     time: "08 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "5",
@@ -54,6 +58,7 @@ const productsPizza = [
     description: 'Tomato sauce, mozzarella, frikandel, onion, a swirl of mayonnaise and curry.',
     time: "17 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "6",
@@ -63,6 +68,7 @@ const productsPizza = [
     description: 'BBQ sauce, mozzarella, grilled chicken & bacon.',
     time: "26 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "7",
@@ -72,6 +78,7 @@ const productsPizza = [
     description: 'Tomato sauce, mozzarella, shoarma & a swirl of garlic sauce.',
     time: "25 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "8",
@@ -81,6 +88,7 @@ const productsPizza = [
     description: 'Tomato sauce, mozzarella, chicken kebab, onion and a swirl of garlic sauce.',
     time: "15 min",
     inCart: 0,
+    totalPrice: "€0",
   }, {
     productvalue: "9",
     name: "Pizza Pepperoni Party",
@@ -89,6 +97,7 @@ const productsPizza = [
     description: 'Tomato sauce, extra pepperoni and mozzarella.',
     time: "12 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "10",
@@ -98,6 +107,7 @@ const productsPizza = [
     description: 'BBQ sauce, mozzarella, pepperoni, minced beef, chicken kebab, bacon & onion.',
     time: "20 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "11",
@@ -107,6 +117,7 @@ const productsPizza = [
     description: 'Tomato sauce, ham, pineapple & extra mozzarella.',
     time: "07 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "12",
@@ -116,6 +127,7 @@ const productsPizza = [
     description: 'Tomato sauce, ham, pepperoni, minced beef, mushrooms, black olives, bell pepper, onion & extra mozzarella.',
     time: "18 min",
     inCart: 0,
+    totalPrice: "€0",
   },
 ];
 
@@ -170,6 +182,10 @@ const FoodInfo = (props) => {
     Alert.alert("please call Urban Lounge Coffeeshop for a large order")
     count = 50;
   }
+
+  var itemPrice = props.foodList.price.replace("€", "");
+  var totalItemPrice = itemPrice * count;
+  props.foodList.totalPrice = "€" + totalItemPrice;
   return (
     <View style={{ width: 240, justifyContent: 'space-evenly', }}>
 

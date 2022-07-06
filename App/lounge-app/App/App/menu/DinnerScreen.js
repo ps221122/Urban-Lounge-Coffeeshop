@@ -21,6 +21,7 @@ const productsDinner = [
     description: 'This is Jamaican national dish, made with the national fruit ackee.',
     time: "12 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "2",
@@ -30,6 +31,7 @@ const productsDinner = [
     description: 'Rice, vegetables, meat, sauce, herbs, spices, egg',
     time: "29 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "3",
@@ -39,6 +41,7 @@ const productsDinner = [
     description: 'Incredibly tasty slow cooked Jamaican Spiced Curry that is full of flavor and tender to the bone!',
     time: "21 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "4",
@@ -48,6 +51,7 @@ const productsDinner = [
     description: 'It is best to ask if the fishmonger cleans the Snappers, that is the most convenient.',
     time: "12 min",
     inCart: 0,
+    totalPrice: "€0",
   },
 
   {
@@ -58,6 +62,7 @@ const productsDinner = [
     description: 'This is an easy way to cook whole fish, but one that few western cooks have mastered.',
     time: "13 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "6",
@@ -67,6 +72,7 @@ const productsDinner = [
     description: 'A traditional Antillean soup, for the Antilleans this soup with red kidney beans is the ultimate comfort food.',
     time: "29 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "7",
@@ -76,6 +82,7 @@ const productsDinner = [
     description: 'Okra soup is prepared using the edible green seed pods of the okra flowering plant as the primary ingredient. It is greenish in color.',
     time: "16 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "8",
@@ -85,7 +92,9 @@ const productsDinner = [
     description: 'goat, broth, garlic, onion, pepper, tomato, herbs, vegetables, sauce.',
     time: "17 min",
     inCart: 0,
-  }, {
+    totalPrice: "€0",
+  },
+  {
     productvalue: "9",
     name: "STEWED OXTAIL",
     tag: "https://soulfood.nl/wp-content/uploads/2021/05/website1-2-1170x780.jpg",
@@ -93,6 +102,7 @@ const productsDinner = [
     description: 'Making the traditional oxtail stew takes some time, but as they say: "then you have something!". It is the ideal dish to make on the weekend.',
     time: "29 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "10",
@@ -102,6 +112,7 @@ const productsDinner = [
     description: 'Amazing Indian dish with tenderloin chicken off the sizzles 🔥',
     time: "16 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "11",
@@ -111,6 +122,7 @@ const productsDinner = [
     description: 'Chicken foot soup is a popular Jamaican one-pot dish with ingredients such as chicken foot, pumpkins, carrots, yams, potatoes and seasonings such as allspice, thyme and salt. It is traditionally prepared on Saturdays for dinner.',
     time: "27 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "12",
@@ -120,6 +132,7 @@ const productsDinner = [
     description: 'Its ratatouille season! Ratatouille is a classic French end- of - summer stew thats fun to say (rat-tuh-TOO-ee) and fun to make.',
     time: "24 min",
     inCart: 0,
+    totalPrice: "€0",
   },
 ];
 
@@ -173,6 +186,10 @@ const FoodInfo = (props) => {
     Alert.alert("please call Urban Lounge Coffeeshop for a large order")
     count = 50;
   }
+
+  var itemPrice = props.foodList.price.replace("€", "");
+  var totalItemPrice = itemPrice * count;
+  props.foodList.totalPrice = "€" + totalItemPrice;
   return (
     <View style={{ width: 240, justifyContent: 'space-evenly', }}>
 

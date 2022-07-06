@@ -17,6 +17,8 @@ const productsDrink = [
     tag: "https://www.chelseasmessyapron.com/wp-content/uploads/2020/04/Strawberry-Milkshake-1.jpg",
     price: '€3.95',
     description: 'Tick Shake Strawberry',
+    inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "2",
@@ -24,6 +26,8 @@ const productsDrink = [
     tag: "https://foodtasia.com/wp-content/uploads/2021/07/banana-milkshake-34.jpg",
     price: '€3.95',
     description: 'Thick Shake Banana',
+    inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "3",
@@ -31,6 +35,8 @@ const productsDrink = [
     tag: "https://www.amytreasure.com/wp-content/uploads/2019/07/2K3A4574.jpg",
     price: '€3.95',
     description: 'Thick shake Premium caramel',
+    inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "4",
@@ -38,6 +44,8 @@ const productsDrink = [
     tag: "https://static-images.jumbo.com/product_images/080920212317_428484FLS-1_360x360_2.png",
     price: '€2.50',
     description: '0.25 LT Fuze Tea Green Tea',
+    inCart: 0,
+    totalPrice: "€0",
   },
 
   {
@@ -46,6 +54,8 @@ const productsDrink = [
     tag: "https://images.quickoffice.nl/002/600x450/897061p1.jpg",
     price: '€2.00',
     description: '0.33 Liter Coca Cola',
+    inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "6",
@@ -53,6 +63,8 @@ const productsDrink = [
     tag: "https://media.foox.nl/FT/AFB/high/9492.jpg",
     price: '€2.00',
     description: '0.33 liter Fernandes Cherry',
+    inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "7",
@@ -60,6 +72,8 @@ const productsDrink = [
     tag: "https://www.officepalace.nl/autoimg/1406057/400x400/ffffff/frisdrank-fanta-orange-blikje-0-33l-1.jpg",
     price: '€2.00',
     description: '0.33 liter Fanta',
+    inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "8",
@@ -67,6 +81,8 @@ const productsDrink = [
     tag: "https://images.quickoffice.nl/002/600x450/897064p1.jpg",
     price: '€2.00',
     description: '0.33 liter Fanta Cassis',
+    inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "9",
@@ -74,6 +90,8 @@ const productsDrink = [
     tag: "https://www.kantinewinkel.nl/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/f/e/fernandes_red_grape_033l_blik.png",
     price: '€2.00',
     description: '0.33 liter Fernandes Red Grape',
+    inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "10",
@@ -81,6 +99,8 @@ const productsDrink = [
     tag: "https://www.antilliaanse-toko.nl/media/catalog/product/cache/1ca3c8b1c6458f0eb1a5e1747c261955/f/r/fria_grape_chiki.png",
     price: '€2.75',
     description: 'Fria Grape',
+    inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "11",
@@ -88,6 +108,8 @@ const productsDrink = [
     tag: "https://www.office-deals.nl/images/Water_Chaudfontaine_Blauw_Pet_0_50l(10214555).jpg",
     price: '€2.95',
     description: '0.5 liter Chaudfontaine',
+    inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "12",
@@ -95,6 +117,8 @@ const productsDrink = [
     tag: "https://www.minutemaid.com/content/dam/nagbrands/us/minutemaidus/en/products/mm-lemonade-product-page.png",
     price: '€4.95',
     description: 'Minute Maid 1-liter',
+    inCart: 0,
+    totalPrice: "€0",
   },
 ];
 
@@ -149,6 +173,10 @@ const FoodInfo = (props) => {
     Alert.alert("please call Urban Lounge Coffeeshop for a large order")
     count = 50;
   }
+
+  var itemPrice = props.foodList.price.replace("€", "");
+  var totalItemPrice = itemPrice * count;
+  props.foodList.totalPrice = "€" + totalItemPrice;
   return (
     <View style={{ width: 240, justifyContent: 'space-evenly', }}>
 

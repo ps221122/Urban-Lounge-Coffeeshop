@@ -14,7 +14,8 @@ const productsAlcohol = [
     tag: "https://assets.sainsburys-groceries.co.uk/gol/3999417/1/640x640.jpg",
     price: '€3.50',
     description: 'Smirnoff Ice Vodka Mixed Drink 70cl',
-    inCart:0,
+    inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "2",
@@ -23,6 +24,7 @@ const productsAlcohol = [
     price: '€3.95',
     description: '4 - White Claw Hard Seltzer 330ml.',
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "3",
@@ -31,6 +33,7 @@ const productsAlcohol = [
     price: '€10.95',
     description: 'Heineken Premium Pilsener Bier 6 * 50cl',
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "4",
@@ -39,6 +42,7 @@ const productsAlcohol = [
     price: '€7.50',
     description: 'Bavaria - Pils 33cl',
     inCart: 0,
+    totalPrice: "€0",
   },
 
   {
@@ -48,6 +52,7 @@ const productsAlcohol = [
     price: '€8.00',
     description: 'Jupiler Belgisch Pils 33cl',
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "6",
@@ -56,6 +61,7 @@ const productsAlcohol = [
     price: '€9.40',
     description: 'Grolsch - Pils - 25cl',
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "7",
@@ -64,6 +70,7 @@ const productsAlcohol = [
     price: '€4.90',
     description: 'Orbea - Pinot Grigio - 750ML',
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "8",
@@ -71,13 +78,17 @@ const productsAlcohol = [
     tag: "https://www.supermarktaanbiedingen.com/public/images/discount/2018/06/701237.png",
     price: '€5.99',
     description: 'Excellence - Chardonnay - 750ML',
-  }, {
+    inCart: 0,
+    totalPrice: "€0",
+  },
+  {
     productvalue: "9",
     name: "Leffe Blond Belgisch Abdijbier Flessen",
     tag: "https://static-images.jumbo.com/product_images/170420210207_275061PAK-1_720x720.png",
     price: '€4.00',
     description: '6 x 30 CL',
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "10",
@@ -86,6 +97,7 @@ const productsAlcohol = [
     price: '€9.75',
     description: 'Ponche Crema Curacao',
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "11",
@@ -94,6 +106,7 @@ const productsAlcohol = [
     price: '€8.95',
     description: 'Pistachio Curacao',
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "12",
@@ -102,6 +115,7 @@ const productsAlcohol = [
     price: '€6.95',
     description: 'Moët & Chandon - Brut Impérial in giftbox',
     inCart: 0,
+    totalPrice: "€0",
   },
 ];
 
@@ -155,6 +169,10 @@ const FoodInfo = (props) => {
     Alert.alert("please call Urban Lounge Coffeeshop for a large order")
     count = 50;
   }
+
+  var itemPrice = props.foodList.price.replace("€", "");
+  var totalItemPrice = itemPrice * count;
+  props.foodList.totalPrice = "€" + totalItemPrice;
   return (
     <View style={{ width: 240, justifyContent: 'space-evenly', }}>
 

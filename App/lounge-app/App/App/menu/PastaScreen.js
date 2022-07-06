@@ -18,6 +18,7 @@ const productsPasta = [
     description: 'Butter, Shrimp, Fettuccine, Heavy cream, Parmesan cheese.',
     time: "29 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "2",
@@ -27,6 +28,7 @@ const productsPasta = [
     description: 'onion, anchovies, white wine, bigoli pasta, parsley, black pepper.',
     time: "15 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "3",
@@ -36,6 +38,7 @@ const productsPasta = [
     description: 'Tortellini, romatomatoes, garlic, tomatoes, Parmigiano Reggiano, fresh basil, fennel bulb, fresh spinach.',
     time: "20 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "4",
@@ -45,6 +48,7 @@ const productsPasta = [
     description: 'Butter, garlic, mushrooms, heavy whipping cream, fettuccine, parmesan cheese, pasta water, salt, black pepper, parsley.',
     time: "19 min",
     inCart: 0,
+    totalPrice: "€0",
   },
 
   {
@@ -55,6 +59,7 @@ const productsPasta = [
     description: 'sweet Italian sausage, ground beef, onion, garlic, tomato paste, tomato sauce, white sugar, dried basil leaves, fennel seeds, Italian seasoning, salt, black pepper, parsley',
     time: "24 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "6",
@@ -64,6 +69,7 @@ const productsPasta = [
     description: 'spaghetti, chicken, parsley, garlic, black pepper, onion, bellpepper.',
     time: "22 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "7",
@@ -73,6 +79,7 @@ const productsPasta = [
     description: 'butter, milk, macaroni, bacon, salt.',
     time: "26 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "8",
@@ -82,6 +89,7 @@ const productsPasta = [
     description: 'pasta calamarata, calamari, cherry tomatoes, white wine, parsley, garlic, chili, salt.',
     time: "14 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "9",
@@ -91,6 +99,7 @@ const productsPasta = [
     description: 'carrot, egg noodles, chicken, capsicum, garlic, green onion.',
     time: "11 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "10",
@@ -100,6 +109,7 @@ const productsPasta = [
     description: 'Chicken, Bell peppers, Pasta, Green onions, Jerk seasoning, Heavy cream, parmesan cheese, Garlic.',
     time: "14 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "11",
@@ -109,6 +119,7 @@ const productsPasta = [
     description: 'Olive Oil, Onion, butter, linguine, pepper, salt, sugar, lemon, fresh basil, fresh parsley, tomatoes.',
     time: "29 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "12",
@@ -118,6 +129,7 @@ const productsPasta = [
     description: 'With fresh cockles from the Wadden Sea.',
     time: "15 min",
     inCart: 0,
+    totalPrice: "€0",
   },
 ];
 
@@ -173,6 +185,10 @@ const FoodInfo = (props) => {
     Alert.alert("please call Urban Lounge Coffeeshop for a large order")
     count = 50;
   }
+
+  var itemPrice = props.foodList.price.replace("€", "");
+  var totalItemPrice = itemPrice * count;
+  props.foodList.totalPrice = "€" + totalItemPrice;
   return (
     <View style={{ width: 240, justifyContent: 'space-evenly', }}>
 

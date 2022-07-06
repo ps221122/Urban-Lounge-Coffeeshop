@@ -17,6 +17,7 @@ const productsVegan = [
     description: 'Tomato sauce, mozzarella, mushrooms, bell pepper, onion, fresh spinach and fresh tomato.',
     time: "15 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "2",
@@ -26,6 +27,7 @@ const productsVegan = [
     description: 'Tomato sauce, fresh spinach, fresh tomato, pizza herbs, pesto & extra mozzarella.',
     time: "12 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "3",
@@ -35,6 +37,7 @@ const productsVegan = [
     description: 'Tomato sauce, mozzarella, vegetarian chicken, fresh tomato, onion and a pesto swirl.',
     time: "09 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "4",
@@ -44,6 +47,7 @@ const productsVegan = [
     description: 'Tomato sauce, vegan cheese, mushrooms, fresh tomato, bell pepper, spinach and onion.',
     time: "19 min",
     inCart: 0,
+    totalPrice: "€0",
   },
 
   {
@@ -54,6 +58,7 @@ const productsVegan = [
     description: 'Tomato sauce, vegan cheese, extra vegan cheese & pizza herbs',
     time: "26 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "6",
@@ -63,6 +68,7 @@ const productsVegan = [
     description: 'Tomato sauce, vegan cheese, mushrooms & pizza herbs.',
     time: "11 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "7",
@@ -72,6 +78,7 @@ const productsVegan = [
     description: 'Tomato sauce, extra mozzarella and a gluten-free base (20 cm).',
     time: "17 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "8",
@@ -87,6 +94,7 @@ const productsVegan = [
     description: 'Tomato sauce, vegan cheese, mushroom, truffle tapenade, parsley and garlic on the rim.',
     time: "10 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "10",
@@ -96,6 +104,7 @@ const productsVegan = [
     description: 'Tomato sauce, red onion, vegan garlic swirl, vegan cheese, vegan chicken shoarma with garlic oil on the rim.',
     time: "28 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "11",
@@ -105,6 +114,7 @@ const productsVegan = [
     description: 'Tomato sauce, tuna, onion & extra mozzarella.',
     time: "15 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "12",
@@ -114,6 +124,7 @@ const productsVegan = [
     description: 'BBQ sauce, mozzarella, red onion, bell pepper, chicken, bacon (100% chicken) swirl of bbq sauce and garlic oil on the rim.',
     time: "13 min",
     inCart: 0,
+    totalPrice: "€0",
   },
 
 ];
@@ -169,6 +180,10 @@ const FoodInfo = (props) => {
     Alert.alert("please call Urban Lounge Coffeeshop for a large order")
     count = 50;
   }
+
+  var itemPrice = props.foodList.price.replace("€", "");
+  var totalItemPrice = itemPrice * count;
+  props.foodList.totalPrice = "€" + totalItemPrice;
   return (
     <View style={{ width: 240, justifyContent: 'space-evenly', }}>
 

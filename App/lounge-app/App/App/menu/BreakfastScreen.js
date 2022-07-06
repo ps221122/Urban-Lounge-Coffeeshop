@@ -18,7 +18,7 @@ const productsOntbijt = [
         description: 'The Caribbean flavors of these coconut pancakes with fried pineapple in a sauce of brown sugar, cinnamon and rum.',
         time: "15 min",
         inCart: 0,
-        totalPrice: "",
+        totalPrice: "€0",
     },
     {
         productvalue: "2",
@@ -186,17 +186,9 @@ const FoodInfo = (props) => {
         count = 50;
     }
 
-
-
-    // let p = items.map((item) => Number(item.price.replace("€", "")))
-
     var itemPrice = props.foodList.price.replace("€", "");
     var totalItemPrice = itemPrice * count;
-
     props.foodList.totalPrice = "€" + totalItemPrice;
-
-    // var totalPrice;
-    // console.log(totalPrice);
     return (
         <View style={{ width: 245, justifyContent: 'space-evenly', }}>
             <View>

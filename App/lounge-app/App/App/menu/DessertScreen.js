@@ -17,6 +17,7 @@ const productDesserts = [
     description: 'Stroopwafels feature two thin, crispy waffle- like wafers surrounding a creamy, caramel - flavored center made from molasses, brown sugar, butter, and cinnamon.',
     time: "05 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "2",
@@ -26,6 +27,7 @@ const productDesserts = [
     description: 'The crust is warm and flaky, and the filling is chunky, sweet, and spicy. But you would not stop there!',
     time: "03 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "3",
@@ -35,6 +37,7 @@ const productDesserts = [
     description: 'Its hard to decide what to love more about these warm, deep-fried delicacies: their incredible taste or how fun it is to say their name.',
     time: "06 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "4",
@@ -44,6 +47,7 @@ const productDesserts = [
     description: 'Bulla cake has a round and flat shape, and it is made with flour, molasses, and baking powder. It can be either light- or dark-colored and is often spiced with ginger or nutmeg.',
     time: "26 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "5",
@@ -53,6 +57,7 @@ const productDesserts = [
     description: 'Sweet potato pudding is a favorite Sunday dessert throughout Jamaica, consisting of sweet potatoes, flour, coconut milk, dried fruits, and flavorings such as vanilla, nutmeg, sugar, and salt.',
     time: "29 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "6",
@@ -62,6 +67,7 @@ const productDesserts = [
     description: 'Bun and Cheese comes packaged as a traditional loaf, and is most commonly eaten sandwich-style, by cutting individual slices and adding slices of cheese in between, hence the “Bun and Cheese.(ONLY Available: during easter).',
     time: "08 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "7",
@@ -71,6 +77,7 @@ const productDesserts = [
     description: 'Gecondenseerde melk, melk, bosvruchten, suiker, essence',
     time: "08 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "8",
@@ -80,6 +87,7 @@ const productDesserts = [
     description: 'semi-skimmed milk, water, white sugar, vanilla aroma, peanut butter',
     time: "04 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "9",
@@ -89,6 +97,7 @@ const productDesserts = [
     description: '1 pint of Caramel Pecan Ice-cream',
     time: "03 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "10",
@@ -98,6 +107,7 @@ const productDesserts = [
     description: '4 diffrent flavours: Vanilla, Tamarinda, Strawberry, Peanut',
     time: "04 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "11",
@@ -107,6 +117,7 @@ const productDesserts = [
     description: 'Arepa di pampuna are Antillean pumpkin pancakes.',
     time: "10 min",
     inCart: 0,
+    totalPrice: "€0",
   },
   {
     productvalue: "12",
@@ -116,6 +127,7 @@ const productDesserts = [
     description: 'Making delicious Pandushi Kokolishi for a delicious and sweet dessert',
     time: "18 min",
     inCart: 0,
+    totalPrice: "€0",
   },
 ]
 
@@ -170,6 +182,10 @@ const FoodInfo = (props) => {
     Alert.alert("please call Urban Lounge Coffeeshop for a large order")
     count = 50;
   }
+
+  var itemPrice = props.foodList.price.replace("€", "");
+  var totalItemPrice = itemPrice * count;
+  props.foodList.totalPrice = "€" + totalItemPrice;
   return (
     <View style={{ width: 240, justifyContent: 'space-evenly', }}>
 
