@@ -18,7 +18,7 @@ const productsOntbijt = [
         description: 'The Caribbean flavors of these coconut pancakes with fried pineapple in a sauce of brown sugar, cinnamon and rum.',
         time: "15 min",
         inCart: 0,
-        totalPrice: 0,
+        totalPrice: "",
     },
     {
         productvalue: "2",
@@ -28,6 +28,7 @@ const productsOntbijt = [
         description: 'French Toast I really think is pure comfort food.',
         time: "14 min",
         inCart: 0,
+        totalPrice: "€0",
     },
     {
         productvalue: "3",
@@ -37,6 +38,7 @@ const productsOntbijt = [
         description: 'Elvis Waffles! Delicious soft waffles topped with banana, peanut butter and caramelized bacon.',
         time: "18 min",
         inCart: 0,
+        totalPrice: "€0",
     },
     {
         productvalue: "4",
@@ -46,6 +48,7 @@ const productsOntbijt = [
         description: 'An old favorite among Jamaicans, cornmeal porridge is a go-to meal if you want a hearty, healthy start to the day..',
         time: "25 min",
         inCart: 0,
+        totalPrice: "€0",
     },
     {
         productvalue: "5",
@@ -55,6 +58,7 @@ const productsOntbijt = [
         description: 'Saltfish and ackee is the national dish of Jamaica and is traditionally served with these dumplings.',
         time: "23 min",
         inCart: 0,
+        totalPrice: "€0",
     },
     {
         productvalue: "6",
@@ -64,6 +68,7 @@ const productsOntbijt = [
         description: 'Fried eggs and plantain with butter toasted bread with chocolate & or coffee',
         time: "16 min",
         inCart: 0,
+        totalPrice: "€0",
     },
     {
         productvalue: "7",
@@ -73,6 +78,7 @@ const productsOntbijt = [
         description: 'Pastries,Eggs,Bacon,Yogurt,Jams and spreads,Fruit',
         time: "09 min",
         inCart: 0,
+        totalPrice: "€0",
     },
     {
         productvalue: "8",
@@ -82,6 +88,7 @@ const productsOntbijt = [
         description: 'Spice up your morning with bell pepper, onions, fluffy scrambled eggs, sausage and melty cheese, all wrapped in a soft tortilla.',
         time: "10 min",
         inCart: 0,
+        totalPrice: "€0",
     },
     {
         productvalue: "9",
@@ -91,6 +98,7 @@ const productsOntbijt = [
         description: 'But when its cooked, its not only an excellent choice - its also very tasty.And this particular recipe is particularly good.',
         time: "29 min",
         inCart: 0,
+        totalPrice: "€0",
     },
     {
         productvalue: "10",
@@ -100,6 +108,7 @@ const productsOntbijt = [
         description: 'Delicious scrambled eggs, bread and sausage muffin. You can also ask for it with hash browns and a nourishing orange juice or an aromatic coffee.',
         time: "28 min",
         inCart: 0,
+        totalPrice: "€0",
     },
     {
         productvalue: "11",
@@ -109,6 +118,7 @@ const productsOntbijt = [
         description: 'Breakfast pizza with avocado and fried egg with hot coffee or chocolate milk',
         time: "08 min",
         inCart: 0,
+        totalPrice: "€0",
     },
     {
         productvalue: "12",
@@ -118,6 +128,7 @@ const productsOntbijt = [
         description: 'Hallaca is a traditional dish from Venezuela that looks like a tamal but differs in taste, texture, ingredients and cultural significance',
         time: "25 min",
         inCart: 0,
+        totalPrice: "€0",
     },
 ];
 
@@ -137,8 +148,8 @@ const BreakfastScreen = () => {
     const isFoodInCart = (foodList, cartItems) =>
         Boolean(cartItems.find((item) => item.name === foodList.name));
 
-    
-    
+
+
     return (
         <ScrollView>
             {productsOntbijt.map((foodList, index) => (
@@ -174,6 +185,18 @@ const FoodInfo = (props) => {
         Alert.alert("please call Urban Lounge Coffeeshop for a large order")
         count = 50;
     }
+
+
+
+    // let p = items.map((item) => Number(item.price.replace("€", "")))
+
+    var itemPrice = props.foodList.price.replace("€", "");
+    var totalItemPrice = itemPrice * count;
+
+    props.foodList.totalPrice = "€" + totalItemPrice;
+
+    // var totalPrice;
+    // console.log(totalPrice);
     return (
         <View style={{ width: 245, justifyContent: 'space-evenly', }}>
             <View>

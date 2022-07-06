@@ -13,37 +13,25 @@ const ViewCart = ({ navigation, route }) => {
     const { items } = useSelector(
         (state) => state.cartReducer.selectedItems
     );
-    var InCart = items
-        .map((item) => Number(item.inCart));
-    
-    var totalItemPrice = items.map((item) => Number(item.totalPrice));
 
-    var productPrice = items
-        .map((item) => Number(item.price.replace("€", "")))
+    const total = items
+        .map((item) => Number(item.totalPrice.replace("€", "")))
+        .reduce((prev, curr) => prev + curr, 0);
 
-    var subTotal = productPrice * InCart;
-
-    subTotal.toFixed(2);
-
-    totalItemPrice = subTotal;
-
-    // console.log(totalItemPrice);
+    const totalUSD = total.toLocaleString("nl", {
+        style: "currency",
+        currency: "EUR",
+    });
 
 
 
-
-
-
-
-    
     const addOrderToFirebase = () => {
         showDate();
-        
-
         // addItem([
         //      date,
         //     items,
         // ]);
+        setModalVisible(false);
     };
 
 
@@ -85,6 +73,7 @@ const ViewCart = ({ navigation, route }) => {
                         </View>
                         <Divider />
                         <ScrollView>
+
                             {items.map((item, index) => (
                                 <OrderItem key={index} item={item} />
                             ))}
@@ -92,13 +81,13 @@ const ViewCart = ({ navigation, route }) => {
                         <View style={styles.subtotalContainer}>
                             <Text style={styles.subtotalText}>Subtotal</Text>
                             <Divider />
-                            <Text></Text>
+                            <Text>{totalUSD}</Text>
                         </View>
                         <View style={styles.modalContainerInner}>
                             <TouchableOpacity onPress={() => { addOrderToFirebase(); }} style={styles.touchableModalView}>
                                 <Text style={styles.CheckoutModalButton}>CheckOut</Text>
                                 <Text style={styles.innerModalText}>
-
+                                    {total ? totalUSD : ""}
                                 </Text>
                             </TouchableOpacity>
                         </View>
@@ -116,12 +105,12 @@ const ViewCart = ({ navigation, route }) => {
                 transparent={true}
                 onRequestClose={() => setModalVisible(false)}>
                 {checkoutModalContent()}</Modal>
-            {subTotal ? (
+            {total ? (
                 <View style={styles.outerView}>
                     <View style={styles.outerInnerView}>
                         <TouchableOpacity style={styles.touchableView} onPress={() => setModalVisible(true)}>
                             <Text style={styles.textFont}>ViewCart</Text>
-                            <Text style={styles.textPriceFont}>{}</Text>
+                            <Text style={styles.textPriceFont}>{totalUSD}</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
