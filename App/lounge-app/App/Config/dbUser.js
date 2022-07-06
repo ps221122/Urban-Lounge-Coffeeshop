@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import * as  firebase from 'firebase';
 
 const firebaseConfig = {
     apiKey: "AIzaSyDdQEse09ATeMT5tyfUeDieJV1y60aVo_E",
@@ -11,5 +11,13 @@ const firebaseConfig = {
     databaseURL: "https://fir-2-6d88b-default-rtdb.firebaseio.com/",
 };
 
-let app = firebase.initializeApp(firebaseConfig);
-export const db = app.database();
+let app;
+if (firebase.apps.length === 0) {
+    app = firebase.initializeApp(firebaseConfig);
+}
+else
+{
+    app = firebase.app()
+}
+const auth = firebase.auth()
+export { auth };

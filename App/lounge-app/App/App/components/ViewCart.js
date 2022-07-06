@@ -15,6 +15,8 @@ const ViewCart = ({ navigation, route }) => {
     );
     var InCart = items
         .map((item) => Number(item.inCart));
+    
+    var totalItemPrice = items.map((item) => Number(item.totalPrice));
 
     var productPrice = items
         .map((item) => Number(item.price.replace("€", "")))
@@ -23,15 +25,25 @@ const ViewCart = ({ navigation, route }) => {
 
     subTotal.toFixed(2);
 
+    totalItemPrice = subTotal;
 
+    // console.log(totalItemPrice);
+
+
+
+
+
+
+
+    
     const addOrderToFirebase = () => {
         showDate();
+        
 
-        addItem([
-            // date,
-            items,
-        ]);
-
+        // addItem([
+        //      date,
+        //     items,
+        // ]);
     };
 
 
@@ -109,7 +121,7 @@ const ViewCart = ({ navigation, route }) => {
                     <View style={styles.outerInnerView}>
                         <TouchableOpacity style={styles.touchableView} onPress={() => setModalVisible(true)}>
                             <Text style={styles.textFont}>ViewCart</Text>
-                            <Text style={styles.textPriceFont}></Text>
+                            <Text style={styles.textPriceFont}>{}</Text>
                         </TouchableOpacity>
                     </View>
                 </View>

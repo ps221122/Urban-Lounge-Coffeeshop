@@ -3,7 +3,7 @@ import { Button, StyleSheet, Text, TextInput, View, TouchableOpacity, ImageBackg
 import { NavigationContainer } from '@react-navigation/native';
 import { useState } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { auth } from '../../Config/db';
+import { auth } from '../../Config/dbUser';
 import { useEffect } from 'react';
 import { Input, Icon } from '@rneui/themed';
 import Divider from 'react-native-divider';
@@ -26,7 +26,7 @@ const SignUpScreen = ({ navigation }) => {
             })
             .catch(error => alert(error.message))
     }
-    return(
+    return (
         <ImageBackground style={styles.container} source={{ uri: "https://images.unsplash.com/photo-1543233604-3baca4d35513?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29mZmVlJTIwY3VwfGVufDB8fDB8fA%3D%3D&w=1000&q=80" }} resizeMode={'cover'}>
             <View style={styles.shadowProp}>
                 <View style={{ marginBottom: 25, }}>

@@ -3,7 +3,7 @@ import { Button, StyleSheet, Text, TextInput, View, TouchableOpacity, ImageBackg
 import { NavigationContainer } from '@react-navigation/native';
 import { useState } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { auth } from '../../Config/db';
+import { auth } from '../../Config/dbUser';
 import { useEffect } from 'react';
 import { Input, Icon } from '@rneui/themed';
 import Divider from 'react-native-divider';
