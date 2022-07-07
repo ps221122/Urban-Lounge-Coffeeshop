@@ -57,7 +57,7 @@ const TransportNavigation = () => {
     <NavigationContainer independent={true}>
       <Stack.Navigator initialRouteName='Home' screenOptions={screenOptions} >
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Delivery" component={Delivery} options={{ headerShown: true }} />
+        <Stack.Screen name="Delivery" component={Delivery}/>
         <Stack.Screen name="PickUp" component={PickUp} />
       </Stack.Navigator>
     </NavigationContainer>

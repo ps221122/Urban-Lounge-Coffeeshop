@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput } from 'react-native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import BlankScreen2 from '../BlankScreen2';
 import Divider from 'react-native-divider';
 import colors from '../../Config/colors';
 
@@ -8,21 +11,37 @@ import colors from '../../Config/colors';
 
 
 
-const Delivery = () => {
+const Delivery = ({ navigation }) => {
+  const [userName, setUserName] = useState("");
   const [userPostCode, setUserPostCode] = useState("");
   const [userStreetNum, setUserStreetNum] = useState("");
   const [userUnitNum, setUserUnitNum] = useState("");
 
-  let infoUser = [userPostCode, userStreetNum, userUnitNum];
+  let infoUser = [userName + "," + "→" + userPostCode + "," + "→" + userStreetNum + "," + "→" + userUnitNum];
 
   const infoUserFindLocation = () => {
     setTimeout(() => {
-      console.log("your user info is:" + infoUser + "");
-    }, 3500);
+      console.log("" + infoUser + "");
+      navigation.navigate("BlankScreen2", {
+        infoUser,
+      })
+    }, 2500);
   }
 
   return (
     <View style={styles.outercontainerForm}>
+
+      <View style={styles.innerFormViews}>
+        <Text style={styles.innerFormText}>Name:</Text>
+        <TextInput placeholder='Name...' style={styles.formTextInput} onChangeText={(userName) => setUserName(userName)}
+          value={userName} />
+      </View>
+
+
+
+
+
+
       <View style={styles.innerFormViews}>
         <Text style={styles.innerFormText}>Post Code:</Text>
         <TextInput placeholder='Post Code...' style={styles.formTextInput} onChangeText={(userPostCode) => setUserPostCode(userPostCode)}
@@ -56,11 +75,27 @@ const Delivery = () => {
   )
 }
 
+const Stack = createNativeStackNavigator();
+const screenOptions = {
+  headerShown: false,
+};
+
+function Transport() {
+  return (
+    <NavigationContainer independent={true}>
+      <Stack.Navigator initialRouteName="Home" screenOptions={screenOptions}>
+        <Stack.Screen name="Delivery" component={Delivery} />
+        <Stack.Screen name="BlankScreen2" component={BlankScreen2} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
+}
+
 
 const styles = StyleSheet.create({
   outercontainerForm: {
     marginHorizontal: 15,
-    marginVertical: 15,
+    marginVertical: 45,
   },
   innerFormViews: {
     marginHorizontal: 10,
@@ -96,4 +131,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default Delivery;
+export default Transport;

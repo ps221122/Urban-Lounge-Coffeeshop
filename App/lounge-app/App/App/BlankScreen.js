@@ -19,11 +19,6 @@ const BlankScreen = ({ route }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        // alignItems: 'flex-end',
-        // padding: 20,
-        // justifyContent: 'space-between',
-        // alignSelf:'center'
-        // alignContent: 'center'
     },
 })
 
