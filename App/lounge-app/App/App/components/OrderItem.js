@@ -7,7 +7,8 @@ const OrderItem = ({ item }) => {
     var { name, price, inCart } = item;
     var priceNum = parseFloat(price.substring(1));
     var productPriceItem = priceNum * inCart;
-    var subTotalPrice = "€" + productPriceItem;
+    var subTotalPrice = "€" + productPriceItem.toFixed(2);
+
     // console.log(subTotalPrice);
     return (
         <View style={styles.orderView}>

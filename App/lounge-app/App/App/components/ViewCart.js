@@ -2,9 +2,12 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { View, Text, TouchableOpacity, Modal, StyleSheet, ScrollView, AsyncStorage } from "react-native";
 import { useSelector } from "react-redux";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Divider } from '@rneui/themed';
 import { addItem } from '../../Service/ItemService';
 import OrderItem from "./OrderItem";
+import OrderCompleted from "../Payment/OrderCompleted";
 
 
 const ViewCart = ({ navigation, route }) => {
@@ -31,7 +34,8 @@ const ViewCart = ({ navigation, route }) => {
         //      date,
         //     items,
         // ]);
-        setModalVisible(false);
+        // setModalVisible(false);
+        navigation.navigate("OrderCompleted");
     };
 
 

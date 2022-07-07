@@ -189,6 +189,7 @@ const FoodInfo = (props) => {
 
   var itemPrice = props.foodList.price.replace("€", "");
   var totalItemPrice = itemPrice * count;
+  totalItemPrice.toFixed(2);
   props.foodList.totalPrice = "€" + totalItemPrice;
   return (
     <View style={{ width: 240, justifyContent: 'space-evenly', }}>
