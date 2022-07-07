@@ -13,13 +13,21 @@ const Delivery = () => {
   const [userStreetNum, setUserStreetNum] = useState("");
   const [userUnitNum, setUserUnitNum] = useState("");
 
+  let infoUser = [userPostCode, userStreetNum, userUnitNum];
+
+  const infoUserFindLocation = () => {
+    setTimeout(() => {
+      console.log("your user info is:" + infoUser + "");
+    }, 3500);
+  }
+
   return (
     <View style={styles.outercontainerForm}>
       <View style={styles.innerFormViews}>
         <Text style={styles.innerFormText}>Post Code:</Text>
         <TextInput placeholder='Post Code...' style={styles.formTextInput} onChangeText={(userPostCode) => setUserPostCode(userPostCode)}
           value={userPostCode} />
-        
+
       </View>
 
 
@@ -40,7 +48,7 @@ const Delivery = () => {
 
 
       <View style={styles.outerButtonFindView}>
-        <TouchableOpacity style={styles.outerButtonFind}>
+        <TouchableOpacity style={styles.outerButtonFind} onPress={() => infoUserFindLocation()}>
           <Text style={styles.innerButtonFindText}>Find Address</Text>
         </TouchableOpacity>
       </View>
@@ -87,9 +95,5 @@ const styles = StyleSheet.create({
     color: colors.secondary,
   },
 })
-
-
-
-
 
 export default Delivery;

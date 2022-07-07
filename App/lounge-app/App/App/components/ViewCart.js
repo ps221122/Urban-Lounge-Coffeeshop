@@ -2,16 +2,16 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { View, Text, TouchableOpacity, Modal, StyleSheet, ScrollView, AsyncStorage } from "react-native";
 import { useSelector } from "react-redux";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Divider } from '@rneui/themed';
 import { addItem } from '../../Service/ItemService';
 import OrderItem from "./OrderItem";
 import OrderCompleted from "../Payment/OrderCompleted";
+import LottieView from "lottie-react-native";
 
 
 const ViewCart = ({ navigation, route }) => {
     const [modalVisible, setModalVisible] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const { items } = useSelector(
         (state) => state.cartReducer.selectedItems
@@ -26,20 +26,23 @@ const ViewCart = ({ navigation, route }) => {
         currency: "EUR",
     });
 
-
-
     const addOrderToFirebase = () => {
+        setLoading(true);
         showDate();
         // addItem([
-        //      date,
+        //     date,
         //     items,
-        // ]);
-        // setModalVisible(false);
-        navigation.navigate("OrderCompleted");
+        // ])
+            setTimeout(() => {
+                setLoading(false);   
+            }, 2500);
+        
+        
+
     };
 
-
     const [date, setDateTime] = useState('');
+
     const showDate = () => {
 
         //Get Current Date
@@ -88,7 +91,10 @@ const ViewCart = ({ navigation, route }) => {
                             <Text>{totalUSD}</Text>
                         </View>
                         <View style={styles.modalContainerInner}>
-                            <TouchableOpacity onPress={() => { addOrderToFirebase(); }} style={styles.touchableModalView}>
+                            <TouchableOpacity onPress={() => {
+                                addOrderToFirebase();
+                                setModalVisible(false);
+                            }} style={styles.touchableModalView}>
                                 <Text style={styles.CheckoutModalButton}>CheckOut</Text>
                                 <Text style={styles.innerModalText}>
                                     {total ? totalUSD : ""}
@@ -100,7 +106,6 @@ const ViewCart = ({ navigation, route }) => {
             </>
         );
     };
-
 
     return (
         <>
@@ -118,10 +123,37 @@ const ViewCart = ({ navigation, route }) => {
                         </TouchableOpacity>
                     </View>
                 </View>
-            ) : (<></>)}
+            ) :
+                (<></>)}
+        
+            {loading ? (
+                <View
+                    style={{
+                        backgroundColor: "black",
+                        position: "absolute",
+                        opacity: 0.6,
+                        justifyContent: "center",
+                        alignItems: "center",
+                        height: "100%",
+                        width: "100%",
+                    }}
+                >
+                    <LottieView
+                        style={{ height: 200 }}
+                        source={require("../assets/animation/scanner.json")}
+                        autoPlay
+                        speed={3}
+                    />
+                </View>
+            ) : (
+                <></>
+            )}
         </>
-    )
+    );
 }
+
+
+
 
 
 const styles = StyleSheet.create({
