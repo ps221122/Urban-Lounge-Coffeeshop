@@ -2,12 +2,14 @@ import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
 const Header2 = ({ route }) => {
-    const infoArr = [route.params.infoUser];
+    const arr = [route.params.location];
+    JSON.stringify(arr);
+    console.log(arr);
     return (
         <SafeAreaView style={styles.mainContainer}>
             <View style={styles.headerLocation}>
                 <View style={{ flexDirection: 'row' }}>
-                    <Text style={styles.headerLocationText}>{infoArr}</Text>
+                    <Text style={styles.headerLocationText}>{arr}</Text>
                 </View>
             </View>
         </SafeAreaView>
@@ -24,7 +26,6 @@ const styles = StyleSheet.create({
     headerLocationText: {
         fontSize: 18,
         marginHorizontal: 15,
-        // letterSpacing:12,
         fontWeight: '500',
     },
 })

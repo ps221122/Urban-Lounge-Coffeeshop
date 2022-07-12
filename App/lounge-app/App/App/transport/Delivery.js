@@ -17,14 +17,14 @@ const Delivery = ({ navigation }) => {
   const [userStreetNum, setUserStreetNum] = useState("");
   const [userUnitNum, setUserUnitNum] = useState("");
 
-  let infoUser = [userName + "," + "→" + userPostCode + "," + "→" + userStreetNum + "," + "→" + userUnitNum];
+  let location = [userName + "," + "→" + userPostCode + "," + "→" + userStreetNum + "," + "→" + userUnitNum];
 
   const infoUserFindLocation = () => {
-      navigation.navigate("BlankScreen2", {
-        infoUser,
-      })
-    }
-;
+    navigation.navigate("BlankScreen2", {
+      location,
+    })
+  }
+    ;
 
   return (
     <View style={styles.outercontainerForm}>
@@ -33,7 +33,7 @@ const Delivery = ({ navigation }) => {
         <Text style={styles.innerFormText}>Name:</Text>
         <TextInput placeholder='Name...' style={styles.formTextInput} onChangeText={(userName) => setUserName(userName)}
           value={userName}
-      />
+        />
       </View>
 
       <View style={styles.innerFormViews}>
@@ -45,7 +45,7 @@ const Delivery = ({ navigation }) => {
 
 
       <View style={styles.innerFormViews}>
-        <Text style={styles.innerFormText}>Street Number:</Text>
+        <Text style={styles.innerFormText}>House Number:</Text>
         <TextInput placeholder='Street Number...' style={styles.formTextInput} onChangeText={(userStreetNum) => setUserStreetNum(userStreetNum)}
           value={userStreetNum} />
       </View>

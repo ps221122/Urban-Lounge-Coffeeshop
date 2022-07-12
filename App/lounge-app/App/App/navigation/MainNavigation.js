@@ -40,11 +40,11 @@ const TabMenu = ({ route }) => {
       }}
       initialRouteName="MenuScreen">
 
-      <Tab.Screen name='Menu' component={MenuScreen} initialParams={{arr,}}
+      <Tab.Screen name='Menu' component={MenuScreen} initialParams={{ arr, }}
         options={{
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name='silverware-fork-knife' color={color} size={30} />),
-        }}/>
+        }} />
 
       <Tab.Screen name='weed' component={ProductScreen}
         options={{

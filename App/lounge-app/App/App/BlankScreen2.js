@@ -9,7 +9,7 @@ const BlankScreen2 = ({route}) => {
   return (
     <View style={styles.container}>
       <Header2 route={route} />
-      <MainNavigation />
+      <MainNavigation route={route} />
     </View>
   )
 }

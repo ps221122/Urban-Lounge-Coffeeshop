@@ -36,15 +36,14 @@ const ViewCart = ({ navigation, props, route }) => {
 
 
     const addOrderToFirebase = () => {
-        showDate();
         setLoading(true);
-        // addItem(
-        //     [
-        //         date,
-        //         arr,
-        //         items,
-        //     ]
-        // )
+        addItem(
+            [
+                date,
+                arr,
+                items,
+            ]
+        )
         setTimeout(() => {
             setLoading(false);
         }, 2500);
@@ -107,6 +106,7 @@ const ViewCart = ({ navigation, props, route }) => {
                             <TouchableOpacity onPress={() => {
                                 addOrderToFirebase();
                                 setModalVisible(false);
+                                showDate();
                             }} style={styles.touchableModalView}>
                                 <Text style={styles.CheckoutModalButton}>CheckOut</Text>
                                 <Text style={styles.innerModalText}>
