@@ -46,6 +46,8 @@ npm install @rneui/base@edge @rneui/themed@edge
 
 expo doctor --fix-dependencies
 
+npm install -g expo-cli
+
 npm i @react-native-picker/picker
 
 npm i expo-image-picker

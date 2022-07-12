@@ -1,5 +1,5 @@
 let defaultState = {
-    selectedItems: { items: [], foodName: "" },
+    selectedItems: { items: [], foodName: "", },
 };
 
 let cartReducer = (state = defaultState, action) => {

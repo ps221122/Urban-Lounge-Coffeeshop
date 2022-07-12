@@ -20,13 +20,11 @@ const Delivery = ({ navigation }) => {
   let infoUser = [userName + "," + "→" + userPostCode + "," + "→" + userStreetNum + "," + "→" + userUnitNum];
 
   const infoUserFindLocation = () => {
-    setTimeout(() => {
-      console.log("" + infoUser + "");
       navigation.navigate("BlankScreen2", {
         infoUser,
       })
-    }, 2500);
-  }
+    }
+;
 
   return (
     <View style={styles.outercontainerForm}>
@@ -34,13 +32,9 @@ const Delivery = ({ navigation }) => {
       <View style={styles.innerFormViews}>
         <Text style={styles.innerFormText}>Name:</Text>
         <TextInput placeholder='Name...' style={styles.formTextInput} onChangeText={(userName) => setUserName(userName)}
-          value={userName} />
+          value={userName}
+      />
       </View>
-
-
-
-
-
 
       <View style={styles.innerFormViews}>
         <Text style={styles.innerFormText}>Post Code:</Text>

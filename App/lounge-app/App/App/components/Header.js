@@ -1,7 +1,5 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, Text, View, StatusBar, Platform } from 'react-native';
-import { Divider } from 'react-native-flex-layout';
-import { AsyncStorage } from 'react-native';
 
 
 const Header = ({ route }) => {

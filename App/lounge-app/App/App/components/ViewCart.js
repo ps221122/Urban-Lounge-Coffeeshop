@@ -5,11 +5,16 @@ import { useSelector } from "react-redux";
 import { Divider } from '@rneui/themed';
 import { addItem } from '../../Service/ItemService';
 import OrderItem from "./OrderItem";
-import OrderCompleted from "../Payment/OrderCompleted";
 import LottieView from "lottie-react-native";
+import CartScreen from "../Payment/CartScreen";
 
 
-const ViewCart = ({ navigation, route }) => {
+
+
+const ViewCart = ({ navigation, props, route }) => {
+    const arr = [route.params.arr];
+    JSON.stringify(arr);
+    // console.log(arr);
     const [modalVisible, setModalVisible] = useState(false);
     const [loading, setLoading] = useState(false);
 
@@ -26,25 +31,29 @@ const ViewCart = ({ navigation, route }) => {
         currency: "EUR",
     });
 
-    const addOrderToFirebase = () => {
-        setLoading(true);
-        showDate();
-        // addItem([
-        //     date,
-        //     items,
-        // ])
-            setTimeout(() => {
-                setLoading(false);   
-            }, 2500);
-        
-        
 
+
+
+
+    const addOrderToFirebase = () => {
+        showDate();
+        setLoading(true);
+        // addItem(
+        //     [
+        //         date,
+        //         arr,
+        //         items,
+        //     ]
+        // )
+        setTimeout(() => {
+            setLoading(false);
+        }, 2500);
+        navigation.navigate("CartScreen");
     };
 
     const [date, setDateTime] = useState('');
 
     const showDate = () => {
-
         //Get Current Date
         var date = new Date().getDate();
 
@@ -68,6 +77,10 @@ const ViewCart = ({ navigation, route }) => {
         setDateTime(finalObject);
 
     }
+
+
+
+
 
     const checkoutModalContent = () => {
         return (
@@ -125,7 +138,7 @@ const ViewCart = ({ navigation, route }) => {
                 </View>
             ) :
                 (<></>)}
-        
+
             {loading ? (
                 <View
                     style={{
