@@ -14,7 +14,7 @@ import CartScreen from "../Payment/CartScreen";
 const ViewCart = ({ navigation, props, route }) => {
     const arr = [route.params.arr];
     JSON.stringify(arr);
-    // console.log(arr);
+
     const [modalVisible, setModalVisible] = useState(false);
     const [loading, setLoading] = useState(false);
 
@@ -32,26 +32,33 @@ const ViewCart = ({ navigation, props, route }) => {
     });
 
 
-
+    const userOrderItemsInfo = [items, date, arr];
 
 
     const addOrderToFirebase = () => {
-        setLoading(true);
-        addItem(
-            [
-                date,
-                arr,
-                items,
-            ]
-        )
-        setTimeout(() => {
-            setLoading(false);
-        }, 2500);
-        navigation.navigate("CartScreen");
+       
+        
+
+
+        // console.log(userOrderItemsInfo);
+
+        // setLoading(true);
+        // addItem(
+        //     [
+        //         date,
+        //         arr,
+        //         items,
+        //     ]
+        // )
+
+        // setTimeout(() => {
+        //     setLoading(false);
+        // }, 2500);
+
     };
 
-    const [date, setDateTime] = useState('');
 
+    const [date, setDateTime] = useState('');
     const showDate = () => {
         //Get Current Date
         var date = new Date().getDate();
@@ -122,7 +129,7 @@ const ViewCart = ({ navigation, props, route }) => {
 
     return (
         <>
-            <Modal animationType='fade'
+            <Modal animationType='slide'
                 visible={modalVisible}
                 transparent={true}
                 onRequestClose={() => setModalVisible(false)}>
@@ -166,9 +173,6 @@ const ViewCart = ({ navigation, props, route }) => {
 }
 
 
-
-
-
 const styles = StyleSheet.create({
     outerView: {
         flex: 1,
@@ -197,7 +201,7 @@ const styles = StyleSheet.create({
     },
     textFont: {
         color: 'white',
-        fontSize: 20,
+        fontSize: 18,
         marginRight: 20,
     },
     textPriceFont: {
@@ -208,7 +212,7 @@ const styles = StyleSheet.create({
     modalContainer: {
         flex: 1,
         justifyContent: "flex-end",
-        backgroundColor: "rgba(0,0,0,0.7)",
+        backgroundColor: "rgba(0,0,0,0.9)",
     },
 
     modalCheckoutContainer: {

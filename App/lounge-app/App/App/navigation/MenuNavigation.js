@@ -40,36 +40,43 @@ const MenuNav = () => {
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name='coffee' color={color} size={25} />),
                 }} />
+        
             <Tab.Screen name='pizza' component={PizzaScreen} options={{
                 tabBarLabel: "Pizza",
                 tabBarIcon: ({ color }) => (
                     <MaterialCommunityIcons name='pizza' color={color} size={25} />),
             }} />
+
             <Tab.Screen name='VeganScreen' component={VeganScreen} options={{
                 tabBarLabel: "Vegan",
                 tabBarIcon: ({ color }) => (
                     <MaterialCommunityIcons name='leaf' color={color} size={25} />),
             }} />
+
             <Tab.Screen name='PastaScreen' component={PastaScreen} options={{
                 tabBarLabel: "Pasta",
                 tabBarIcon: ({ color }) => (
                     <MaterialCommunityIcons name='pasta' color={color} size={25} />),
             }} />
+
             <Tab.Screen name='BeverageScreen' component={BeverageScreen} options={{
                 tabBarLabel: "Drinks",
                 tabBarIcon: ({ color }) => (
                     <MaterialCommunityIcons name='beer' color={color} size={25} />),
             }} />
+
             <Tab.Screen name='AlcoholScreen' component={AlcoholScreen} options={{
                 tabBarLabel: "Alcohol",
                 tabBarIcon: ({ color }) => (
                     <MaterialCommunityIcons name='glass-mug-variant' color={color} size={25} />),
             }} />
+
             <Tab.Screen name='DinnerScreen' component={DinnerScreen} options={{
                 tabBarLabel: "Dinner",
                 tabBarIcon: ({ color }) => (
                     <MaterialCommunityIcons name='food-drumstick' color={color} size={25} />),
             }} />
+            
             <Tab.Screen name='DessertScreen' component={DessertScreen} options={{
                 tabBarLabel: "Dessert",
                 tabBarIcon: ({ color }) => (

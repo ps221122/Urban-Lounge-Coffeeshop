@@ -15,6 +15,7 @@ const Tab = createBottomTabNavigator();
 
 
 const TabMenu = ({ route }) => {
+  // const info = [];
   const arr = [route.params.location];
   JSON.stringify(arr);
   // console.log(arr);

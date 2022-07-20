@@ -19,10 +19,19 @@ const Delivery = ({ navigation }) => {
 
   let location = [userName + "," + "→" + userPostCode + "," + "→" + userStreetNum + "," + "→" + userUnitNum];
 
+  
+
   const infoUserFindLocation = () => {
-    navigation.navigate("BlankScreen2", {
-      location,
-    })
+    if (userName.trim().length !== 0 || userPostCode.trim().length !== 0) {
+      navigation.navigate("BlankScreen2", {
+        location,
+      })
+    }
+    else
+    {
+      return;
+      
+    }
   }
     ;
 

@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Button, StyleSheet, Text, TextInput, View, TouchableOpacity, ImageBackground } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { StyleSheet, Text, TextInput, View, TouchableOpacity, ImageBackground } from 'react-native';
 import { useState } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
 import { auth } from '../../Config/dbUser';
 import { useEffect } from 'react';
 import { Input, Icon } from '@rneui/themed';

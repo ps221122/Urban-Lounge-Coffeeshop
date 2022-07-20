@@ -3,11 +3,11 @@ import { View, Platform, StyleSheet, StatusBar, Image, SafeAreaView, Text } from
 import SearchTab from '../components/SearchTab';
 import ViewCart from '../components/ViewCart';
 import MenuNavigation from '../navigation/MenuNavigation';
+import CartScreen from '../Payment/CartScreen';
 
 const MenuScreen = ({ route, navigation }) => {
   const array = [route.params.arr];
   JSON.stringify(array);
-  // console.log(array);
   return (
     <View style={{ flex: 1, }}>
       <SearchTab />
