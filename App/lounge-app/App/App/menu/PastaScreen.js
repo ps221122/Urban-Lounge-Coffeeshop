@@ -153,11 +153,15 @@ const PastaScreen = () => {
   return (
     <ScrollView showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
       {productsPasta.map((foodList, index) => (
-        <TouchableOpacity key={index}>
+        <TouchableOpacity key={index} activeOpacity={1}>
           <View style={[styles.productItemView, styles.shadowProp]}>
             <BouncyCheckbox iconStyle={{
               borderColor: "lightgray",
-              borderRadius: 9,
+              borderRadius: 40,
+              width: 30,
+              height: 30,
+              marginLeft: 15,
+              marginBottom: 15,
             }}
               fillColor="green"
               unfillColor='#F8F8FF'

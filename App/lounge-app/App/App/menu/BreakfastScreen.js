@@ -157,7 +157,11 @@ const BreakfastScreen = () => {
                     <View style={[styles.productItemView, styles.shadowProp]}>
                         <BouncyCheckbox iconStyle={{
                             borderColor: "lightgray",
-                            borderRadius: 50,
+                            borderRadius: 40,
+                            width: 30,
+                            height: 30,
+                            marginLeft: 15,
+                            marginBottom:15,
                         }}
                             fillColor={colors.Green}
                             unfillColor={colors.secondary}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View, StatusBar, Platform } from 'react-native';
 
 const Header2 = ({ route }) => {
     const arr = [route.params.location];

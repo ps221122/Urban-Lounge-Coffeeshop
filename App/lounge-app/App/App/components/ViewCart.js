@@ -4,6 +4,7 @@ import { View, Text, TouchableOpacity, Modal, StyleSheet, ScrollView, AsyncStora
 import { useSelector } from "react-redux";
 import { Divider } from '@rneui/themed';
 import { addItem } from '../../Service/ItemService';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import OrderItem from "./OrderItem";
 import LottieView from "lottie-react-native";
 import CartScreen from "../Payment/CartScreen";
@@ -11,7 +12,7 @@ import CartScreen from "../Payment/CartScreen";
 
 
 
-const ViewCart = ({ navigation, props, route }) => {
+export default ViewCart = ({ navigation, props, route }) => {
     const arr = [route.params.arr];
     JSON.stringify(arr);
 
@@ -31,30 +32,18 @@ const ViewCart = ({ navigation, props, route }) => {
         currency: "EUR",
     });
 
-
-    const userOrderItemsInfo = [items, date, arr];
-
-
     const addOrderToFirebase = () => {
-       
-        
-
-
-        // console.log(userOrderItemsInfo);
-
-        // setLoading(true);
-        // addItem(
-        //     [
-        //         date,
-        //         arr,
-        //         items,
-        //     ]
-        // )
-
-        // setTimeout(() => {
-        //     setLoading(false);
-        // }, 2500);
-
+        setLoading(true);
+        addItem(
+            [
+                date,
+                arr,
+                items,
+            ]
+        )
+        setTimeout(() => {
+            setLoading(false);
+        }, 2500);
     };
 
 
@@ -84,10 +73,6 @@ const ViewCart = ({ navigation, props, route }) => {
 
     }
 
-
-
-
-
     const checkoutModalContent = () => {
         return (
             <>
@@ -111,11 +96,12 @@ const ViewCart = ({ navigation, props, route }) => {
                         </View>
                         <View style={styles.modalContainerInner}>
                             <TouchableOpacity onPress={() => {
+                                showDate();
                                 addOrderToFirebase();
                                 setModalVisible(false);
-                                showDate();
-                            }} style={styles.touchableModalView}>
-                                <Text style={styles.CheckoutModalButton}>CheckOut</Text>
+                                navigation.navigate("CartScreen", { items });
+                            }} style={styles.touchableModalView}>{route.params.userOrderItemsInfo}
+                                <Text style={styles.CheckoutModalButton}>Next</Text>
                                 <Text style={styles.innerModalText}>
                                     {total ? totalUSD : ""}
                                 </Text>
@@ -138,7 +124,7 @@ const ViewCart = ({ navigation, props, route }) => {
                 <View style={styles.outerView}>
                     <View style={styles.outerInnerView}>
                         <TouchableOpacity style={styles.touchableView} onPress={() => setModalVisible(true)}>
-                            <Text style={styles.textFont}>ViewCart</Text>
+                            <Text style={styles.textFont}>Basket</Text>
                             <Text style={styles.textPriceFont}>{totalUSD}</Text>
                         </TouchableOpacity>
                     </View>
@@ -161,8 +147,7 @@ const ViewCart = ({ navigation, props, route }) => {
                     <LottieView
                         style={{ height: 200 }}
                         source={require("../assets/animation/scanner.json")}
-                        autoPlay
-                        speed={3}
+
                     />
                 </View>
             ) : (
@@ -171,7 +156,6 @@ const ViewCart = ({ navigation, props, route }) => {
         </>
     );
 }
-
 
 const styles = StyleSheet.create({
     outerView: {
@@ -253,21 +237,21 @@ const styles = StyleSheet.create({
         marginTop: 20,
         backgroundColor: "black",
         alignItems: "flex-start",
-        padding: 15,
+        padding: 10,
         borderRadius: 30,
-        width: 250,
+        width: 225,
         position: "relative",
     },
     CheckoutModalButton: {
-        fontSize: 20,
+        fontSize: 25,
         color: 'white',
     },
     innerModalText: {
         position: "absolute",
         right: 20,
         color: "white",
-        fontSize: 20,
-        top: 17,
+        fontSize: 25,
+        top: 14,
     },
     modalHeader: {
         flexDirection: 'row',
@@ -278,4 +262,3 @@ const styles = StyleSheet.create({
 
 })
 
-export default ViewCart;
