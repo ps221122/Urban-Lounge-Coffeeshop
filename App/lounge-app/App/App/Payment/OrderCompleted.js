@@ -11,7 +11,7 @@ import OnRoute from "./OnRoute";
 
 
 
-const OrderCompleted = ({navigation}) => {
+const OrderCompleted = ({ navigation }) => {
     const { items } = useSelector(
         (state) => state.cartReducer.selectedItems
     );
@@ -27,16 +27,21 @@ const OrderCompleted = ({navigation}) => {
 
 
     const animation = useRef(null);
+    const animation2 = useRef(null);
     setTimeout(() => {
         animation.current?.play();
+        animation2.current?.play();
     }, 2000);
-   
+
     useEffect(() => {
         animation.current?.play();
+        animation2.current?.play();
     }, []);
 
 
-
+    setTimeout(() => {
+        navigation.navigate("OnRoute");
+    }, 9000);
 
 
 
@@ -54,8 +59,8 @@ const OrderCompleted = ({navigation}) => {
                     source={require("../assets/animation/check-mark.json")}
                     autoPlay={true}
                     loop={false}
-                    ref={animation}
-                    speed={0.5}
+                    ref={animation2}
+                    speed={0.2}
                 />
                 <Text style={{ fontSize: 20, fontWeight: "bold" }}>
                     Your order at Urban Lounge Coffeeshop has been placed with a total of : {totalUSD}

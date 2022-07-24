@@ -6,7 +6,6 @@ import MenuScreen from "../menu/MenuScreen";
 import CartScreen from '../Payment/CartScreen';
 import InfoScreen from '../Info/InfoScreen';
 import SignInScreen from '../Users/SignInScreen';
-import ProductScreen from '../product/ProductScreen';
 import colors from '../../Config/colors';
 
 
@@ -25,17 +24,8 @@ const TabMenu = ({ route }) => {
         tabBarActiveTintColor: colors.secondary,
         tabBarInactiveTintColor: 'black',
         tabBarStyle: {
-          borderTopWidth: 0,
-          backgroundColor: colors.BabyBlue,
-          elevation: 0,
-          borderRadius: 5,
-          shadowColor: '#171717',
-          shadowOffset: { width: -2, height: 5 },
-          shadowOpacity: 0.2,
-          shadowRadius: 3,
+          backgroundColor: "#669999",
         },
-
-
       }}
       initialRouteName="MenuScreen">
 
@@ -43,12 +33,6 @@ const TabMenu = ({ route }) => {
         options={{
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name='silverware-fork-knife' color={color} size={30} />),
-        }} />
-
-      <Tab.Screen name='weed' component={ProductScreen}
-        options={{
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name='balloon' color={color} size={30} />),
         }} />
 
       <Tab.Screen name='CheckOut' component={CartScreen}

@@ -104,5 +104,6 @@ export default {
     DarkGray: '#A9A9A9',
     DimGray: '#696969',
     GhostWhite: '#F8F8FF',
-    Gainsboro:'#DCDCDC',
+    Gainsboro: '#DCDCDC',
+    transparent: '00FFFFFF',
 }

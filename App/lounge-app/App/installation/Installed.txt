@@ -59,3 +59,5 @@ expo install expo-linear-gradient
 npm i react-native-curved-bottom-bar@1.1.3
 
 npm i lottie-react-native
+
+npm i react-native-exit-app

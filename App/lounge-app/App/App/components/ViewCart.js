@@ -41,6 +41,7 @@ export default ViewCart = ({ navigation, props, route }) => {
                 items,
             ]
         )
+        console.log(date);
         setTimeout(() => {
             setLoading(false);
         }, 2500);
@@ -99,7 +100,6 @@ export default ViewCart = ({ navigation, props, route }) => {
                                 showDate();
                                 addOrderToFirebase();
                                 setModalVisible(false);
-                                navigation.navigate("CartScreen", { items });
                             }} style={styles.touchableModalView}>{route.params.userOrderItemsInfo}
                                 <Text style={styles.CheckoutModalButton}>Next</Text>
                                 <Text style={styles.innerModalText}>
