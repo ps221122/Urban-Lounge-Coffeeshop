@@ -1,32 +1,32 @@
 @extends('layout.app')
 @section('title', 'Login')
 @section('content')
-    <div class="">
+    <div class="login-box ">
         <x-guest-layout>
             <x-auth-card>
                 <x-slot name="logo">
-                    {{-- <h1>Sign in or create an account</h1> --}}
+                    <h1 class="text-4xl font-semibold">Sign in or create an account</h1>
                 </x-slot>
 
                 <!-- Session Status -->
                 <x-auth-session-status class="mb-4" :status="session('status')" />
 
                 <!-- Validation Errors -->
-                <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                <x-auth-validation-errors class="mb-4 text-red-800 text-lg" :errors="$errors" />
 
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
 
                     <!-- Email Address -->
-                    <div class="user-box">
+                    <div class="user-box my-16">
                         <x-label for="email" :value="__('Email')" />
 
                         <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
-                            required autofocus />
+                            required autofocus autocomplete="off" />
                     </div>
 
                     <!-- Password -->
-                    <div class="mt-4 class="user-box"">
+                    <div class="mt-4 class="user-box my-16">
                         <x-label for="password" :value="__('Password')" />
 
                         <x-input id="password" class="block mt-1 w-full" type="password" name="password" required

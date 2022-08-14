@@ -45,3 +45,9 @@
 .div10 {
     grid-area: 5 / 2 / 6 / 3;
 }
+
+.login-box h1 {
+    margin: 0 0 30px;
+    padding: 0;
+    text-align: center;
+}
