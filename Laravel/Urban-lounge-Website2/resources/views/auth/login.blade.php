@@ -30,7 +30,7 @@
                         <x-label for="password" :value="__('Password')" />
 
                         <x-input id="password" class="block mt-1 w-full" type="password" name="password" required
-                            autocomplete="current-password" />
+                            autocomplete="new-password" />
                     </div>
 
                     <!-- Remember Me -->
@@ -57,6 +57,7 @@
                     </div>
                 </form>
             </x-auth-card>
+
         </x-guest-layout>
     </div>
 @endsection

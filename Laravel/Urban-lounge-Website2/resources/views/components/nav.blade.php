@@ -3,7 +3,7 @@
     <div class=" lg:mx-2 py-2 flex flex-wrap px-2 lg:space-x-8 items-center justify-between">
 
         <div class="inline-flex tracking-wider items-center">
-            <a href="#">
+            <a href="{{ route('index') }}">
                 <img src="./assets/logo.png" alt="logo-image" class="h-28" />
             </a>
             <h1 class="font-sans italic text-3xl font-medium">Urban Lounge Coffeeshop</h1>
@@ -38,10 +38,10 @@
                     <div class="lg:absolute bg-white right-0 rounded-md p-2"
                         :class="{ 'hidden': !dropdownOpen, 'flex flex-col': dropdownOpen }">
                         <ul class="space-y-2 lg:w-48">
-                            <li><a href="#"
+                            <li><a href="{{ route('breakfast') }}"
                                     class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-200 hover:text-black">Breakfast</a>
                             </li>
-                            <li><a href="#"
+                            <li><a href="{{ route('pizza') }}"
                                     class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-200 hover:text-black">Pizza</a>
                             </li>
                             <li><a href="#"
@@ -71,13 +71,15 @@
                 </li>
 
                 <li
-                    class="flex px-20 py-2 font-medium text-black hover:underline hover:uppercase rounded-md hover:font-bold text-lg">
-                    0.00</li>
+                    class="flex px-20 py-2 font-medium text-black hover:underline hover:uppercase rounded-md hover:font-bold text-lg cursor-pointer open-shopping-cart-box" onclick="myFunction()">
+                    <i class="bi bi-bag-fill px-2"></i>
+                    0.00
+                </li>
                 <li class="lg:ml-auto">
                     <div class="flex py-8 lg:mx-3  lg:mt-auto">
                         @auth
                             <a href="{{ url('/dashboard') }}"
-                                class="text-sm text-gray-700 dark:text-gray-500 underline">hi</a>
+                                class="text-sm text-gray-700 dark:text-gray-500 underline">{{ Auth::user()->name }}</a>
                         @else
                             <a href="{{ route('login') }}"
                                 class="mx-2 border-2 border-black px-5 rounded-full font-medium hover:bg-gray-300 active:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300">Log

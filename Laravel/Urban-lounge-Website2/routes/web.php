@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('screen.index');
 })->name('index');
 
+Route::get('/Breakfast', function () {
+    return view('menu.breakfast');
+})->name('breakfast');
+
+Route::get('/Pizza', function () {
+    return view('menu.pizza');
+})->name('pizza');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
