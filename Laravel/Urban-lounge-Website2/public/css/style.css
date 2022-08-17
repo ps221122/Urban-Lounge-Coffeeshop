@@ -24,7 +24,7 @@
     margin-left: -115px;
     padding-left: 30px;
     padding-right: 30px;
-    display: block;
+    display: none;
 }
 
 .modal__header {
@@ -33,6 +33,6 @@
 }
 
 .modal__footer {
-    border-top: 1px solid rgb(49, 48, 48);
-    border-radius: 10%;
+    border-top: 1px dotted rgb(131, 129, 129);
+    border-radius: 2%;
 }

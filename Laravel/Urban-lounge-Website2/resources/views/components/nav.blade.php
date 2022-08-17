@@ -70,10 +70,10 @@
                         href="">About us</a>
                 </li>
 
-                <li
-                    class="flex px-20 py-2 font-medium text-black hover:underline hover:uppercase rounded-md hover:font-bold text-lg cursor-pointer open-shopping-cart-box" onclick="myFunction()">
+                <li class="flex px-20 py-2 font-medium text-black hover:underline hover:uppercase rounded-md hover:font-bold text-lg cursor-pointer open-shopping-cart-box"
+                    onclick="myFunction()">
                     <i class="bi bi-bag-fill px-2"></i>
-                    0.00
+                    <p id="cart-total-price">0.00</p>
                 </li>
                 <li class="lg:ml-auto">
                     <div class="flex py-8 lg:mx-3  lg:mt-auto">

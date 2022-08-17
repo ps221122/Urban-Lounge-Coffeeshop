@@ -131,18 +131,22 @@
                         let items = "";
                         for (let i = 0; i < arg.length; i++) {
                             items += `<a class="lg:w-1/4 md:w-1/2 p-2 w-full card px-12">
-                    <div class="block relative h-48 rounded overflow-hidden">
+                    <div class="block relative h-48 rounded overflow-hidden store-image-box">
                         <img alt="ecommerce" class="object-cover object-center w-full h-full block"
                             src="${arg[i].tag}">
                     </div>
+
                     <div class="flex justify-between">
-                    <div class="mt-4">
+                    <div class="store-info-box mt-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Breakfast</h3>
                         <h2 class="text-gray-900 title-font text-base font-medium" id="items-name">${arg[i].name}</h2>
                         <p class="mt-1">${arg[i].price}</p>
+                        <p class="hidden">${arg[i].inCart}</p>
                     </div>
+
                      <div class="add-button-div rounded-full bg-red-500 w-16 h-10 flex justify-center mt-16 hover:bg-red-800">
-                            <button class="text-xl text-white add-button" id="add-button">add</button>
+                            <button class="text-xl text-white add-button" id="add-button"><i class="bi bi-bag-plus-fill"></i></button>
+                            
                         </div>
                         </div>
                 </a>`
