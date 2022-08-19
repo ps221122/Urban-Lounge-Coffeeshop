@@ -18,12 +18,33 @@ Route::get('/', function () {
 })->name('index');
 
 Route::get('/Breakfast', function () {
-    return view('menu.breakfast');
+    return view('menu.menuList');
 })->name('breakfast');
 
 Route::get('/Pizza', function () {
-    return view('menu.pizza');
+   return view('menu.menuList');
 })->name('pizza');
+
+
+Route::get('/Vegan', function () {
+   return view('menu.menuList');
+})->name('vegan');
+
+Route::get('/Pasta', function () {
+   return view('menu.menuList');
+})->name('pasta');
+
+Route::get('/Dinner', function () {
+   return view('menu.menuList');
+})->name('dinner');
+
+Route::get('/Beverage', function () {
+   return view('menu.menuList');
+})->name('beverage');
+
+Route::get('/Alcohol', function () {
+   return view('menu.menuList');
+})->name('alcohol');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

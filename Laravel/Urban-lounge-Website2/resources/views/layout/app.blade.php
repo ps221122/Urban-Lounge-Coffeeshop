@@ -2,9 +2,9 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 @include('components.head')
 
-<body>
+<body class="font-serif subpixel-antialiased">
     @include('components.nav')
-     @yield ('content')
+    @yield ('content')
     @include('components.footer')
 </body>
 

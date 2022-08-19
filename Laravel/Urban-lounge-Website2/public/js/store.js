@@ -24,13 +24,21 @@
 
                 const items = {};
 
+
                 items.img = fullImagePath;
                 items.name = productName;
                 items.price = productPrice;
                 items.incart = productIncart;
 
-                // console.log(items);
+                // localStorage.setItem("cartItemsStorageLocation", JSON.stringify(items));
 
+                // if (items != null) {
+                //     if (items[items.tag] == undefined) {
+                //         items.incart = 1;
+                //     }
+                // }
+
+                // console.log(cartItemsStorageLocation);
 
                 const cartItemsBox = document.createElement("div");
                 cartItemsBox.classList.add("flex", "justify-between", "mt-2");
@@ -61,6 +69,7 @@
                 // console.log("your product has been added");
 
                 showTotal();
+
             }
         })
     })

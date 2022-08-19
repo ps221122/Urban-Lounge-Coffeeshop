@@ -1,4 +1,4 @@
-<nav class="shadow-xl font-sans shadow-gray-300" x-data="{ navbarOpen: false }">
+<nav class="shadow-xl font-sans shadow-gray-300 sticky" x-data="{ navbarOpen: false }">
 
     <div class=" lg:mx-2 py-2 flex flex-wrap px-2 lg:space-x-8 items-center justify-between">
 
@@ -41,24 +41,24 @@
                             <li><a href="{{ route('breakfast') }}"
                                     class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-200 hover:text-black">Breakfast</a>
                             </li>
-                            <li><a href="{{ route('pizza') }}"
+                            <li><a href="{{ route('pizza') }}#pizza"
                                     class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-200 hover:text-black">Pizza</a>
                             </li>
-                            <li><a href="#"
+                            <li><a href="{{ route('vegan') }}#vegan"
                                     class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-200 hover:text-black">Vegan
                                     <ion-icon name="leaf-outline" class="text-green-700"></ion-icon>
                                 </a>
                             </li>
-                            <li><a href=""
+                            <li><a href="{{ route('pasta') }}#pasta"
                                     class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-200 hover:text-black">Pasta</a>
                             </li>
-                            <li><a href=""
+                            <li><a href="{{ route('dinner') }}#dinner"
                                     class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-200 hover:text-black">Dinner</a>
                             </li>
-                            <li><a href=""
+                            <li><a href="{{ route('beverage') }}#beverage"
                                     class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-200 hover:text-black">Beverage</a>
                             </li>
-                            <li><a href=""
+                            <li><a href="{{ route('alcohol') }}#alcohol"
                                     class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-200 hover:text-black">Alcohol</a>
                             </li>
                         </ul>
