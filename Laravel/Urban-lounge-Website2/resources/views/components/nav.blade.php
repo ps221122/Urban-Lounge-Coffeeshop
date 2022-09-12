@@ -1,12 +1,12 @@
 <nav class="shadow-xl font-sans shadow-gray-300 sticky" x-data="{ navbarOpen: false }">
 
-    <div class=" lg:mx-2 py-2 flex flex-wrap px-2 lg:space-x-8 items-center justify-between">
+    <div class=" lg:mx-1 py-2 flex flex-wrap px-2 lg:space-x-8 items-center justify-between">
 
         <div class="inline-flex tracking-wider items-center">
             <a href="{{ route('index') }}">
-                <img src="./assets/logo.png" alt="logo-image" class="h-28" />
+                <img src="./assets/logo.png" alt="logo-image" class="h-24" />
             </a>
-            <h1 class="font-sans italic text-3xl font-medium">Urban Lounge Coffeeshop</h1>
+            <h1 class="font-sans italic text-3xl font-medium">Urban Lounge!</h1>
         </div>
 
 
@@ -60,6 +60,9 @@
                             </li>
                             <li><a href="{{ route('alcohol') }}#alcohol"
                                     class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-200 hover:text-black">Alcohol</a>
+                            </li>
+                            <li><a href="{{ route('dessert') }}#alcohol"
+                                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-200 hover:text-black">Dessert</a>
                             </li>
                         </ul>
                     </div>

@@ -1,8 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap');
+
+body, nav {
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .login-box h1 {
     margin: 0 0 30px;
     padding: 0;
     text-align: center;
 }
+
+.bottle-title {
+    font-size: 26px;
+    font-family: var(--italic-font);
+    font-style: italic;
+    margin-bottom: 14px;
+    transition-delay: 0.2s;
+}
+
+.bottle-subtitle {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+    transition-delay: 0.3s;
+}
+
+.firstBox {
+    width: 400px;
+}
+
+.firstBox1 {
+    width: 430px;
+}
+
+#item1 {
+    background-color: #e7dfcf;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+#item2 {
+    background-color: #e9bf8b;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+#item3 {
+    background-color: #b6d6c8;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+#item4 {
+    background-color: #e86357;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+
+/* body {
+    background-color: #e7dfcf;
+} */
 
 .card {
     background: rgba(255, 255, 255, 0.73);
@@ -38,6 +97,100 @@
 }
 
 .category-title {
-
     margin-bottom: 95px;
+}
+
+.innerView {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.bottle-bg {
+    width: 320px;
+    height: 395px;
+    object-fit: cover;
+    border-radius: 160px;
+}
+
+.secondBox {
+    /* display: flex; */
+    margin-left: 30rem;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.bottle-img {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    /* transform: scale(1.2); */
+    height: 385px;
+}
+
+.outerBox {
+    height: 500px;
+}
+
+.fade-in-out {
+    margin-left: -58px;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+
+.fade-in-out span {
+    display: inline-block;
+    font-size: 4rem;
+    color: transparent;
+    text-shadow: 0px 0px 0px black;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.fade-in-out span:nth-child(1) {
+    animation-name: fadeleft;
+}
+
+.fade-in-out span:nth-child(2) {
+    animation-name: faderight;
+    animation-delay: .3s;
+}
+
+.fade-in-out span:nth-child(3) {
+    animation-name: fadeleft;
+    animation-delay: .6s;
+}
+
+.fade-in-out span:nth-child(4) {
+    animation-name: faderight;
+    animation-delay: .9s;
+}
+
+.fade-in-out span:nth-child(5) {
+    animation-name: fadeleft;
+    animation-delay: 1.2s;
+}
+
+.fade-in-out span:nth-child(6) {
+    animation-name: faderight;
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeleft {
+    50% {
+        transform: skew(50deg) translateY(-200%);
+        text-shadow: 0px 0px 50px;
+        opacity: 0;
+    }
+}
+
+@keyframes faderight {
+    50% {
+        transform: skew(-50deg) translateY(-200%);
+        text-shadow: 0px 0px 50px;
+        opacity: 0;
+    }
 }

@@ -35,3 +35,5 @@
 
     </div>
 </div>
+
+@include('components.checkoutForm')

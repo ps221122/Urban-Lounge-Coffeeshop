@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\EmptyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('screen.index');
-})->name('index');
+
+Route::get('/',[EmptyController::class, 'index'])->name('index');
 
 Route::get('/Breakfast', function () {
     return view('menu.menuList');
@@ -45,6 +44,10 @@ Route::get('/Beverage', function () {
 Route::get('/Alcohol', function () {
    return view('menu.menuList');
 })->name('alcohol');
+
+Route::get('/Dessert', function () {
+   return view('menu.menuList');
+})->name('dessert');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

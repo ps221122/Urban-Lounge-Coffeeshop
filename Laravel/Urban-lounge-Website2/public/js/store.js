@@ -14,7 +14,6 @@ if (document.readyState == 'loading') {
     ready();
 }
 
-
 function ready() {
     var removeItems = document.getElementsByClassName("trash-can");
     // console.log(removeItems);
@@ -36,12 +35,69 @@ function ready() {
 
     document.getElementsByClassName("btn-checkout")[0].addEventListener("click", checkoutClicked);
     document.getElementsByClassName("btn-clear")[0].addEventListener("click", clearClicked);
+    document.getElementsByClassName("submit")[0].addEventListener("click", nextCheckoutFase);
 }
 
-function checkoutClicked(params) {
-    alert("Thank you for your purchase");
+function checkoutClicked() {
+    const box = document.getElementById('content-box');
+    const childBox = document.getElementById("img");
+    var total = document.getElementsByClassName("cart-total-price")[0].innerText
+        ;
+    Notification.requestPermission().then(perm => {
+        if (perm === "granted") {
+            const notification = new Notification("Urban Lounge :order", {
+                body: "Thank you for your purchase at Urban, your total is " + total,
+                data: { hello: "world" },
+                icon: "http://127.0.0.1:8000/assets/logo.png",
+                tag: "welcome",
+            })
+
+        }
+    })
+    // if (box.contains(childBox)) {
+    //     var dialog = document.getElementById('dialog');
+    //     var closeButton = document.getElementById('close');
+    //     var overlay = document.getElementById('overlay');
+
+    //     // show the overlay and the dialog
+
+    //     dialog.classList.remove('hidden');
+    //     overlay.classList.remove('hidden');
+
+
+    //     // hide the overlay and the dialog
+    //     closeButton.addEventListener('click', function () {
+    //         dialog.classList.add('hidden');
+    //         overlay.classList.add('hidden');
+    //     });
+    // }
+    // else {
+    //     alert("Add items first!");
+    // }
+
+
 }
 
+function nextCheckoutFase() {
+    // if (document.myForm.fname.value == "") {
+    //     alert("Please provide your name!");
+    //     document.myForm.fname.focus();
+    //     return false;
+    // }
+    // if (document.myForm.email.value == "") {
+    //     alert("Please provide your Email!");
+    //     document.myForm.email.focus();
+    //     return false;
+    // }
+    // if (document.myForm.pcode.value == "" || isNaN(document.myForm.pcode.value) ||
+    //     document.myForm.Zip.value.length != 5) {
+
+    //     alert("Please provide a zip in the format #####.");
+    //     document.myForm.pcode.focus();
+    //     return false;
+    // }
+    // return (true);
+}
 
 function clearClicked(params) {
     var cartItems = document.getElementsByClassName("cart-row")[0];
@@ -95,7 +151,7 @@ function addItemToCart(items) {
 
     }
 
-    var cartItemRow = `<div class="cart-img-box">
+    var cartItemRow = `<div id="img" class="cart-img-box">
                 <img class="h-16 w-20 rounded-full"
                     src="${items.img}" alt="${items.name}">
             </div>
@@ -120,7 +176,6 @@ function addItemToCart(items) {
     cartItemRows.getElementsByClassName("trash-can")[0].addEventListener("click", removeCartItems);
     cartItemRows.getElementsByClassName("cart-item-unit")[0].addEventListener("change", quantityChanged);
 }
-
 
 function quantityChanged(event) {
     var input = event.target;
@@ -147,8 +202,22 @@ function updateCartTotal() {
         var price = parseFloat(priceElement.innerText.replace("€", " "));
         var quantity = quantityElement.value;
         total = total + (price * quantity);
+
     }
     total = Math.round(total * 100) / 100;
     document.getElementsByClassName("cart-total-price")[0].innerText = "€" + total;
     document.getElementById("cart-price-total-nav").textContent = "€" + total;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,7 +9,7 @@
             </p>
 
         </x-slot>
-        <div class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover"
+        <div class=" antialiased text-gray-900 leading-normal tracking-wider bg-cover"
              style="background-image:url('https://source.unsplash.com/1L71sPT5XKc');"> {{--background --}}
 
 
@@ -121,15 +121,11 @@
                 tippy('.link', {
                     placement: 'bottom'
                 })
-
                 //Toggle mode
                 const toggle = document.querySelector('.js-change-theme');
                 const body = document.querySelector('body');
                 const profile = document.getElementById('profile');
-
-
                 toggle.addEventListener('click', () => {
-
                     if (body.classList.contains('text-gray-900')) {
                         toggle.innerHTML = "☀️";
                         body.classList.remove('text-gray-900');
@@ -142,7 +138,6 @@
                         body.classList.add('text-gray-900');
                         profile.classList.remove('bg-gray-900');
                         profile.classList.add('bg-white');
-
                     }
                 });
             </script>
