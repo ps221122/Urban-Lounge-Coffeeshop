@@ -41,19 +41,8 @@ class PersonController extends Controller
         $person->email = $request->input('email');
         $person->pcode = $request->input('pcode');
         $person->hnumber = $request->input('hnumber');
-
         $person->save();
-
-//          $person = Person::create([
-
-         
-//         // $person->fname= $request->input('fname'),
-//         // $person -> tel= $request->input('tel'),
-//         // $person->email = $request->input('email'),
-//         // $person->pcode = $request->input('pcode'),
-//         // $person->hnumber = $request->input('hnumber')
-// ]);
-// return $person;
+         return redirect('/');
     }
 
     /**
@@ -73,10 +62,23 @@ class PersonController extends Controller
      * @param  \App\Models\Person  $person
      * @return \Illuminate\Http\Response
      */
-    public function edit(Person $person)
+
+
+    public function edit($id)
     {
-        //
+        // return $id;
+
+        $person = Person::where('id',$id)->first();
+        
+       return view('components.orderResult',['id'=>$id, 'person'=> $person]);
     }
+
+
+
+
+
+
+
 
     /**
      * Update the specified resource in storage.

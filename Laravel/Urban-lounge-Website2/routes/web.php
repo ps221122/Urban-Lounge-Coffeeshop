@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmptyController;
+use App\Http\Controllers\PersonController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,9 +13,13 @@ use App\Http\Controllers\EmptyController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
+Route::get('/Ordered/{id}/',[PersonController::class, 'edit']);
+Route::post('/',[PersonController::class, 'store']);
 Route::get('/',[EmptyController::class, 'index'])->name('index');
+
+Route::get('/Ordered', function () {
+    return view('components.orderResult');
+})->name('Order');
 
 Route::get('/Breakfast', function () {
     return view('menu.menuList');

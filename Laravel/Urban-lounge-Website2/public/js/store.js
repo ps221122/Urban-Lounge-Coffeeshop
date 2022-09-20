@@ -38,22 +38,62 @@ function ready() {
     document.getElementsByClassName("submit")[0].addEventListener("click", nextCheckoutFase);
 }
 
-function checkoutClicked() {
+function checkoutClicked(items) {
     const box = document.getElementById('content-box');
     const childBox = document.getElementById("img");
-    var total = document.getElementsByClassName("cart-total-price")[0].innerText
-        ;
-    Notification.requestPermission().then(perm => {
-        if (perm === "granted") {
-            const notification = new Notification("Urban Lounge :order", {
-                body: "Thank you for your purchase at Urban, your total is " + total,
-                data: { hello: "world" },
-                icon: "http://127.0.0.1:8000/assets/logo.png",
-                tag: "welcome",
-            })
 
-        }
-    })
+    const name = box.firstElementChild.children[1].children[0].innerHTML;
+    const value = box.firstElementChild.children[1].children[1].children[0].value;
+    const price = box.firstElementChild.children[1].children[1].children[1].innerHTML;
+
+
+
+
+    let productName = event.target.parentElement.parentElement.previousElementSibling.children[1].textContent;
+
+    let productPrice = event.target.parentElement.parentElement.previousElementSibling.children[2].textContent;
+
+    let productIncart = event.target.parentElement.parentElement.previousElementSibling.children[3].textContent;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // const purchasedBox = [
+    //     name,
+    //     value,
+    //     price,
+    // ];
+
+    // for (let index = 0; index < purchasedBox.length; index++) {
+    //     console.log(index);
+
+    // }
+
+    // localStorage.setItem("test", purchasedBox);
+
+
+
     // if (box.contains(childBox)) {
     //     var dialog = document.getElementById('dialog');
     //     var closeButton = document.getElementById('close');

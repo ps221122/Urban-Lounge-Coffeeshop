@@ -4,6 +4,21 @@ body, nav {
     font-family: 'Times New Roman', Times, serif;
 }
 
+.receipt-box {
+    display: flex;
+    justify-content: center;
+    background-color: #e86357;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    /* height: 300px;
+    width: 500px; */
+    margin: 0px auto;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+}
+
 .login-box h1 {
     margin: 0 0 30px;
     padding: 0;
@@ -83,7 +98,7 @@ body, nav {
     margin-left: -115px;
     padding-left: 30px;
     padding-right: 30px;
-    display: none;
+    display: block;
 }
 
 .modal__header {
@@ -114,7 +129,6 @@ body, nav {
 }
 
 .secondBox {
-    /* display: flex; */
     margin-left: 30rem;
     position: relative;
     flex-shrink: 0;
@@ -124,7 +138,6 @@ body, nav {
     position: absolute;
     top: 15%;
     left: 0;
-    /* transform: scale(1.2); */
     height: 385px;
 }
 
@@ -177,6 +190,11 @@ body, nav {
 .fade-in-out span:nth-child(6) {
     animation-name: faderight;
     animation-delay: 1.5s;
+}
+
+.fade-in-out span:nth-child(7) {
+    animation-name: faderight;
+    animation-delay: 1.8s;
 }
 
 @keyframes fadeleft {
