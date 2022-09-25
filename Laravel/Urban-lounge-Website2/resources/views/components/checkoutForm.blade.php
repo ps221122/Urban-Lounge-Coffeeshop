@@ -11,8 +11,9 @@
     </div>
 
     <div class="border-t border-b border-gray-300 py-5">
-        <form action="/" method="POST" class="flex flex-col" name="myForm">
+        <form action="/Ordered" method="POST" class="flex flex-col" name="myForm">
             @csrf
+
             <label class="text-white" for="name">Name:</label>
             <input class="mb-6 mt-2 rounded-lg px-1 text-black" type="text" name="fname" id="fname"
                 placeholder="Enter name" required>

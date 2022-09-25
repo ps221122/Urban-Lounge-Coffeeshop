@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmptyController;
 use App\Http\Controllers\PersonController;
+use App\Http\Controllers\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +15,8 @@ use App\Http\Controllers\PersonController;
 |
 */
 Route::get('/Ordered/{id}/',[PersonController::class, 'edit']);
-Route::post('/',[PersonController::class, 'store']);
+Route::post('/Ordered',[PersonController::class, 'store']);
+// Route::post('/Ordered',[OrderController::class, 'store']);
 Route::get('/',[EmptyController::class, 'index'])->name('index');
 
 Route::get('/Ordered', function () {

@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Person;
 use App\Models\Order;
 use Illuminate\Http\Request;
 
-class PersonController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -36,35 +35,24 @@ class PersonController extends Controller
      */
     public function store(Request $request)
     {
-        $person = new Person();
-        $person->fname= $request->input('fname');
-        $person -> tel= $request->input('tel');
-        $person->email = $request->input('email');
-        $person->pcode = $request->input('pcode');
-        $person->hnumber = $request->input('hnumber');
-        $person->save();
+        // $order = DB::table('orders')->orderBy('ID', 'desc')->first();
 
-        
-        $insertedId = $person->id;
-        
-      
+        // $order= new Order();
 
-        $order= new Order();
+        // $order->customerId = $request-> input('customer-id')+1;
 
-        $order->customerId = $insertedId;
+        // $order->save();
 
-        $order->save();
-
-         return redirect('/Ordered');
+        // return redirect('/Ordered');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Person  $person
+     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function show(Person $person)
+    public function show(Order $order)
     {
         //
     }
@@ -72,35 +60,22 @@ class PersonController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Person  $person
+     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-
-
-    public function edit($id)
+    public function edit(Order $order)
     {
-        // return $id;
-
-        $person = Person::where('id',$id)->first();
-        
-       return view('components.orderResult',['id'=>$id, 'person'=> $person]);
+        //
     }
-
-
-
-
-
-
-
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Person  $person
+     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Person $person)
+    public function update(Request $request, Order $order)
     {
         //
     }
@@ -108,10 +83,10 @@ class PersonController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Person  $person
+     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Person $person)
+    public function destroy(Order $order)
     {
         //
     }

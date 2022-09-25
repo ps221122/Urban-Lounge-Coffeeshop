@@ -2,6 +2,7 @@ function myFunction() {
     var x = document.getElementById("purchase-box-model");
     if (x.style.display === "none") {
         x.style.display = "block";
+
     }
     else {
         x.style.display = "none";
@@ -39,81 +40,74 @@ function ready() {
 }
 
 function checkoutClicked(items) {
+
+    var value = document.querySelectorAll(".cart-item-unit");
+
+    var name = document.querySelectorAll(".title");
+
+
+
+    //     for (let index = 0; index < name.length; index++) {
+    //         var names = name[index].innerText;
+    //         var naam = [names];
+    //     }
+
+    //     var price = document.querySelectorAll(".cart-item-price");
+
+    //     for (let index = 0; index < value.length; index++) {
+    //         var values = value[index].value;
+    //         var unit = [values];
+    //     }
+
+
+    //     for (let index = 0; index < price.length; index++) {
+    //         var prices = price[index].innerText;
+    //     }
+
+
+    // const itemsCheckout = [];
+
+    // itemsCheckout.name = naam;
+    // itemsCheckout.price = prices;
+    // itemsCheckout.inCart = unit;
+
+
+
+    // console.log(x);
+
+
+
+
+
+
+
+
+
     const box = document.getElementById('content-box');
     const childBox = document.getElementById("img");
 
-    const name = box.firstElementChild.children[1].children[0].innerHTML;
-    const value = box.firstElementChild.children[1].children[1].children[0].value;
-    const price = box.firstElementChild.children[1].children[1].children[1].innerHTML;
 
 
+    if (box.contains(childBox)) {
+        var dialog = document.getElementById('dialog');
+        var closeButton = document.getElementById('close');
+        var overlay = document.getElementById('overlay');
+
+        // show the overlay and the dialog
+
+        dialog.classList.remove('hidden');
+        overlay.classList.remove('hidden');
 
 
-    let productName = event.target.parentElement.parentElement.previousElementSibling.children[1].textContent;
-
-    let productPrice = event.target.parentElement.parentElement.previousElementSibling.children[2].textContent;
-
-    let productIncart = event.target.parentElement.parentElement.previousElementSibling.children[3].textContent;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // const purchasedBox = [
-    //     name,
-    //     value,
-    //     price,
-    // ];
-
-    // for (let index = 0; index < purchasedBox.length; index++) {
-    //     console.log(index);
-
-    // }
-
-    // localStorage.setItem("test", purchasedBox);
-
-
-
-    // if (box.contains(childBox)) {
-    //     var dialog = document.getElementById('dialog');
-    //     var closeButton = document.getElementById('close');
-    //     var overlay = document.getElementById('overlay');
-
-    //     // show the overlay and the dialog
-
-    //     dialog.classList.remove('hidden');
-    //     overlay.classList.remove('hidden');
-
-
-    //     // hide the overlay and the dialog
-    //     closeButton.addEventListener('click', function () {
-    //         dialog.classList.add('hidden');
-    //         overlay.classList.add('hidden');
-    //     });
-    // }
-    // else {
-    //     alert("Add items first!");
-    // }
+        // hide the overlay and the dialog
+        closeButton.addEventListener('click', function () {
+            dialog.classList.add('hidden');
+            overlay.classList.add('hidden');
+        });
+    }
+    else {
+        alert("Add items first!");
+    }
 
 
 }
@@ -240,6 +234,7 @@ function updateCartTotal() {
         var priceElement = cartRow.getElementsByClassName("cart-item-price")[0];
         var quantityElement = cartRow.getElementsByClassName("cart-item-unit")[0];
         var price = parseFloat(priceElement.innerText.replace("€", " "));
+
         var quantity = quantityElement.value;
         total = total + (price * quantity);
 
@@ -248,14 +243,6 @@ function updateCartTotal() {
     document.getElementsByClassName("cart-total-price")[0].innerText = "€" + total;
     document.getElementById("cart-price-total-nav").textContent = "€" + total;
 }
-
-
-
-
-
-
-
-
 
 
 
