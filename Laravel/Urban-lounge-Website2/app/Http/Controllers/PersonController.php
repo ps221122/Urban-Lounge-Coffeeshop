@@ -55,7 +55,7 @@ class PersonController extends Controller
 
         $order->save();
 
-         return redirect('/Ordered');
+        //  return redirect('/Ordered');
     }
 
     /**
