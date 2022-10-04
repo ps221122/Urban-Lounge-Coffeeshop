@@ -16,34 +16,33 @@
 
             <label class="text-white" for="name">Name:</label>
             <input class="mb-6 mt-2 rounded-lg px-1 text-black" type="text" name="fname" id="fname"
-                placeholder="Enter name" required>
+                placeholder="Enter name" required autocomplete="off">
 
 
             <label class="text-white" for="phone">Phone number:</label>
             <input class="mb-6 mt-2 rounded-lg px-1 text-black" type="tel" name="tel" id="tel"
-                placeholder="Enter phone number" pattern="^\(?([+]31|0031|0)-?6(\s?|-)([0-9]\s{0,3}){8}$" required>
+                placeholder="Enter phone number" pattern="^\(?([+]31|0031|0)-?6(\s?|-)([0-9]\s{0,3}){8}$" required
+                autocomplete="off">
 
 
             <label class="text-white" for="Uemail">Email:</label>
             <input class="mb-6 mt-2 rounded-lg px-1 text-black" type="email" id="email" name="email"
-                placeholder="Enter email" required>
+                placeholder="Enter email" required autocomplete="off">
 
 
             <label class="text-white" for="postcode">PostCode:</label>
             <input class="mb-6 mt-2 rounded-lg px-1 text-black" type="text" name="pcode" id="pcode"
-                placeholder="Enter postcode" required>
+                placeholder="Enter postcode" required autocomplete="off">
 
 
             <label class="text-white" for="houseN">House number:</label>
             <input class="mb-8 mt-2 rounded-lg px-1 text-black" type="number" name="hnumber" id="hnumber"
-                placeholder="Enter house number" required>
+                placeholder="Enter house number" required autocomplete="off">
 
 
             <input class="submit rounded-xl bg-green-600 px-3 py-3 text-lg text-white" type="submit" name="submit"
                 id="submit">
         </form>
     </div>
-
-
-
+    @include('components.product-box')
 </div>

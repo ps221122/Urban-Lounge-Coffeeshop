@@ -1,3 +1,5 @@
+
+
 function myFunction() {
     var x = document.getElementById("purchase-box-model");
     if (x.style.display === "none") {
@@ -40,53 +42,49 @@ function ready() {
 }
 
 function checkoutClicked(items) {
+    //displayFormBox();
+    getProductInfo(items);
+}
 
-    var value = document.querySelectorAll(".cart-item-unit");
-
+function getProductInfo(items) {
     var name = document.querySelectorAll(".title");
 
+    var value = document.getElementsByClassName("cart-item-unit");
+
+    for (let index = 0; index < name.length; index++) {
+        for (let index = 0; index < value.length; index++) {
+            const element = name[index].innerText;
+
+            const unit = value[index].value;
+
+            createArray(unit, element);
+
+        }
+
+    }
 
 
-    //     for (let index = 0; index < name.length; index++) {
-    //         var names = name[index].innerText;
-    //         var naam = [names];
-    //     }
+}
 
-    //     var price = document.querySelectorAll(".cart-item-price");
-
-    //     for (let index = 0; index < value.length; index++) {
-    //         var values = value[index].value;
-    //         var unit = [values];
-    //     }
-
-
-    //     for (let index = 0; index < price.length; index++) {
-    //         var prices = price[index].innerText;
-    //     }
-
-
-    // const itemsCheckout = [];
-
-    // itemsCheckout.name = naam;
-    // itemsCheckout.price = prices;
-    // itemsCheckout.inCart = unit;
-
-
-
-    // console.log(x);
+function createArray(unit, element) {
+    var itemsCheckout = [];
+    itemsCheckout.unit = unit;
+    itemsCheckout.title = element;
 
 
 
 
 
 
+    console.log(uniqBy(itemsCheckout));
+
+}
 
 
-
+function displayFormBox(params) {
     const box = document.getElementById('content-box');
+
     const childBox = document.getElementById("img");
-
-
 
     if (box.contains(childBox)) {
         var dialog = document.getElementById('dialog');
@@ -108,7 +106,6 @@ function checkoutClicked(items) {
     else {
         alert("Add items first!");
     }
-
 
 }
 

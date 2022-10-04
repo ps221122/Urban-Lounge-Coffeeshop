@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Person;
-use App\Models\Order;
+use App\Models\Admin;
 use Illuminate\Http\Request;
 
-class PersonController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -36,71 +35,39 @@ class PersonController extends Controller
      */
     public function store(Request $request)
     {
-        $person = new Person();
-        $person->fname= $request->input('fname');
-        $person -> tel= $request->input('tel');
-        $person->email = $request->input('email');
-        $person->pcode = $request->input('pcode');
-        $person->hnumber = $request->input('hnumber');
-        $person->save();
-
-        
-        $insertedId = $person->id;
-        
-      
-
-        $order= new Order();
-
-        $order->customerId = $insertedId;
-
-        $order->save();
-
-        //  return redirect('/Ordered');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Person  $person
+     * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function show(Person $person)
+    public function show(Admin $admin)
     {
-       
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Person  $person
+     * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-
-
-    public function edit($id)
+    public function edit(Admin $admin)
     {
-        // return $id;
-
-        $person = Person::where('id',$id)->first();
-        
-       return view('components.orderResult',['id'=>$id, 'person'=> $person]);
+        //
     }
-
-
-
-
-
-
-
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Person  $person
+     * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Person $person)
+    public function update(Request $request, Admin $admin)
     {
         //
     }
@@ -108,10 +75,10 @@ class PersonController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Person  $person
+     * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Person $person)
+    public function destroy(Admin $admin)
     {
         //
     }

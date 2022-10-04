@@ -1,14 +1,14 @@
 @extends('layout.app')
 @section('title', 'Menu')
 @section('content')
-    <section class="text-gray-600 body-font mt-56 flex">
-        <div class="container px-5 py-24 mx-auto">
+    <section class="body-font mt-56 flex text-gray-600">
+        <div class="container mx-auto px-5 py-24">
             <div class="outer-menu-box">
                 <div class="category-title">
-                    <h1 class="text-2xl italic font-semibold">Breakfast</h1>
+                    <h1 class="text-2xl font-semibold italic">Breakfast</h1>
                     <hr>
                 </div>
-                <div class="flex flex-wrap -m-4" id="main">
+                <div class="-m-4 flex flex-wrap" id="main">
                     <script>
                         const productsOntbijt = [{
                                 productvalue: "1",
@@ -179,10 +179,10 @@
 
             <div class="outer-menu-box my-28">
                 <div class="category-title">
-                    <h1 class="text-2xl italic font-semibold" id="pizza">Pizza</h1>
+                    <h1 class="text-2xl font-semibold italic" id="pizza">Pizza</h1>
                     <hr>
                 </div>
-                <div class="flex flex-wrap -m-4" id="mainPizza">
+                <div class="-m-4 flex flex-wrap" id="mainPizza">
                     <script>
                         const productsPizza = [{
                                 productvalue: "1",
@@ -354,10 +354,10 @@
 
             <div class="outer-menu-box my-28">
                 <div class="category-title">
-                    <h1 class="text-2xl italic font-semibold" id="vegan">Vegan</h1>
+                    <h1 class="text-2xl font-semibold italic" id="vegan">Vegan</h1>
                     <hr>
                 </div>
-                <div class="flex flex-wrap -m-4" id="mainVegan">
+                <div class="-m-4 flex flex-wrap" id="mainVegan">
                     <script>
                         const productsVegan = [{
                                 productvalue: "1",
@@ -528,10 +528,10 @@
 
             <div class="outer-menu-box my-28">
                 <div class="category-title">
-                    <h1 class="text-2xl italic font-semibold" id="pasta">Pasta</h1>
+                    <h1 class="text-2xl font-semibold italic" id="pasta">Pasta</h1>
                     <hr>
                 </div>
-                <div class="flex flex-wrap -m-4" id="mainPasta">
+                <div class="-m-4 flex flex-wrap" id="mainPasta">
                     <script>
                         const productsPasta = [{
                                 productvalue: "1",
@@ -693,10 +693,10 @@
 
             <div class="outer-menu-box my-28">
                 <div class="category-title">
-                    <h1 class="text-2xl italic font-semibold" id="dinner">Dinner</h1>
+                    <h1 class="text-2xl font-semibold italic" id="dinner">Dinner</h1>
                     <hr>
                 </div>
-                <div class="flex flex-wrap -m-4" id="mainDinner">
+                <div class="-m-4 flex flex-wrap" id="mainDinner">
                     <script>
                         const productsDinner = [{
                                 productvalue: "1",
@@ -870,10 +870,10 @@
 
             <div class="outer-menu-box my-28">
                 <div class="category-title">
-                    <h1 class="text-2xl italic font-semibold" id="beverage">Beverage</h1>
+                    <h1 class="text-2xl font-semibold italic" id="beverage">Beverage</h1>
                     <hr>
                 </div>
-                <div class="flex flex-wrap -m-4" id="mainBeverage">
+                <div class="-m-4 flex flex-wrap" id="mainBeverage">
                     <script>
                         const productsDrink = [{
                                 productvalue: "1",
@@ -1034,10 +1034,10 @@
 
             <div class="outer-menu-box my-28">
                 <div class="category-title">
-                    <h1 class="text-2xl italic font-semibold" id="alcohol">Alcohol</h1>
+                    <h1 class="text-2xl font-semibold italic" id="alcohol">Alcohol</h1>
                     <hr>
                 </div>
-                <div class="flex flex-wrap -m-4" id="mainAlcohol">
+                <div class="-m-4 flex flex-wrap" id="mainAlcohol">
                     <script>
                         const productsAlcohol = [{
                                 productvalue: "1",
@@ -1197,10 +1197,10 @@
 
             <div class="outer-menu-box my-28">
                 <div class="category-title">
-                    <h1 class="text-2xl italic font-semibold" id="dessert">Dessert</h1>
+                    <h1 class="text-2xl font-semibold italic" id="dessert">Dessert</h1>
                     <hr>
                 </div>
-                <div class="flex flex-wrap -m-4" id="mainDessert">
+                <div class="-m-4 flex flex-wrap" id="mainDessert">
                     <script>
                         const productDesserts = [{
                                 productvalue: "1",

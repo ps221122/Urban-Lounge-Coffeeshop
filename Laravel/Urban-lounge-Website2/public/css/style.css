@@ -281,7 +281,7 @@ body {
     margin-left: -115px;
     padding-left: 30px;
     padding-right: 30px;
-    display: none;
+    display: block;
 }
 
 .modal__header {
