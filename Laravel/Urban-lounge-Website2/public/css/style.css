@@ -2,13 +2,12 @@
 
 body, nav {
     font-family: 'Times New Roman', Times, serif;
+
 }
 
 
 
-body {
-    margin: 2rem;
-}
+
 
 .spinner1 {
     width: 300px;
@@ -20,7 +19,7 @@ body {
     font-size: 2rem;
     overflow: hidden;
     position: relative;
-    /*   animation: text-color 2s ease-in-out infinite alternate; */
+    animation: text-color 2s ease-in-out infinite alternate;
 }
 
 .spinner2 {
@@ -33,7 +32,7 @@ body {
     font-size: 2rem;
     overflow: hidden;
     position: relative;
-    /*   animation: text-color 2s ease-in-out infinite alternate; */
+    animation: text-color 2s ease-in-out infinite alternate;
 }
 
 .spinner3 {
@@ -46,7 +45,7 @@ body {
     font-size: 2rem;
     overflow: hidden;
     position: relative;
-    /*   animation: text-color 2s ease-in-out infinite alternate; */
+    animation: text-color 2s ease-in-out infinite alternate;
 }
 
 .spinner-sector {
@@ -119,7 +118,7 @@ body {
     border-left-color: lightgreen;
     --duration: 2.5s;
     --timing: ease-out;
- 
+
 }
 
 @keyframes rotate {
@@ -183,24 +182,26 @@ body {
     --timing: ease-out;
 }
 
+.openingBoxContainer {
+    position: relative;
+    font-family: monospace;
+    color: rgb(255, 255, 255);
+    margin-top: 7rem;
+    margin-bottom: -5rem;
+    filter: contrast(15);
+    text-align: center;
+    margin-right: 50%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+#sign {
+    font-style: italic;
+}
 
 .receipt-box {
     margin: 15rem;
 }
+
+
 
 .login-box h1 {
     margin: 0 0 30px;
@@ -223,6 +224,8 @@ body {
     letter-spacing: -0.01em;
     transition-delay: 0.3s;
 }
+
+
 
 .firstBox {
     width: 400px;
@@ -255,11 +258,6 @@ body {
     padding: 25px;
     border-radius: 25px;
 }
-
-
-/* body {
-    background-color: #e7dfcf;
-} */
 
 .card {
     background: rgba(255, 255, 255, 0.73);

@@ -1,11 +1,14 @@
 @extends('layout.app')
 @section('title', 'Menu')
 @section('content')
+    <div class="openingBoxContainer">
+        <p class="text-2xl" id="sign"></p>
+    </div>
     <section class="body-font mt-56 flex text-gray-600">
         <div class="container mx-auto px-5 py-24">
             <div class="outer-menu-box">
                 <div class="category-title">
-                    <h1 class="text-2xl font-semibold italic">Breakfast</h1>
+                    <h1 class="categoryTitle text-2xl font-semibold italic">Breakfast</h1>
                     <hr>
                 </div>
                 <div class="-m-4 flex flex-wrap" id="main">
@@ -700,10 +703,10 @@
                     <script>
                         const productsDinner = [{
                                 productvalue: "1",
-                                name: "Ackee and saltfish",
-                                tag: "https://originalflava.com/wp-content/uploads/2014/05/Ackee-saltfish.jpg",
+                                name: "Chicken Caesar Salad",
+                                tag: "https://images.themodernproper.com/billowy-turkey/production/posts/2019/Easy-italian-salad-recipe-10.jpg?w=1200&h=1200&q=82&fm=jpg&fit=crop&fp-x=0.5&fp-y=0.5&dm=1614096227&s=c0f63a30cef3334d97f9ecad14be51da",
                                 price: '€10.95',
-                                description: 'This is Jamaican national dish, made with the national fruit ackee.',
+                                description: 'One can never go wrong with a chicken caesar salad. Healthy option with greens and proteins!',
                                 time: "12 min",
                                 inCart: 0,
                                 totalPrice: "€0",
@@ -1265,7 +1268,7 @@
                             {
                                 productvalue: "7",
                                 name: "Li di fruta",
-                                tag: "https://www.antilliaans-eten.nl/wp-content/uploads/2015/08/lidifruta_snippet.jpg",
+                                tag: "https://cdn.shopify.com/s/files/1/0554/0298/7717/collections/20210320_074648_1400x.jpg?v=1617767397",
                                 price: '€2.95',
                                 description: 'Gecondenseerde melk, melk, bosvruchten, suiker, essence',
                                 time: "08 min",
@@ -1315,7 +1318,7 @@
                             {
                                 productvalue: "12",
                                 name: "Pandushi",
-                                tag: "https://www.antilliaans-eten.nl/wp-content/uploads/2018/01/pandushiwebsite.jpg",
+                                tag: "https://www.antilliaansekeuken.nl/wp-content/uploads/2014/04/rsz_pandushi_kokolishi.jpg",
                                 price: '€4.99',
                                 description: 'Making delicious Pandushi Kokolishi for a delicious and sweet dessert',
                                 time: "18 min",
