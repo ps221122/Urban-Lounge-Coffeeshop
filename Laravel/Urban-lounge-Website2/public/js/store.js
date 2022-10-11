@@ -778,7 +778,7 @@ function createArray(obj) {
 
     cartItemRows.innerHTML = cartItemRow;
     cartItems.append(cartItemRows);
-    passArray(obj);
+
 }
 
 function displayFormBox(params) {
@@ -957,8 +957,8 @@ function setTime(params) {
             sign.style.color = "red";
             break;
         case 1: //Monday
-            if (Hours >= 1230 && Hours <= 1800) {
-                sign.innerHTML = "Yes, we are open between 12:30 - 18:00.";
+            if (Hours >= 1230 && Hours <= 2030) {
+                sign.innerHTML = "Yes, we are open between 12:30 - 20:30.";
                 sign.style.color = "green";
             }
             else {
@@ -1006,30 +1006,33 @@ function setTime(params) {
 
 }
 
+var header = document.getElementById('header');
 
-var falling = true;
+function fadeOutOnScroll(element) {
+    if (!element) {
+        return;
+    }
 
-TweenLite.set("#container", { perspective: 600 })
-TweenLite.set("img", { xPercent: "-50%", yPercent: "-50%" })
+    var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+    var elementHeight = element.offsetHeight;
+    var scrollTop = document.documentElement.scrollTop;
 
-var total = 30;
-var container = document.getElementById("container"), w = window.innerWidth, h = window.innerHeight;
+    var opacity = 1;
 
-for (i = 0; i < total; i++) {
-    var Div = document.createElement('div');
-    TweenLite.set(Div, { attr: { class: 'dot' }, x: R(0, w), y: R(-200, -150), z: R(-200, 200) });
-    container.appendChild(Div);
-    animm(Div);
+    if (scrollTop > distanceToTop) {
+        opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
+    }
+
+    if (opacity >= 0) {
+        element.style.opacity = opacity;
+    }
 }
 
-function animm(elm) {
-    TweenMax.to(elm, R(6, 15), { y: h + 100, ease: Linear.easeNone, repeat: -1, delay: -15 });
-    TweenMax.to(elm, R(4, 8), { x: '+=100', rotationZ: R(0, 180), repeat: -1, yoyo: true, ease: Sine.easeInOut });
-    TweenMax.to(elm, R(2, 8), { rotationX: R(0, 360), rotationY: R(0, 360), repeat: -1, yoyo: true, ease: Sine.easeInOut, delay: -5 });
-};
+function scrollHandler() {
+    fadeOutOnScroll(header);
+}
 
-function R(min, max) { return min + Math.random() * (max - min) };
-
+window.addEventListener('scroll', scrollHandler);
 
 
 

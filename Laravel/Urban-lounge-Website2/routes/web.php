@@ -25,6 +25,18 @@ Route::get('/Ordered', function () {
     return view('components.orderResult');
 })->name('Order');
 
+Route::get('/Gallery', function () {
+    return view('components.gallery');
+})->name('gallery');
+
+Route::get('/Events', function () {
+    return view('components.events');
+})->name('events');
+
+Route::get('/About', function () {
+    return view('components.about');
+})->name('about');
+
 Route::get('/Breakfast', function () {
     return view('menu.menuList');
 })->name('breakfast');

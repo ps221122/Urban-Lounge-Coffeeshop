@@ -2,8 +2,10 @@
 @section('title', 'Homepage')
 
 @section('content')
-    <div class="index-body mx-14">
-        <div class="fade-in-out font-serif">
+    <div class="index-body">
+
+
+        <div class="fade-in-out font-serif" id="welcome-text">
             <span>W</span>
             <span>e</span>
             <span>l</span>
@@ -12,17 +14,25 @@
             <span>m</span>
             <span>e</span>
             <span class="mx-2"></span>
-            <span>bij</span>
+            <span>to</span>
             <span class="mx-2"></span>
             <span>U</span>
             <span>r</span>
             <span>b</span>
             <span>a</span>
-            <span>n</span>
+            <span>n!</span>
         </div>
-        
 
-        <div class="carouselBox mt-10">
+        <div class="index-header h-screen" id="header"
+            style="background-image: url('https://www.touchbistro.com/wp-content/uploads/2021/03/food-presentation-tips-inset-1.jpg')">
+        </div>
+
+        <div class="scroller">
+            <p class="animate-bounce text-4xl text-white">Scroll down</p>
+            <p class="animate-bounce text-3xl text-white"><i class="bi bi-arrow-down"></i></p>
+        </div>
+
+        <div class="carouselBox mt-24">
 
             <div class="m-2 mt-6">
 
@@ -293,7 +303,6 @@
             </section>
         </div>
 
-
         <div class="statsBox">
             <section class="body-font text-gray-600">
                 <div class="container mx-auto px-5 py-24">
@@ -319,8 +328,6 @@
             </section>
         </div>
 
-
-
         <div class="testimonalBox">
             <section class="body-font text-gray-600">
                 <div class="container mx-auto px-5 py-24">
@@ -340,6 +347,11 @@
                 </div>
             </section>
         </div>
+
+
+
+
+
 
     </div>
 
