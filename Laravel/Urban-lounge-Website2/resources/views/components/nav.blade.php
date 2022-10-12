@@ -86,7 +86,7 @@
 
                 <li>
                     <a class="flex rounded-md px-4 py-2 text-lg font-medium text-black hover:font-bold"
-                        href=""><i class="bi bi-search"></i>
+                        href="#"><i class="bi bi-search"></i>
                     </a>
                 </li>
 

@@ -176,7 +176,7 @@
         <div class="app-box">
             <div class="container mx-auto flex flex-col items-center px-5 py-24 md:flex-row">
                 <div class="mb-10 w-5/6 md:mb-0 md:w-1/2 lg:w-full lg:max-w-lg">
-                    <img class="rounded object-cover object-center" alt="hero" src="https://dummyimage.com/720x600">
+                    <img class="rounded object-cover object-center" alt="hero" src="assets/img.png">
                 </div>
                 <div
                     class="flex flex-col items-center text-center md:w-1/2 md:items-start md:pl-16 md:text-left lg:flex-grow lg:pl-24">
@@ -231,13 +231,13 @@
                         class="inline-flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-500 sm:mr-10 sm:h-32 sm:w-32">
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="2" class="h-10 w-10 sm:h-16 sm:w-16" viewBox="0 0 24 24">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
                         </svg>
                     </div>
                     <div class="mt-6 flex-grow text-center sm:mt-0 sm:text-left">
-                        <h2 class="title-font mb-2 text-lg font-medium text-gray-900">Shooting Stars</h2>
-                        <p class="text-base leading-relaxed">Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                            taxidermy. Gastropub indxgo juice poutine.</p>
+                        <h2 class="title-font mb-2 text-xl font-medium text-gray-900">Contact</h2>
+                        <p class="text-base leading-relaxed"></p>
                         <a class="mt-3 inline-flex items-center text-indigo-500">Learn More
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="2" class="ml-2 h-4 w-4" viewBox="0 0 24 24">
@@ -248,9 +248,8 @@
                 </div>
                 <div class="mx-auto mb-10 flex flex-col items-center border-b border-gray-200 pb-10 sm:flex-row lg:w-3/5">
                     <div class="mt-6 flex-grow text-center sm:mt-0 sm:text-left">
-                        <h2 class="title-font mb-2 text-lg font-medium text-gray-900">The Catalyzer</h2>
-                        <p class="text-base leading-relaxed">Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                            taxidermy. Gastropub indxgo juice poutine.</p>
+                        <h2 class="title-font mb-2 text-xl font-medium text-gray-900">Location</h2>
+                        <p class="text-base leading-relaxed"></p>
                         <a class="mt-3 inline-flex items-center text-indigo-500">Learn More
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="2" class="ml-2 h-4 w-4" viewBox="0 0 24 24">
@@ -260,36 +259,34 @@
                     </div>
                     <div
                         class="order-first inline-flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-500 sm:order-none sm:ml-10 sm:h-32 sm:w-32">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" class="h-10 w-10 sm:h-16 sm:w-16" viewBox="0 0 24 24">
-                            <circle cx="6" cy="6" r="3"></circle>
-                            <circle cx="6" cy="18" r="3"></circle>
-                            <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-10 w-10 sm:h-16 sm:w-16"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                         </svg>
                     </div>
                 </div>
                 <div class="mx-auto flex flex-col items-center sm:flex-row lg:w-3/5">
                     <div
                         class="inline-flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-500 sm:mr-10 sm:h-32 sm:w-32">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" class="h-10 w-10 sm:h-16 sm:w-16" viewBox="0 0 24 24">
-                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            class="bi bi-person-workspace h-10 w-10 sm:h-16 sm:w-16" viewBox="0 0 16 16">
+                            <path
+                                d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                            <path
+                                d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z" />
                         </svg>
                     </div>
                     <div class="mt-6 flex-grow text-center sm:mt-0 sm:text-left">
-                        <h2 class="title-font mb-2 text-lg font-medium text-gray-900">The 400 Blows</h2>
-                        <p class="text-base leading-relaxed">Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                            taxidermy. Gastropub indxgo juice poutine.</p>
+                        <h2 class="title-font mb-2 text-xl font-medium text-gray-900">Jobs</h2>
+                        <p class="text-base leading-relaxed"></p>
                         <a class="mt-3 inline-flex items-center text-indigo-500">Learn More
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" class="ml-2 h-4 w-4" viewBox="0 0 24 24">
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                            </svg>
+
                         </a>
                     </div>
                 </div>
-               
+
             </div>
         </div>
 

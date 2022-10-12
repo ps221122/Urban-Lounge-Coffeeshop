@@ -1036,6 +1036,8 @@ window.addEventListener('scroll', scrollHandler);
 
 
 
+
+
 dateVariation();
 
 
