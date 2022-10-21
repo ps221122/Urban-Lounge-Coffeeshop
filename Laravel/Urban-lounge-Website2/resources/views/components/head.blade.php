@@ -20,7 +20,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="js/store.js" async></script>
+    <script src="js/js.js" async></script>
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
     <title>@yield('title')</title>
 </head>

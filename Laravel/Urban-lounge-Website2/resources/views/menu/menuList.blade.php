@@ -355,6 +355,8 @@
 
 
 
+
+
             <div class="outer-menu-box my-28">
                 <div class="category-title">
                     <h1 class="text-2xl font-semibold italic" id="vegan">Vegan</h1>
@@ -687,6 +689,7 @@
                             return items;
                         }
                         document.getElementById('mainPasta').innerHTML = `
+                        
         ${generateListItems(productsPasta)}`;
                     </script>
                 </div>

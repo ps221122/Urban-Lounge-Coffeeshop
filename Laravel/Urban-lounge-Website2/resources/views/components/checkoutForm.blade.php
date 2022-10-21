@@ -42,7 +42,7 @@
                 placeholder="Enter house number">
 
 
-            <input class="submit rounded-xl bg-green-600 px-3 py-3 text-lg text-white" type="submit" name="submit"
+            <input class="submit rounded-xl bg-green-600 px-3 py-3 text-lg text-white submit-checkout-button" type="submit" name="submit"
                 id="submit">
 
 

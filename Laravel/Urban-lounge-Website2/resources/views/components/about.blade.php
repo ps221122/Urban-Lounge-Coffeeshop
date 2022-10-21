@@ -3,7 +3,7 @@
 
 @section('content')
     <section class="about-body">
-        <div class="title">About us!!</div>
+        <div class="title-about">About us!!</div>
         <div class="index-header h-screen" id="header"
             style="background-image: url('https://www.humphreys.nl/mysite/modules/SFIL0100/images/239_humphreys_restaurant_amsterdam_2.jpg')">
         </div>
@@ -135,7 +135,7 @@
                         </div>
                         <div class="mt-4 px-6 lg:mt-0 lg:w-1/2">
                             <h2 class="title-font text-xs font-semibold tracking-widest text-gray-900">Email:</h2>
-                            <a class="leading-relaxed text-indigo-500">Info@Stonkspizza.nl</a>
+                            <a class="leading-relaxed text-indigo-500">Info@Urban.nl</a>
                             <h2 class="title-font mt-4 text-xs font-semibold tracking-widest text-gray-900">Telefoonnummer:
                             </h2>
                             <p class="leading-relaxed">06 7762 - 9938 88</p>
@@ -238,7 +238,8 @@
                     <div class="mt-6 flex-grow text-center sm:mt-0 sm:text-left">
                         <h2 class="title-font mb-2 text-xl font-medium text-gray-900">Contact</h2>
                         <p class="text-base leading-relaxed"></p>
-                        <a class="mt-3 inline-flex items-center text-indigo-500">Learn More
+                        <a href="{{ route('contact') }}"
+                            class="mt-3 inline-flex items-center text-indigo-500 hover:animate-bounce">Learn More
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="2" class="ml-2 h-4 w-4" viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -250,7 +251,8 @@
                     <div class="mt-6 flex-grow text-center sm:mt-0 sm:text-left">
                         <h2 class="title-font mb-2 text-xl font-medium text-gray-900">Location</h2>
                         <p class="text-base leading-relaxed"></p>
-                        <a class="mt-3 inline-flex items-center text-indigo-500">Learn More
+                        <a href="{{ route('location') }}"
+                            class="mt-3 inline-flex items-center text-indigo-500 hover:animate-bounce">Learn More
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="2" class="ml-2 h-4 w-4" viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -281,7 +283,8 @@
                     <div class="mt-6 flex-grow text-center sm:mt-0 sm:text-left">
                         <h2 class="title-font mb-2 text-xl font-medium text-gray-900">Jobs</h2>
                         <p class="text-base leading-relaxed"></p>
-                        <a class="mt-3 inline-flex items-center text-indigo-500">Learn More
+                        <a href="{{ route('jobs') }}"
+                            class="mt-3 inline-flex items-center text-indigo-500 hover:animate-bounce">Learn More
 
                         </a>
                     </div>

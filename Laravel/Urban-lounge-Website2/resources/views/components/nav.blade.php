@@ -6,7 +6,7 @@
             <a href="{{ route('index') }}">
                 <img src="./assets/logo.png" alt="logo-image" class="h-24" />
             </a>
-            <h1 class="font-sans text-3xl font-medium italic">Urban Lounge!</h1>
+            <h1 class="font-sans text-3xl font-medium italic text-black">Urban Lounge!</h1>
         </div>
 
 
@@ -90,7 +90,7 @@
                     </a>
                 </li>
 
-                <li class="open-shopping-cart-box flex cursor-pointer rounded-md px-20 py-2 text-lg font-medium text-black hover:font-bold hover:uppercase hover:underline"
+                <li class="open-shopping-cart-box flex cursor-pointer items-center rounded-md px-20 py-2 text-lg font-medium text-black hover:font-bold hover:uppercase hover:underline"
                     onclick="myFunction()">
                     <i class="bi bi-bag-fill px-2"></i>
                     <p class="cart-price-total-nav" id="cart-price-total-nav">0.00</p>
@@ -102,7 +102,7 @@
                                 class="text-sm text-gray-700 underline dark:text-gray-500">{{ Auth::user()->name }}</a>
                         @else
                             <a href="{{ route('login') }}"
-                                class="mx-2 rounded-full border-2 border-black px-5 font-medium hover:bg-gray-300 focus:outline-none focus:ring focus:ring-gray-300 active:bg-gray-700">Log
+                                class="mx-2 rounded-full border-2 border-black px-5 font-medium text-black hover:bg-gray-300 focus:outline-none focus:ring focus:ring-gray-300 active:bg-gray-700">Log
                                 in</a>
 
                             @if (Route::has('register'))

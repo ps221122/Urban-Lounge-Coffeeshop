@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmptyController;
+use App\Http\Controllers\JobController;
 use App\Http\Controllers\PersonController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OrderDetailController;
@@ -15,11 +16,14 @@ use App\Http\Controllers\OrderDetailController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/Ordered/{id}/',[PersonController::class, 'edit']);
+// Route::get('/Ordered',[OrderDetailController::class, 'index']);
+
 Route::post('/Ordered',[PersonController::class, 'store']);
-// Route::post('/Ordered',[OrderController::class, 'store']);
+
 
 Route::get('/',[EmptyController::class, 'index'])->name('index');
+
+Route::get('/Jobs',[JobController::class, 'index'])->name('jobs');
 
 Route::get('/Ordered', function () {
     return view('components.orderResult');
@@ -36,6 +40,14 @@ Route::get('/Events', function () {
 Route::get('/About', function () {
     return view('components.about');
 })->name('about');
+
+Route::get('/Contact', function () {
+    return view('components.contact');
+})->name('contact');
+
+Route::get('/Locations', function () {
+    return view('components.location');
+})->name('location');
 
 Route::get('/Breakfast', function () {
     return view('menu.menuList');

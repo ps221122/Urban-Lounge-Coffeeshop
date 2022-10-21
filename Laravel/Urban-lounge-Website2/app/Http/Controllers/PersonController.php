@@ -45,14 +45,14 @@ class PersonController extends Controller
         $person->email = $request->input('email');
         $person->pcode = $request->input('pcode');
         $person->hnumber = $request->input('hnumber');
-        $person->save();
+        // $person->save();
 
         $customerId = $person->id;
 
         $order = new Order();
         $order->customerId = $customerId;
 
-        $order->save();
+        // $order->save();
 
         
         
@@ -73,10 +73,24 @@ class PersonController extends Controller
 
             // var_dump($productid[$i]); 
 
-            $orderDetail->save();
+            // $orderDetail->save();
         }
         
+         //$person = Person::where('id', $person->id)->first();
 
+        $name=$request->input('name');
+        $price=$request->input('price');
+
+        // (array_combine(Array('name','price','unit'), Array($name,$price,$quantity)));
+
+        // dd((array_combine(Array('name','price','unit'), Array($name,$price,$quantity))));
+        
+        // $arr= array_combine($name,$price);
+        // dd($arr);
+
+            //  return view('components.orderResult',['productArr'=>$arr]);
+
+        //   return redirect('/Ordere');
 
     }
 
@@ -102,9 +116,9 @@ class PersonController extends Controller
     {
         // return $id;
 
-        $person = Person::where('id', $id)->first();
+        //$person = Person::where('id', $id)->last();
 
-        return view('components.orderResult', ['id' => $id, 'person' => $person]);
+        // return view('components.orderResult', ['id' => $id, 'person' => $person]);
     }
 
     /**
