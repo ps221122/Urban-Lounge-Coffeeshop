@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class menulist extends Model
 {
     use HasFactory;
+     protected $guarded =[];
+     protected $primaryKey ='id';
 }

@@ -731,7 +731,7 @@ function createArray(obj) {
        <input class="italic font-semibold px-1 w-8  text-center text-lg bg-transparent " type="number" name="id[]" id="id"
                 placeholder="" value="${obj.id}" readonly>
 
-        <input class="italic font-semibold px-1 w-8  text-center text-lg bg-transparent" type="number" name="unit[]" id="unit"
+        <input class="italic font-semibold px-1 w-10  text-center text-base bg-transparent" type="number" name="unit[]" id="unit"
                 placeholder="" value="${obj.unit}" readonly>
 
         <input type="text" class="text-xl text-white tracking-wider bg-transparent" name="name[]" id="name" value="${obj.name}" readonly>
@@ -1032,4 +1032,6 @@ function jobs(event) {
 
 
 
-//dateVariation();
+
+
+

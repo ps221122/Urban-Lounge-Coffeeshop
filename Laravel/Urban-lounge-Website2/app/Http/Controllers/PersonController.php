@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Order;
 use App\Models\Person;
 use App\Models\OrderDetail;
+use App\Models\Menulist;
 
 use Illuminate\Http\Request;
 
@@ -45,14 +46,16 @@ class PersonController extends Controller
         $person->email = $request->input('email');
         $person->pcode = $request->input('pcode');
         $person->hnumber = $request->input('hnumber');
-        // $person->save();
+
+        $person->save();
 
         $customerId = $person->id;
 
         $order = new Order();
+
         $order->customerId = $customerId;
 
-        // $order->save();
+        $order->save();
 
         
         
@@ -71,27 +74,17 @@ class PersonController extends Controller
             
             $orderDetail->customerId = $order->id;
 
-            // var_dump($productid[$i]); 
-
-            // $orderDetail->save();
+            $orderDetail->save();
         }
-        
-         //$person = Person::where('id', $person->id)->first();
+        $productid=Menulist::whereIn('id',$productid)->get();
 
-        $name=$request->input('name');
-        $price=$request->input('price');
+        $quantity=OrderDetail::orderBy('id', 'desc')->where('customerId', $customerId)->get();
 
-        // (array_combine(Array('name','price','unit'), Array($name,$price,$quantity)));
 
-        // dd((array_combine(Array('name','price','unit'), Array($name,$price,$quantity))));
-        
-        // $arr= array_combine($name,$price);
-        // dd($arr);
+// return($quantity);
 
-            //  return view('components.orderResult',['productArr'=>$arr]);
-
-        //   return redirect('/Ordere');
-
+    return view('components.orderResult', ['person'=>$person, 'product'=>$productid, 'orderDetail'=>$quantity]);
+    
     }
 
     /**

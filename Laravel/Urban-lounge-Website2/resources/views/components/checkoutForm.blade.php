@@ -11,7 +11,7 @@
     </div>
 
     <div class="border-t border-b border-gray-300 py-5">
-        <form action="/Ordered" method="POST" class="form flex flex-col" name="myForm">
+        <form action="/Ordered?nonsense=1" method="POST" class="form flex flex-col" name="myForm">
             @csrf
 
 
@@ -42,8 +42,8 @@
                 placeholder="Enter house number">
 
 
-            <input class="submit rounded-xl bg-green-600 px-3 py-3 text-lg text-white submit-checkout-button" type="submit" name="submit"
-                id="submit">
+            <input class="submit submit-checkout-button rounded-xl bg-green-600 px-3 py-3 text-lg text-white"
+                type="submit" name="submit" id="submit">
 
 
 

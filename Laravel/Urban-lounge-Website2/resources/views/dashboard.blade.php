@@ -2,18 +2,10 @@
 @section('title', 'Dashboard')
 @section('content')
     <x-app-layout>
-        <x-slot name="header">
+        <x-slot name="header"></x-slot>
 
-            <p class="hidden">
-                {{ __('Dashboard') }}
-            </p>
-
-        </x-slot>
-        <div class="bg-cover leading-normal tracking-wider text-gray-900 antialiased"
-            style="background-image:url('https://source.unsplash.com/1L71sPT5XKc');"> {{-- background --}}
-
-
-
+        <div class="index-header h-screen" id="header"
+            style="background-image: url('https://cdn.pixabay.com/photo/2016/03/26/13/09/workspace-1280538_960_720.jpg')">
             <div class="mx-auto my-32 flex h-auto max-w-4xl flex-wrap items-center lg:my-0 lg:h-screen">
 
                 <!--Main Col-->
@@ -36,8 +28,8 @@
 
 
 
-                        <p class="flex items-center justify-center pt-2 text-xs text-gray-600 lg:justify-start lg:text-sm">
-
+                        <p class="flex items-center justify-center pt-8 text-xs text-gray-400 lg:justify-start lg:text-sm">
+                            {{ Auth::user()->created_at }}
                         </p>
 
 
@@ -63,19 +55,15 @@
                                     <path
                                         d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
                                 </svg></a>
-                            <a class="link" href="#" data-tippy-content="@unsplash"><svg
+                            <a class="link" href="#" data-tippy-content="@discord"><svg
                                     class="h-6 fill-current text-gray-600 hover:text-green-700" role="img"
                                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <title>Unsplash</title>
-                                    <path d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z" />
-                                </svg></a>
-                            <a class="link" href="#" data-tippy-content="@dribble"><svg
-                                    class="h-6 fill-current text-gray-600 hover:text-green-700" role="img"
-                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <title>Dribbble</title>
+                                    <title>Discord</title>
                                     <path
-                                        d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z" />
+                                        d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
                                 </svg></a>
+
+                            <title>Discord</title>
                             <a class="link" href="#" data-tippy-content="@instagram"><svg
                                     class="h-6 fill-current text-gray-600 hover:text-green-700" role="img"
                                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -92,11 +80,12 @@
                                 </svg></a>
                         </div>
 
+
                         <!-- Use https://simpleicons.org/ to find the svg for your preferred product -->
 
                     </div>
-
                 </div>
+
 
                 <!--Img Col-->
                 <div class="w-full lg:w-2/5">
@@ -106,44 +95,49 @@
                     <!-- Image from: http://unsplash.com/photos/MP0IUfwrn0A -->
 
                 </div>
-
-
-                <!-- Pin to top right corner -->
-                <div class="w-18 absolute top-0 right-0 h-12 p-4">
-                    <button class="js-change-theme focus:outline-none">🌙</button>
-                </div>
-
             </div>
 
-            <script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
-            <script src="https://unpkg.com/tippy.js@4"></script>
-            <script>
-                //Init tooltips
-                tippy('.link', {
-                    placement: 'bottom'
-                })
-                //Toggle mode
-                const toggle = document.querySelector('.js-change-theme');
-                const body = document.querySelector('body');
-                const profile = document.getElementById('profile');
-                toggle.addEventListener('click', () => {
-                    if (body.classList.contains('text-gray-900')) {
-                        toggle.innerHTML = "☀️";
-                        body.classList.remove('text-gray-900');
-                        body.classList.add('text-gray-100');
-                        profile.classList.remove('bg-white');
-                        profile.classList.add('bg-gray-900');
-                    } else {
-                        toggle.innerHTML = "🌙";
-                        body.classList.remove('text-gray-100');
-                        body.classList.add('text-gray-900');
-                        profile.classList.remove('bg-gray-900');
-                        profile.classList.add('bg-white');
-                    }
-                });
-            </script>
+
 
         </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </x-app-layout>
 @endsection

@@ -6,6 +6,7 @@ use App\Http\Controllers\JobController;
 use App\Http\Controllers\PersonController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OrderDetailController;
+use App\Http\Controllers\MenulistController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -81,6 +82,15 @@ Route::get('/Alcohol', function () {
 Route::get('/Dessert', function () {
    return view('menu.menuList');
 })->name('dessert');
+
+Route::get('/Planet Defense', function () {
+   return view('components.planet');
+})->name('planet');
+
+Route::get('/Delivered', function () {
+   return view('components.orderCompleted');
+})->name('orderCompleted');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
