@@ -87,7 +87,7 @@
 
     </div>
 
-    <div class="box m-72">
+    {{-- <div class="box m-72">
         <div class="spinner1">
             <p id="demo">Loading</p>
             <div class="spinner-sector spinner-sector-red"></div>
@@ -108,7 +108,7 @@
                 <div class="spinner-sector spinner-sector-red2"></div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
     <div class="seasons">

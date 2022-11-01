@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmptyController;
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\ApplicantController;
 use App\Http\Controllers\PersonController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OrderDetailController;
@@ -25,6 +26,12 @@ Route::post('/Ordered',[PersonController::class, 'store']);
 Route::get('/',[EmptyController::class, 'index'])->name('index');
 
 Route::get('/Jobs',[JobController::class, 'index'])->name('jobs');
+
+Route::post('/Jobs',[ApplicantController::class, 'store']);
+
+Route::get('/jobs', function () {
+    return view('components.applied');
+})->name('jobs');
 
 Route::get('/Ordered', function () {
     return view('components.orderResult');

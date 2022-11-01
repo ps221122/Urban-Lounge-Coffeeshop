@@ -1,30 +1,30 @@
 console.log("running");
 
-function dateVariation() {
-    const date = new Date();
-    var data = date.toLocaleString();
-    // if (data == "01-08") {
-    //     console.log("autumn");
-    //     document.body.style.backgroundColor = "#e9bf8b";
-    // }
-    // else if (data == "18-10") {
-    //     console.log("winter");
-    //     document.body.style.backgroundColor = "#b6d6c8";
-    //     document.getElementsByClassName("autum").style.display = "none";
-    // }
-    // else if (data == "01-02") {
-    //     console.log("spring");
-    //     document.body.style.backgroundColor = "#AFD297";
-    // }
-    // else if (data == "01-05") {
-    //     console.log("summer");
-    //     document.body.style.backgroundColor = "#f0f2e7";
-    // }
-    // else {
-    //     document.body.style.backgroundColor = "#F6F6F5";
-    // }
-}
-dateVariation();
+// function dateVariation() {
+//     const date = new Date();
+//     var data = date.toLocaleString();
+//     // if (data == "01-08") {
+//     //     console.log("autumn");
+//     //     document.body.style.backgroundColor = "#e9bf8b";
+//     // }
+//     // else if (data == "18-10") {
+//     //     console.log("winter");
+//     //     document.body.style.backgroundColor = "#b6d6c8";
+//     //     document.getElementsByClassName("autum").style.display = "none";
+//     // }
+//     // else if (data == "01-02") {
+//     //     console.log("spring");
+//     //     document.body.style.backgroundColor = "#AFD297";
+//     // }
+//     // else if (data == "01-05") {
+//     //     console.log("summer");
+//     //     document.body.style.backgroundColor = "#f0f2e7";
+//     // }
+//     // else {
+//     //     document.body.style.backgroundColor = "#F6F6F5";
+//     // }
+// }
+// dateVariation();
 
 function myFunction() {
     var x = document.getElementById("purchase-box-model");
@@ -314,120 +314,140 @@ function giveId(obj) {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 31,
         };
     } else if (obj.name == "Pizza Perfect Pepperoni(Glutenvrij)") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 32,
         };
     } else if (obj.name == "Vegan Zwarte Truffel") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 33,
         };
     } else if (obj.name == "Vegan Shoarma Pizza") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 34,
         };
     } else if (obj.name == "Pizza Tonno") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 35,
         };
     } else if (obj.name == "BBQ Bacon & Chicken(Glutenvrij)") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 36,
         };
     } else if (obj.name == "Shirmp Pasta Alfredo") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 37,
         };
     } else if (obj.name == "Pasta BigolÍ") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 38,
         };
     } else if (obj.name == "Pasta Tortellini") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 39,
         };
     } else if (obj.name == "Fettuccine Alfredo") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 40,
         };
     } else if (obj.name == "Lasagna") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 41,
         };
     } else if (obj.name == "Garlic Glazed Noodle") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 42,
         };
     } else if (obj.name == "Bacon Mac & Cheese") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 43,
         };
     } else if (obj.name == "Pasta Calamarata") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 44,
         };
     } else if (obj.name == "Lo Mein Noodles") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 45,
         };
     } else if (obj.name == "Rasta Pasta") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 46,
         };
     } else if (obj.name == "Pasta alla Pescatora") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 47,
         };
     } else if (obj.name == "Spaghetti Vongole") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 48,
         };
     } else if (obj.name == "Chicken Caesar Salad") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 49,
         };
     } else if (obj.name == "Caribbean Mixed Rice") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 50,
         };
     } else if (obj.name == "Curry goat/mutton/chicken") {
@@ -440,270 +460,315 @@ function giveId(obj) {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 52,
         };
     } else if (obj.name == "Steamed Fish with Dumplings") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 53,
         };
     } else if (obj.name == "Red Peas Soup") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 54,
         };
     } else if (obj.name == "Chilaquiles") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 55,
         };
     } else if (obj.name == "Tutu & Kabritu") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 56,
         };
     } else if (obj.name == "STEWED OXTAIL") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 57,
         };
     } else if (obj.name == "Tandoori Chicken") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 58,
         };
     } else if (obj.name == "Chicken Foot Soup") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 59,
         };
     } else if (obj.name == "Ratatouille") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 60,
         };
     } else if (obj.name == "Tick Shake Strawberry") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 61,
         };
     } else if (obj.name == "Thick Shake Banana") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 62,
         };
     } else if (obj.name == "Thick shake Premium caramel") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 63,
         };
     } else if (obj.name == "0.25 LT Fuze Tea Green Tea") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 64,
         };
     } else if (obj.name == "0.33 Liter Coca Cola") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 65,
         };
     } else if (obj.name == "0.33 liter Fernandes Cherry") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 66,
         };
     } else if (obj.name == "0.33 liter Fanta") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 67,
         };
     } else if (obj.name == "0.33 liter Fanta Cassis") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 68,
         };
     } else if (obj.name == "0.33 liter Fernandes Red Grape") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 69,
         };
     } else if (obj.name == "Fria Grape") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 70,
         };
     } else if (obj.name == "0.5 liter Spa water") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 71,
         };
     } else if (obj.name == "Minute Maid") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 72,
         };
     } else if (obj.name == "Smirnoff Ice Vodka Mixed Drink 70cl") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 73,
         };
     } else if (obj.name == "White Claw Hard Seltzer 330ml") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 74,
         };
     } else if (obj.name == "Heineken Premium Pilsener Bier") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 75,
         };
     } else if (obj.name == "Bavaria - Pils") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 76,
         };
     } else if (obj.name == "Jupiler Belgisch Pils") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 77,
         };
     } else if (obj.name == "Grolsch - Pils - 25cl") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 78,
         };
     } else if (obj.name == "Orbea - Pinot Grigio - 750ML") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 79,
         };
     } else if (obj.name == "Excellence - Chardonnay - 750ML") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 80,
         };
     } else if (obj.name == "Leffe Blond Belgisch Abdijbier Flessen") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 81,
         };
     } else if (obj.name == "Ponche Crema Curacao") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 82,
         };
     } else if (obj.name == "Pistachio Curacao") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 83,
         };
     } else if (obj.name == "Moët & Chandon - Brut Impérial in giftbox") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 84,
         };
     } else if (obj.name == "Dutch Stroopwafel") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 85,
         };
     } else if (obj.name == "Dutch Apple Pie") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 86,
         };
     } else if (obj.name == "Oliebollen (Dutch Doughnuts)") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 87,
         };
     } else if (obj.name == "Bulla cake") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 88,
         };
     } else if (obj.name == "Sweet potato pudding") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 89,
         };
     } else if (obj.name == "Bun & Cheese") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 90,
         };
     } else if (obj.name == "Li di fruta") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 91,
         };
     } else if (obj.name == "Li di Pinda") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 92,
         };
     } else if (obj.name == "Caramel Pecan Ice-cream") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 93,
         };
     } else if (obj.name == "Tumba Ice-Cream") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 94,
         };
     } else if (obj.name == "Arepa di pampuna") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 95,
         };
     } else if (obj.name == "Pandushi") {
         obj = {
             name: obj.name,
             unit: obj.unit,
+            price: obj.price,
             id: 96,
         };
     }
@@ -734,7 +799,7 @@ function createArray(obj) {
         <input class="italic font-semibold px-1 w-10  text-center text-base bg-transparent" type="number" name="unit[]" id="unit"
                 placeholder="" value="${obj.unit}" readonly>
 
-        <input type="text" class="text-xl text-white tracking-wider bg-transparent" name="name[]" id="name" value="${obj.name}" readonly>
+        <input type="text" class="text-lg text-white tracking-wider bg-transparent" name="name[]" id="name" value="${obj.name}" readonly>
     <input type="text" class="text-sm text-white tracking-wider bg-transparent" name="price[]" id="name" value="${obj.price}" readonly>`;
 
     cartItemRows.innerHTML = cartItemRow;
@@ -1011,6 +1076,11 @@ function jobs(event) {
     let title = button.parentElement.parentElement.children[0].innerHTML;
 
     var title_box = document.getElementById("title-block");
+    var title_box1 = document.getElementById("title-block-hidden");
+
+    title_box.value = title;
+    title_box1.value = title;
+
 
     var dialog = document.getElementById("dialog");
     var closeButton = document.getElementById("close");
@@ -1027,7 +1097,8 @@ function jobs(event) {
         overlay.classList.add("hidden");
     });
 
-    title_box.innerHTML = title;
+
+    // console.log();
 }
 
 

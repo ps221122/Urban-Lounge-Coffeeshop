@@ -160,7 +160,7 @@
                     <div class="flex justify-between">
                     <div class="store-info-box mt-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">${arg[i].category}</h3>
-                        <h2 class="text-gray-900 title-font text-base font-medium" id="items-name">${arg[i].name}</h2>
+                        <h2  class="text-gray-900 title-font text-base font-medium" id="items-name">${arg[i].name}</h2>
                         <p class="mt-1">${arg[i].price}</p>
                         <p class="hidden">${arg[i].inCart}</p>
                     </div>
@@ -168,7 +168,8 @@
                             <button class="text-xl text-white add-button" id="add-button"><i class="bi bi-bag-plus-fill"></i><button>   
                         </div>
                         </div>
-                </a>`
+                        
+                        </a>`
                             }
                             return items;
                         }
@@ -1068,7 +1069,7 @@
                             {
                                 productvalue: "3",
                                 name: "Heineken Premium Pilsener Bier",
-                                tag: "https://static.ah.nl/static/gall/img_340806_Gall_500.png",
+                                tag: "https://cdn.pixabay.com/photo/2015/01/04/19/43/beer-588615_960_720.jpg",
                                 price: '€10.95',
                                 description: 'Heineken Premium Pilsener Bier 6 * 50cl',
                                 inCart: 0,
@@ -1089,7 +1090,7 @@
                             {
                                 productvalue: "5",
                                 name: "Jupiler Belgisch Pils 33cl",
-                                tag: "https://static.ah.nl/static/gall/img_50591_Gall_500.png",
+                                tag: "https://d33za54wpumlhy.cloudfront.net/eyJidWNrZXQiOiJzYXZldXJiaWVyZSIsImtleSI6ImltZy9wLzI2ODgtNTM5ODguanBnIiwiZWRpdHMiOnsid2VicCI6eyJxdWFsaXR5Ijo4MH0sInBuZyI6eyJxdWFsaXR5Ijo4MH0sInJlc2l6ZSI6eyJ3aWR0aCI6MzI4LCJoZWlnaHQiOjIyNSwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MCwiZyI6MCwiYiI6MCwiYWxwaGEiOjB9fX19",
                                 price: '€8.00',
                                 description: 'Jupiler Belgisch Pils 33cl',
                                 inCart: 0,

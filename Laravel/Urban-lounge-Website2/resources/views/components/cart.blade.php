@@ -1,8 +1,8 @@
-<div id="purchase-box-model" class="purchase-box mr-28 bg-gray-300 h-2/4 w-2/12">
+<div id="purchase-box-model" class="purchase-box mr-28 h-2/4 w-2/12 bg-gray-300">
     <!-- Header -->
-    <div class="modal__header flex justify-between my-3 ">
+    <div class="modal__header my-3 flex justify-between">
         <h1 class="text-3xl text-black">Summary</h1>
-        <button class="text-red-700 text-2xl"><i id="myBtn" class="bi bi-x-lg"></i></button>
+        <button class="text-2xl text-red-700"><i id="btnClose" class="bi bi-x-lg"></i></button>
     </div>
 
 
@@ -20,16 +20,15 @@
     <!-- Footer -->
     <div class="modal__footer mt-8 mb-5">
         <div class="flex content-center justify-between">
-            <h1 class="text-lg text-black py-4">Total price:</h1>
-            <p class="py-4 text-lg text-black font-sans cart-total-price" id="cart-total">€0.00</p>
+            <h1 class="py-4 text-lg text-black">Total price:</h1>
+            <p class="cart-total-price py-4 font-sans text-lg text-black" id="cart-total">€0.00</p>
         </div>
         <div class="flex justify-evenly">
-            <button class="text-white  rounded-2xl py-1 text-lg bg-slate-500 px-8 btn-clear"
-                id="clear-cart-button">clear
+            <button class="btn-clear rounded-2xl bg-slate-500 py-1 px-8 text-lg text-white" id="clear-cart-button">clear
                 cart</button>
 
             <button
-                class="border-solid border-2 border-black bg-black text-white rounded-2xl py-1 text-lg px-8 btn-checkout">Checkout</button>
+                class="btn-checkout rounded-2xl border-2 border-solid border-black bg-black py-1 px-8 text-lg text-white">Checkout</button>
 
         </div>
 
