@@ -5,7 +5,7 @@
 <body class="body subpixel-antialiased">
     @include('components.nav')
     @yield ('content')
-    {{-- @include('components.footer') --}}
+    @include('components.footer')
 </body>
 
 </html>

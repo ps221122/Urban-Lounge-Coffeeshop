@@ -17,13 +17,13 @@
                 <h2 class="title-font mb-3 text-sm font-medium tracking-widest text-gray-900">Home</h2>
                 <nav class="mb-10 list-none">
                     <li>
-                        <a class="text-gray-600 hover:text-gray-800">Gallery</a>
+                        <a href="{{ route('gallery') }}" class="text-gray-600 hover:text-gray-800">Gallery</a>
                     </li>
                     <li>
-                        <a class="text-gray-600 hover:text-gray-800">Events</a>
+                        <a href="{{ route('events') }}" class="text-gray-600 hover:text-gray-800">Events</a>
                     </li>
                     <li>
-                        <a class="text-gray-600 hover:text-gray-800">About us</a>
+                        <a href="{{ route('about') }}" class="text-gray-600 hover:text-gray-800">About us</a>
                     </li>
                 </nav>
             </div>
@@ -34,13 +34,13 @@
                 <h2 class="title-font mb-3 text-lg font-medium tracking-widest text-gray-900">About Urban Lounge</h2>
                 <nav class="mb-10 list-none">
                     <li>
-                        <a class="text-gray-600 hover:text-gray-800">Working at Urban</a>
+                        <a href="{{ route('jobs') }}" class="text-gray-600 hover:text-gray-800">Working at Urban</a>
                     </li>
                     <li>
-                        <a class="text-gray-600 hover:text-gray-800">Look in the kitchen</a>
+                        <a href="#" class="text-gray-600 hover:text-gray-800">Look in the kitchen</a>
                     </li>
                     <li>
-                        <a class="text-gray-600 hover:text-gray-800">Locations</a>
+                        {{-- <a class="text-gray-600 hover:text-gray-800">Locations</a> --}}
                     </li>
                 </nav>
             </div>
@@ -51,13 +51,13 @@
                 <h2 class="title-font mb-3 text-lg font-medium tracking-widest text-gray-900">Franchise information</h2>
                 <nav class="mb-10 list-none">
                     <li>
-                        <a class="text-gray-600 hover:text-gray-800">FAQ</a>
+                        <a href="{{ route('faq') }}" class="text-gray-600 hover:text-gray-800">FAQ</a>
                     </li>
                     <li>
-                        <a class="text-gray-600 hover:text-gray-800">Privacy</a>
+                        <a href="{{ route('privacy') }}" class="text-gray-600 hover:text-gray-800">Privacy</a>
                     </li>
                     <li>
-                        <a class="text-gray-600 hover:text-gray-800">Terms and Conditions</a>
+                        <a href="{{ route('terms') }}" class="text-gray-600 hover:text-gray-800">Terms and Conditions</a>
                     </li>
                 </nav>
             </div>

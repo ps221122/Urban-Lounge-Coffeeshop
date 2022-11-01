@@ -45,6 +45,18 @@ Route::get('/Events', function () {
     return view('components.events');
 })->name('events');
 
+Route::get('/Privacy', function () {
+    return view('components.privacy');
+})->name('privacy');
+
+Route::get('/FAQ', function () {
+    return view('components.faq');
+})->name('faq');
+
+Route::get('/Terms', function () {
+    return view('components.terms');
+})->name('terms');
+
 Route::get('/About', function () {
     return view('components.about');
 })->name('about');
