@@ -48,7 +48,7 @@ class ApplicantController extends Controller
 
 
         
-     return redirect('/jobs');
+    //  return redirect('/Jobs');
     }
 
     /**

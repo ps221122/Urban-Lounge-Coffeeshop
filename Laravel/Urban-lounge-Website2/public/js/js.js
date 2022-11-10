@@ -1,5 +1,6 @@
 console.log("running");
 
+
 // function dateVariation() {
 //     const date = new Date();
 //     var data = date.toLocaleString();
@@ -107,7 +108,8 @@ function giveId(obj) {
             price: obj.price,
             id: 1,
         };
-    } else if (obj.name == "French Toast") {
+    }
+    else if (obj.name == "French Toast") {
         obj = {
             name: obj.name,
             unit: obj.unit,
@@ -869,6 +871,7 @@ function addToCartClicked(event) {
         items.price = productPrice;
         items.inCart = productIncart;
 
+
         addItemToCart(items);
         updateCartTotal();
     }
@@ -1100,6 +1103,7 @@ function jobs(event) {
 
     // console.log();
 }
+
 
 
 

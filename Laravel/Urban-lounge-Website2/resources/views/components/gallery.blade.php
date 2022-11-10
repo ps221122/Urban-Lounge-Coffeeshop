@@ -116,9 +116,7 @@
         <div class="container mx-auto px-5 py-24">
             <div class="mb-20 flex w-full flex-col text-center">
                 <h1 class="title-font mb-4 text-2xl font-medium text-gray-900 sm:text-3xl">Urban Lounge's relationships</h1>
-                <p class="mx-auto text-base leading-relaxed lg:w-2/3">Whatever cardigan tote bag tumblr hexagon brooklyn
-                    asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man
-                    bun deep jianbing selfies heirloom.</p>
+                <p class="mx-auto text-base leading-relaxed lg:w-2/3"></p>
             </div>
             <div class="-m-4 flex flex-wrap">
                 <div class="p-4 sm:w-1/2 lg:w-1/3">
@@ -184,7 +182,7 @@
                 <div class="p-4 sm:w-1/2 lg:w-1/3">
                     <div class="relative flex">
                         <img alt="gallery" class="absolute inset-0 h-full w-full object-cover object-center"
-                            src="https://www.onderwijsbeurszuid.nl/sites/default/files/inline-images/Suma-College-logo.jpg">
+                            src="https://www.onderwijsbeurszuid.nl/sites/default/files/styles/medium/public/exhibitors/logos/summa-college-logo.png?itok=ZS4bvx4d">
                         <div
                             class="relative z-10 w-full border-4 border-gray-200 bg-white px-8 py-10 opacity-0 hover:opacity-100">
                             <h2 class="title-font mb-1 text-sm font-medium tracking-widest text-indigo-500">5.
@@ -369,7 +367,7 @@
                 <img src="https://www.theknot.com/tk-media/images/8e5250d2-f223-44d2-95e2-4768e7455319~rs_768.h"
                     alt="image">
             </div>
-            
+
         </div>
 
 

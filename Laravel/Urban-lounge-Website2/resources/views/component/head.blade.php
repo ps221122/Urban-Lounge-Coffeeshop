@@ -6,6 +6,7 @@
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/css.css">
     <link rel="icon" href="http://127.0.0.1:8000/assets/logo.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -22,6 +23,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="js/js.js" async></script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
     <title>@yield('title')</title>
 </head>

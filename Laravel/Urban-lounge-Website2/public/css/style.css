@@ -3,6 +3,7 @@
 body, nav {
     font-family: 'Times New Roman', Times, serif;
     width: 100%;
+    /* overflow-x: hidden; */
 }
 
 
@@ -11,7 +12,7 @@ body, nav {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: -100px;
+    margin-top: 70px;
 }
 
 
@@ -452,7 +453,6 @@ input[type=radio] {
     margin-left: -115px;
     padding-left: 30px;
     padding-right: 30px;
-    display: none;
 }
 
 .modal__header {

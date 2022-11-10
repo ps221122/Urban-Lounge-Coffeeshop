@@ -8,6 +8,8 @@ use App\Http\Controllers\PersonController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OrderDetailController;
 use App\Http\Controllers\MenulistController;
+use App\Http\Controllers\EventController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,34 +22,40 @@ use App\Http\Controllers\MenulistController;
 */
 // Route::get('/Ordered',[OrderDetailController::class, 'index']);
 
-Route::post('/Ordered',[PersonController::class, 'store']);
+// Route::post('/Ordered',[PersonController::class, 'store']);
 
+Route::get('/Home',[EmptyController::class, 'index'])->name('index');
 
-Route::get('/',[EmptyController::class, 'index'])->name('index');
+Route::get('/Breakfast',[MenulistController::class, 'index'])->name('breakfast');
 
-Route::get('/Jobs',[JobController::class, 'index'])->name('jobs');
+Route::get('/Pizza',[MenulistController::class, 'index'])->name('pizza');
 
-Route::post('/Jobs',[ApplicantController::class, 'store']);
+Route::get('/Vegan',[MenulistController::class, 'index'])->name('vegan');
 
-Route::get('/jobs', function () {
-    return view('components.applied');
-})->name('jobs');
+Route::get('/Pasta',[MenulistController::class, 'index'])->name('pasta');
 
-Route::get('/Ordered', function () {
-    return view('components.orderResult');
-})->name('Order');
+Route::get('/Dinner',[MenulistController::class, 'index'])->name('dinner');
+
+Route::get('/Beverage',[MenulistController::class, 'index'])->name('beverage');
+
+Route::get('/Alcohol',[MenulistController::class, 'index'])->name('alcohol');
+
+Route::get('/Dessert',[MenulistController::class, 'index'])->name('dessert');
+
+Route::get('/Events',[EventController::class, 'index'])->name('events');
 
 Route::get('/Gallery', function () {
     return view('components.gallery');
 })->name('gallery');
 
-Route::get('/Events', function () {
-    return view('components.events');
-})->name('events');
+Route::get('/About', function () {
+    return view('components.about');
+})->name('about');
 
 Route::get('/Privacy', function () {
     return view('components.privacy');
 })->name('privacy');
+
 
 Route::get('/FAQ', function () {
     return view('components.faq');
@@ -57,58 +65,36 @@ Route::get('/Terms', function () {
     return view('components.terms');
 })->name('terms');
 
-Route::get('/About', function () {
-    return view('components.about');
-})->name('about');
-
 Route::get('/Contact', function () {
     return view('components.contact');
 })->name('contact');
 
-Route::get('/Locations', function () {
-    return view('components.location');
-})->name('location');
 
-Route::get('/Breakfast', function () {
-    return view('menu.menuList');
-})->name('breakfast');
+// Route::get('/Jobs',[JobController::class, 'index'])->name('jobs');
 
-Route::get('/Pizza', function () {
-   return view('menu.menuList');
-})->name('pizza');
+//  Route::post('/Jobs',[ApplicantController::class, 'store']);
+
+// Route::get('/Jobs', function () {
+//     return view('components.applied');
+// });
+
+// Route::get('/Ordered', function () {
+//     return view('components.orderResult');
+// })->name('Order');
 
 
-Route::get('/Vegan', function () {
-   return view('menu.menuList');
-})->name('vegan');
+// Route::get('/Locations', function () {
+//     return view('components.location');
+// })->name('location');
 
-Route::get('/Pasta', function () {
-   return view('menu.menuList');
-})->name('pasta');
 
-Route::get('/Dinner', function () {
-   return view('menu.menuList');
-})->name('dinner');
+// Route::get('/Planet Defense', function () {
+//    return view('components.planet');
+// })->name('planet');
 
-Route::get('/Beverage', function () {
-   return view('menu.menuList');
-})->name('beverage');
-
-Route::get('/Alcohol', function () {
-   return view('menu.menuList');
-})->name('alcohol');
-
-Route::get('/Dessert', function () {
-   return view('menu.menuList');
-})->name('dessert');
-
-Route::get('/Planet Defense', function () {
-   return view('components.planet');
-})->name('planet');
-
-Route::get('/Delivered', function () {
-   return view('components.orderCompleted');
-})->name('orderCompleted');
+// Route::get('/Delivered', function () {
+//    return view('components.orderCompleted');
+// })->name('orderCompleted');
 
 
 Route::get('/dashboard', function () {

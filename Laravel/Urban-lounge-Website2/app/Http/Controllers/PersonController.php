@@ -83,7 +83,7 @@ class PersonController extends Controller
 
 // return($quantity);
 
-    return view('components.orderResult', ['person'=>$person, 'product'=>$productid, 'orderDetail'=>$quantity]);
+    // return view('components.orderResult', ['person'=>$person, 'product'=>$productid, 'orderDetail'=>$quantity]);
     
     }
 

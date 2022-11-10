@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-@include('components.head')
+@include('component.head')
 
-<body class="body subpixel-antialiased">
-    @include('components.nav')
+<body class="font-serif bg-slate-100">
+    @include('component.nav')
     @yield ('content')
-    @include('components.footer')
+    @include('component.footer')
 </body>
 
 </html>
