@@ -1,7 +1,7 @@
 <nav class="fixed top-0 left-0 z-20 w-full bg-white px-2 py-2.5 shadow-lg sm:px-4">
     <div class="container mx-auto flex flex-wrap items-center justify-between">
-        <a href="#" class="mx-0 flex items-center lg:-ml-36 lg:mr-80">
-            <img src="./assets/logo.png" class="mr-3 h-6 sm:h-16" alt="Flowbite Logo">
+        <a href="{{ route('index') }}" class="mx-0 flex items-center lg:-ml-36 lg:mr-80">
+            <img src="./assets/logo.png" class="mr-3 h-6 sm:h-16" alt="Logo">
             <span class="self-center whitespace-nowrap text-xl font-medium italic text-black lg:text-3xl">Urban
                 Lounge!</span>
         </a>
@@ -39,7 +39,7 @@
                         class="z-10 hidden w-44 divide-y divide-gray-100 rounded bg-white font-normal shadow dark:divide-gray-600 dark:bg-gray-100">
                         <ul class="py-1 text-sm text-black dark:text-black" aria-labelledby="dropdownLargeButton">
                             <li>
-                                <a href="{{ route('breakfast') }}#breakfast"
+                                <a href="{{ route('breakfast') }}"
                                     class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-200 dark:hover:text-blue-800">Breakfast</a>
                             </li>
                             <li>
@@ -119,4 +119,5 @@
             </ul>
         </div>
     </div>
+    @include('components.Scart')
 </nav>

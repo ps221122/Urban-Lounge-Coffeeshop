@@ -8,7 +8,8 @@ use App\Http\Controllers\PersonController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OrderDetailController;
 use App\Http\Controllers\MenulistController;
-use App\Http\Controllers\EventController;
+use App\Http\Controllers\EventlistController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +43,9 @@ Route::get('/Alcohol',[MenulistController::class, 'index'])->name('alcohol');
 
 Route::get('/Dessert',[MenulistController::class, 'index'])->name('dessert');
 
-Route::get('/Events',[EventController::class, 'index'])->name('events');
+Route::get('/Events/',[EventlistController::class, 'index','store'])->name('events');
+
+Route::get('/test',[EventlistController::class, 'store']);
 
 Route::get('/Gallery', function () {
     return view('components.gallery');
@@ -70,6 +73,11 @@ Route::get('/Contact', function () {
 })->name('contact');
 
 
+Route::get('/Planet Defense', function () {
+   return view('components.planet');
+})->name('planet');
+
+
 // Route::get('/Jobs',[JobController::class, 'index'])->name('jobs');
 
 //  Route::post('/Jobs',[ApplicantController::class, 'store']);
@@ -88,9 +96,7 @@ Route::get('/Contact', function () {
 // })->name('location');
 
 
-// Route::get('/Planet Defense', function () {
-//    return view('components.planet');
-// })->name('planet');
+
 
 // Route::get('/Delivered', function () {
 //    return view('components.orderCompleted');

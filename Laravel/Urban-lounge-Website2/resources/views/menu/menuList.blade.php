@@ -2,16 +2,18 @@
 @section('title', 'Menu')
 @section('content')
     <div class="openingBoxContainer mt-20 md:mt-40">
-        <p class="text-xl sm:text-2xl" id="sign"></p>
+        <p class="px-2 text-lg sm:text-2xl md:text-xl" id="sign"></p>
     </div>
-    <section class="body-font mt-24 flex text-gray-600">
-        <div class="container mx-auto px-5 py-24">
 
-            <div class="outer-menu-box my-28">
+    <section class="body-font menulist -mt-28 flex items-baseline text-gray-600 lg:mt-24">
+        <div class="container mx-auto py-2 px-5 lg:py-24">
+
+            <div class="outer-menu-box lg:my-28">
                 <div class="category-title">
                     <h1 class="text-2xl font-semibold italic" id="breakfast">Breakfast</h1>
                     <hr>
                 </div>
+
                 <div class="-m-4 flex flex-wrap" id="main">
                     @foreach ($breakfast as $item)
                         <div class="w-full p-12 md:w-1/2 lg:w-1/3">
@@ -26,7 +28,7 @@
                                     <h2 class="title-font text-lg font-medium text-gray-900" id="items-name">
                                         {{ $item->name }}
                                     </h2>
-                                    <p class="mt-1">{{ $item->price }}</p>
+                                    <p class="mt-1">€{{ $item->price }}</p>
                                     <p class="hidden">0</p>
                                 </div>
                                 <div
@@ -41,7 +43,7 @@
             </div>
 
 
-            <div class="outer-menu-box my-28">
+            <div class="outer-menu-box lg:my-28">
                 <div class="category-title">
                     <h1 class="text-2xl font-semibold italic" id="pizza">Pizza</h1>
                     <hr>
@@ -60,7 +62,7 @@
                                     <h2 class="title-font text-lg font-medium text-gray-900" id="items-name">
                                         {{ $item->name }}
                                     </h2>
-                                    <p class="mt-1">{{ $item->price }}</p>
+                                    <p class="mt-1">€{{ $item->price }}</p>
                                     <p class="hidden">0</p>
                                 </div>
                                 <div
@@ -94,7 +96,7 @@
                                     <h2 class="title-font text-lg font-medium text-gray-900" id="items-name">
                                         {{ $item->name }}
                                     </h2>
-                                    <p class="mt-1">{{ $item->price }}</p>
+                                    <p class="mt-1">€{{ $item->price }}</p>
                                     <p class="hidden">0</p>
                                 </div>
                                 <div
@@ -128,7 +130,7 @@
                                     <h2 class="title-font text-lg font-medium text-gray-900" id="items-name">
                                         {{ $item->name }}
                                     </h2>
-                                    <p class="mt-1">{{ $item->price }}</p>
+                                    <p class="mt-1">€{{ $item->price }}</p>
                                     <p class="hidden">0</p>
                                 </div>
                                 <div
@@ -164,7 +166,7 @@
                                     <h2 class="title-font text-lg font-medium text-gray-900" id="items-name">
                                         {{ $item->name }}
                                     </h2>
-                                    <p class="mt-1">{{ $item->price }}</p>
+                                    <p class="mt-1">€{{ $item->price }}</p>
                                     <p class="hidden">0</p>
                                 </div>
                                 <div
@@ -200,7 +202,7 @@
                                     <h2 class="title-font text-lg font-medium text-gray-900" id="items-name">
                                         {{ $item->name }}
                                     </h2>
-                                    <p class="mt-1">{{ $item->price }}</p>
+                                    <p class="mt-1">€{{ $item->price }}</p>
                                     <p class="hidden">0</p>
                                 </div>
                                 <div
@@ -236,7 +238,7 @@
                                     <h2 class="title-font text-lg font-medium text-gray-900" id="items-name">
                                         {{ $item->name }}
                                     </h2>
-                                    <p class="mt-1">{{ $item->price }}</p>
+                                    <p class="mt-1">€{{ $item->price }}</p>
                                     <p class="hidden">0</p>
                                 </div>
                                 <div
@@ -272,7 +274,7 @@
                                     <h2 class="title-font text-lg font-medium text-gray-900" id="items-name">
                                         {{ $item->name }}
                                     </h2>
-                                    <p class="mt-1">{{ $item->price }}</p>
+                                    <p class="mt-1">€{{ $item->price }}</p>
                                     <p class="hidden">0</p>
                                 </div>
                                 <div
@@ -286,10 +288,9 @@
                 </div>
             </div>
 
-
-
-
         </div>
         @include('components.cart')
     </section>
+
+    {{-- @include('components.Scart') --}}
 @endsection

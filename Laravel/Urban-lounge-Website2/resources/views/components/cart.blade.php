@@ -1,4 +1,4 @@
-<div id="purchase-box-model" class="purchase-box mr-28 bg-gray-300 lg:h-2/4 lg:w-3/12 lg:mt-20 sticky">
+<div id="purchase-box-model" class="purchase-box mx-28 bg-gray-300 lg:mt-40 lg:h-2/4 lg:w-3/12">
     <!-- Header -->
     <div class="modal__header my-3 flex justify-between">
         <h1 class="text-3xl text-black">Summary</h1>

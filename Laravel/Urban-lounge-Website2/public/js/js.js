@@ -1,32 +1,5 @@
 console.log("running");
 
-
-// function dateVariation() {
-//     const date = new Date();
-//     var data = date.toLocaleString();
-//     // if (data == "01-08") {
-//     //     console.log("autumn");
-//     //     document.body.style.backgroundColor = "#e9bf8b";
-//     // }
-//     // else if (data == "18-10") {
-//     //     console.log("winter");
-//     //     document.body.style.backgroundColor = "#b6d6c8";
-//     //     document.getElementsByClassName("autum").style.display = "none";
-//     // }
-//     // else if (data == "01-02") {
-//     //     console.log("spring");
-//     //     document.body.style.backgroundColor = "#AFD297";
-//     // }
-//     // else if (data == "01-05") {
-//     //     console.log("summer");
-//     //     document.body.style.backgroundColor = "#f0f2e7";
-//     // }
-//     // else {
-//     //     document.body.style.backgroundColor = "#F6F6F5";
-//     // }
-// }
-// dateVariation();
-
 function myFunction() {
     var x = document.getElementById("purchase-box-model");
     if (x.style.display === "none") {
