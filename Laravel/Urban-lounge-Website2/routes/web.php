@@ -9,7 +9,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OrderDetailController;
 use App\Http\Controllers\MenulistController;
 use App\Http\Controllers\EventlistController;
-
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,11 +21,8 @@ use App\Http\Controllers\EventlistController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/Ordered',[OrderDetailController::class, 'index']);
 
-// Route::post('/Ordered',[PersonController::class, 'store']);
-
-Route::get('/Home',[EmptyController::class, 'index'])->name('index');
+Route::get('/',[EmptyController::class, 'index'])->name('index');
 
 Route::get('/Breakfast',[MenulistController::class, 'index'])->name('breakfast');
 
@@ -43,9 +40,19 @@ Route::get('/Alcohol',[MenulistController::class, 'index'])->name('alcohol');
 
 Route::get('/Dessert',[MenulistController::class, 'index'])->name('dessert');
 
-Route::get('/Events/',[EventlistController::class, 'index','store'])->name('events');
+Route::get('/Events',[EventlistController::class, 'index','store'])->name('events');
 
-Route::get('/test',[EventlistController::class, 'store']);
+Route::get('cart', [CartController::class, 'cartList'])->name('cart.list');
+
+Route::post('cart', [CartController::class, 'addToCart'])->name('cart.store');
+
+Route::post('update-cart', [CartController::class, 'updateCart'])->name('cart.update');
+
+Route::post('remove', [CartController::class, 'removeCart'])->name('cart.remove');
+
+Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear');
+
+// Route::post('cart', [CartController::class, 'eventStore']);
 
 Route::get('/Gallery', function () {
     return view('components.gallery');
@@ -76,32 +83,6 @@ Route::get('/Contact', function () {
 Route::get('/Planet Defense', function () {
    return view('components.planet');
 })->name('planet');
-
-
-// Route::get('/Jobs',[JobController::class, 'index'])->name('jobs');
-
-//  Route::post('/Jobs',[ApplicantController::class, 'store']);
-
-// Route::get('/Jobs', function () {
-//     return view('components.applied');
-// });
-
-// Route::get('/Ordered', function () {
-//     return view('components.orderResult');
-// })->name('Order');
-
-
-// Route::get('/Locations', function () {
-//     return view('components.location');
-// })->name('location');
-
-
-
-
-// Route::get('/Delivered', function () {
-//    return view('components.orderCompleted');
-// })->name('orderCompleted');
-
 
 Route::get('/dashboard', function () {
     return view('dashboard');

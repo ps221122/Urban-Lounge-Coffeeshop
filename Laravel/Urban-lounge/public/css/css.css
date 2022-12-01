@@ -1,0 +1,831 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap');
+
+body {
+     font-family: 'Times New Roman', Times, serif;
+     width: 100%;
+     overflow: auto;
+}
+
+nav {
+     font-family: 'Times New Roman', Times, serif;
+     width: 100%;
+     /* overflow: hidden; */
+}
+
+body::-webkit-scrollbar {
+     display: none;
+}
+
+
+.scroller {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 70px;
+}
+
+
+.form-box {
+     background: rgba(255, 255, 255, 0.5);
+     -webkit-backdrop-filter: blur(10px);
+     backdrop-filter: blur(10px);
+     border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.index-header {
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.title-about {
+     bottom: 45%;
+     position: absolute;
+     margin-left: 45%;
+     font-size: 85px;
+     color: white;
+     text-decoration: underline;
+}
+
+#welcome-text {
+     bottom: 45%;
+     position: absolute;
+     animation: linear infinite alternate;
+     animation-name: run;
+     animation-duration: 15s;
+}
+
+input[type=radio] {
+     height: 20px;
+     width: 100px;
+}
+
+@keyframes run {
+     0% {
+          left: 0;
+     }
+
+     50% {
+          left: 65%;
+     }
+
+     100% {
+          left: 0;
+     }
+}
+
+.spinner1 {
+     width: 300px;
+     height: 300px;
+     margin-left: 36rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 2rem;
+     overflow: hidden;
+     position: relative;
+     animation: text-color 2s ease-in-out infinite alternate;
+}
+
+.spinner2 {
+     width: 300px;
+     margin-top: -75px;
+     height: 300px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 2rem;
+     overflow: hidden;
+     position: relative;
+     animation: text-color 2s ease-in-out infinite alternate;
+}
+
+.spinner3 {
+     width: 300px;
+     margin-top: -75px;
+     height: 300px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 2rem;
+     overflow: hidden;
+     position: relative;
+     animation: text-color 2s ease-in-out infinite alternate;
+}
+
+.spinner-sector {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     border-radius: 50%;
+     border: 1px solid transparent;
+     mix-blend-mode: overlay;
+     animation: rotate var(--duration) var(--timing) infinite;
+     pointer-events: none;
+}
+
+.secondSpinner {
+     display: flex;
+     margin-left: 28rem;
+}
+
+.spinner-sector-red {
+     border-top-color: #a8a8a8;
+     --duration: 1.5s;
+     --timing: ease-in-out;
+}
+
+.spinner-sector-blue {
+     border-left-color: #0cd6f5;
+     --duration: 2s;
+     --timing: ease-in;
+}
+
+.spinner-sector-green {
+     border-right-color: darkcyan;
+     --duration: 2.5s;
+     --timing: ease-out;
+}
+
+.spinner-sector-red1 {
+     border-bottom-color: lightslategray;
+     --duration: 1.5s;
+     --timing: ease-in-out;
+}
+
+.spinner-sector-blue1 {
+     border-right-color: #a8a8a8;
+     --duration: 2s;
+     --timing: ease-in;
+}
+
+.spinner-sector-green1 {
+     border-left-color: cadetblue;
+     --duration: 2.5s;
+     --timing: ease-out;
+
+}
+
+.spinner-sector-red2 {
+     border-bottom-color: lightcoral;
+     --duration: 1.5s;
+     --timing: ease-in-out;
+}
+
+.spinner-sector-blue2 {
+     border-right-color: darkcyan;
+     --duration: 2s;
+     --timing: ease-in;
+
+}
+
+.spinner-sector-green2 {
+     border-left-color: lightgreen;
+     --duration: 2.5s;
+     --timing: ease-out;
+
+}
+
+@keyframes rotate {
+     0% {
+          transform: rotate(0);
+     }
+
+     100% {
+          transform: rotate(360deg);
+     }
+}
+
+@keyframes text-color {
+     0% {
+          color: rgba(0, 0, 0, 1);
+     }
+
+     50% {
+          color: rgba(0, 0, 0, 0.5);
+     }
+
+     100% {
+          color: rgba(0, 0, 0, 0.1);
+     }
+}
+
+.spinner-2 {
+     width: 300px;
+     height: 300px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 2rem;
+     overflow: hidden;
+     position: relative;
+     animation: text-color 2s ease-in-out infinite alternate;
+}
+
+.spinner-2::before,
+.spinner-2::after {
+     content: "";
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     border-radius: 50%;
+     border: 15px solid transparent;
+     mix-blend-mode: overlay;
+     animation: rotate var(--duration) var(--timing) infinite;
+     pointer-events: none;
+}
+
+.spinner-2::before {
+     border-left-color: lightblue;
+     --duration: 2s;
+     --timing: ease-in;
+}
+
+.spinner-2::after {
+     border-right-color: lightgreen;
+     --duration: 2.5s;
+     --timing: ease-out;
+}
+
+.openingBoxContainer {
+     position: relative;
+     font-family: monospace;
+     color: rgb(255, 255, 255);
+     margin-top: 7rem;
+     margin-bottom: -5rem;
+     filter: contrast(15);
+     text-align: center;
+     margin-right: 50%;
+}
+
+#sign {
+     font-style: italic;
+}
+
+.receipt-box {
+     margin: 15rem;
+}
+
+.orderCheckoutBox .set {
+     height: 100%;
+     left: 0;
+     pointer-events: none;
+     position: absolute;
+     top: 0;
+     width: 100%;
+}
+
+.orderCheckoutBox .set.set2 {
+     filter: blur(2px);
+     transform: rotateY(180deg) scale(1.5);
+}
+
+.orderCheckoutBox .set.set3 {
+     filter: blur(4px);
+     transform: rotateY(180deg) scale(0.8);
+}
+
+.orderCheckoutBox .set div {
+     animation-name: animate;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+     display: block;
+     opacity: 0;
+     position: absolute;
+     top: -10%;
+     transform: rotateZ(0) translateX(20px);
+}
+
+.orderCheckoutBox .set div:nth-child(1) {
+     animation-delay: -7s;
+     animation-duration: 15s;
+     left: 20%;
+}
+
+.orderCheckoutBox .set div:nth-child(2) {
+     animation-delay: -5s;
+     animation-duration: 20s;
+     left: 50%;
+}
+
+.orderCheckoutBox .set div:nth-child(3) {
+     animation-duration: 20s;
+     left: 70%;
+}
+
+.orderCheckoutBox .set div:nth-child(4) {
+     animation-delay: -5s;
+     animation-duration: 15s;
+     left: 0;
+}
+
+.orderCheckoutBox .set div:nth-child(5) {
+     animation-delay: -10s;
+     animation-duration: 18s;
+     left: 85%;
+}
+
+.orderCheckoutBox .set div:nth-child(6) {
+     animation-duration: 12s;
+     left: 0;
+}
+
+.orderCheckoutBox .set div:nth-child(7) {
+     animation-duration: 14s;
+     left: 15%;
+}
+
+.orderCheckoutBox .set div:nth-child(8) {
+     animation-duration: 15s;
+     left: 60%;
+}
+
+@keyframes animate {
+     10% {
+          opacity: 1;
+     }
+
+     20% {
+          transform: rotateZ(45deg) translateX(-20px);
+     }
+
+     40% {
+          transform: rotateZ(90deg) translateX(-20px);
+     }
+
+     60% {
+          transform: rotateZ(180deg) translateX(20px);
+     }
+
+     80% {
+          transform: rotateZ(180deg) translateX(-20px);
+     }
+
+     100% {
+          top: 110%;
+          transform: rotateZ(225deg) translateX(-20px);
+     }
+}
+
+/* @media screen and (max-width: 990px) {} */
+
+/* @media screen and (max-width: 768px) {
+    .orderCheckoutBox .set div img {
+        width: 100px;
+        heigth: 100px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .orderCheckoutBox .set div img {
+        width: 75px;
+        heigth: 50px;
+    }
+} */
+
+
+.login-box h1 {
+     margin: 0 0 30px;
+     padding: 0;
+     text-align: center;
+
+}
+
+.bottle-title {
+     font-size: 26px;
+     font-family: var(--italic-font);
+     font-style: italic;
+     margin-bottom: 14px;
+     transition-delay: 0.2s;
+}
+
+.bottle-subtitle {
+     font-size: 15px;
+     line-height: 1.5;
+     margin-bottom: 24px;
+     letter-spacing: -0.01em;
+     transition-delay: 0.3s;
+}
+
+
+
+
+
+.firstBox {
+     width: 400px;
+}
+
+.firstBox1 {
+     width: 430px;
+}
+
+#item1 {
+     background-color: #e7dfcf;
+     padding: 25px;
+     border-radius: 25px;
+}
+
+#item2 {
+     background-color: #e9bf8b;
+     padding: 25px;
+     border-radius: 25px;
+}
+
+#item3 {
+     background-color: #b6d6c8;
+     padding: 25px;
+     border-radius: 25px;
+}
+
+#item4 {
+     background-color: #e86357;
+     padding: 25px;
+     border-radius: 25px;
+}
+
+.card {
+     background: rgba(255, 255, 255, 0.73);
+     border-radius: 16px;
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(10.2px);
+     -webkit-backdrop-filter: blur(10.2px);
+     border: 1px solid rgba(255, 255, 255, 0.74);
+     margin-left: 10px;
+     margin-bottom: 50px;
+     margin-right: 20px;
+}
+
+.box-user-dashboard {
+     background-color: transparent;
+}
+
+.purchase-box {
+     margin-left: -115px;
+     padding-left: 30px;
+     padding-right: 30px;
+}
+
+.modal__header {
+     border-bottom: 1px solid rgb(49, 48, 48);
+     border-radius: 10%;
+}
+
+.modal__footer {
+     border-top: 1px dotted rgb(131, 129, 129);
+     border-radius: 2%;
+}
+
+.category-title {
+     margin-bottom: 95px;
+}
+
+.innerView {
+     display: flex;
+     justify-content: space-between;
+}
+
+
+.bottle-bg {
+     width: 320px;
+     height: 395px;
+     object-fit: cover;
+     border-radius: 160px;
+}
+
+.secondBox {
+     margin-left: 30rem;
+     position: relative;
+     flex-shrink: 0;
+}
+
+.bottle-img {
+     position: absolute;
+     top: 15%;
+     left: 0;
+     height: 385px;
+}
+
+.outerBox {
+     height: 500px;
+}
+
+.fade-in-out {
+     margin-left: -800px;
+     margin-top: 3rem;
+     margin-bottom: 1rem;
+     width: 100%;
+     height: fit-content;
+     text-align: center;
+}
+
+.fade-in-out span {
+     display: inline-block;
+     font-size: 4rem;
+     color: transparent;
+     text-shadow: 0px 0px 0px black;
+     animation-duration: 5s;
+     animation-iteration-count: infinite;
+}
+
+.fade-in-out span:nth-child(1) {
+     animation-name: fadeleft;
+}
+
+.fade-in-out span:nth-child(2) {
+     animation-name: faderight;
+     animation-delay: .3s;
+}
+
+.fade-in-out span:nth-child(3) {
+     animation-name: fadeleft;
+     animation-delay: .6s;
+}
+
+.fade-in-out span:nth-child(4) {
+     animation-name: faderight;
+     animation-delay: .9s;
+}
+
+.fade-in-out span:nth-child(5) {
+     animation-name: fadeleft;
+     animation-delay: 1.2s;
+}
+
+.fade-in-out span:nth-child(6) {
+     animation-name: faderight;
+     animation-delay: 1.5s;
+}
+
+.fade-in-out span:nth-child(7) {
+     animation-name: faderight;
+     animation-delay: 1.8s;
+}
+
+@keyframes fadeleft {
+     50% {
+          transform: skew(50deg) translateY(-200%);
+          text-shadow: 0px 0px 50px;
+          opacity: 0;
+     }
+}
+
+@keyframes faderight {
+     50% {
+          transform: skew(-50deg) translateY(-200%);
+          text-shadow: 0px 0px 50px;
+          opacity: 0;
+     }
+}
+
+.snowflake {
+     color: rgb(110, 105, 105);
+     font-size: 1em;
+     font-family: Arial;
+     text-shadow: 0 0 1px #000;
+}
+
+@-webkit-keyframes snowflakes-fall {
+     0% {
+          top: -10%
+     }
+
+     100% {
+          top: 100%
+     }
+}
+
+@-webkit-keyframes snowflakes-shake {
+     0% {
+          -webkit-transform: translateX(0px);
+          transform: translateX(0px)
+     }
+
+     50% {
+          -webkit-transform: translateX(80px);
+          transform: translateX(80px)
+     }
+
+     100% {
+          -webkit-transform: translateX(0px);
+          transform: translateX(0px)
+     }
+}
+
+@keyframes snowflakes-fall {
+     0% {
+          top: -10%
+     }
+
+     100% {
+          top: 100%
+     }
+}
+
+@keyframes snowflakes-shake {
+     0% {
+          transform: translateX(0px)
+     }
+
+     50% {
+          transform: translateX(80px)
+     }
+
+     100% {
+          transform: translateX(0px)
+     }
+}
+
+.snowflake {
+     position: fixed;
+     top: -10%;
+     z-index: 9999;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+     cursor: default;
+     -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+     -webkit-animation-duration: 10s, 3s;
+     -webkit-animation-timing-function: linear, ease-in-out;
+     -webkit-animation-iteration-count: infinite, infinite;
+     -webkit-animation-play-state: running, running;
+     animation-name: snowflakes-fall, snowflakes-shake;
+     animation-duration: 10s, 3s;
+     animation-timing-function: linear, ease-in-out;
+     animation-iteration-count: infinite, infinite;
+     animation-play-state: running, running
+}
+
+.snowflake:nth-of-type(0) {
+     left: 1%;
+     -webkit-animation-delay: 0s, 0s;
+     animation-delay: 0s, 0s
+}
+
+.snowflake:nth-of-type(1) {
+     left: 10%;
+     -webkit-animation-delay: 1s, 1s;
+     animation-delay: 1s, 1s
+}
+
+.snowflake:nth-of-type(2) {
+     left: 20%;
+     -webkit-animation-delay: 6s, .5s;
+     animation-delay: 6s, .5s
+}
+
+.snowflake:nth-of-type(3) {
+     left: 30%;
+     -webkit-animation-delay: 4s, 2s;
+     animation-delay: 4s, 2s
+}
+
+.snowflake:nth-of-type(4) {
+     left: 40%;
+     -webkit-animation-delay: 2s, 2s;
+     animation-delay: 2s, 2s
+}
+
+.snowflake:nth-of-type(5) {
+     left: 50%;
+     -webkit-animation-delay: 8s, 3s;
+     animation-delay: 8s, 3s
+}
+
+.snowflake:nth-of-type(6) {
+     left: 60%;
+     -webkit-animation-delay: 6s, 2s;
+     animation-delay: 6s, 2s
+}
+
+.snowflake:nth-of-type(7) {
+     left: 70%;
+     -webkit-animation-delay: 2.5s, 1s;
+     animation-delay: 2.5s, 1s
+}
+
+.snowflake:nth-of-type(8) {
+     left: 80%;
+     -webkit-animation-delay: 1s, 0s;
+     animation-delay: 1s, 0s
+}
+
+.snowflake:nth-of-type(9) {
+     left: 90%;
+     -webkit-animation-delay: 3s, 1.5s;
+     animation-delay: 3s, 1.5s
+}
+
+#canvas {
+     background: url('https://marclopezavila.github.io/planet-defense-game/img/space.jpg') no-repeat;
+     width: 100%;
+     height: 100%;
+     background-size: cover;
+}
+
+#canvas.playing {
+     cursor: url('https://marclopezavila.github.io/planet-defense-game/img/aim_red.png') 17.5 17.5, auto !important;
+}
+
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+     .purchase-box {
+          display: block;
+     }
+
+     .basket {
+          display: none;
+     }
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+     nav{
+          display: none;
+     }
+     .carouselBox{
+          display: none;
+     }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+     .purchase-box {
+          display: none;
+     }
+
+     #sign {
+          width: max-content;
+          font-size: 19px;
+          padding-top: 15px;
+     }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+     .purchase-box {
+          display: none;
+     }
+
+     #sign {
+          width: max-content;
+          font-size: 19px;
+          padding-top: 15px;
+     }
+
+     .basket {
+          display: block;
+     }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+     .purchase-box {
+          display: none;
+     }
+
+     #sign {
+          width: max-content;
+          font-size: 19px;
+          padding-top: 15px;
+     }
+
+     .basket {
+          display: block;
+     }
+}
+
+
+
+/*-- TABLET --*/
+@media(min-width: 641px) {
+     .basket {
+          display: block;
+     }
+}
+
+/*-- SMALL DESKTOP --*/
+@media(min-width: 768px) {
+     .purchase-box {
+          display: none;
+     }
+
+     #sign {
+          width: max-content;
+          font-size: 35px;
+          padding-top: 15px;
+     }
+}
+
+/*-- DESKTOP --*/
+@media(min-width: 992px) {}
+
+/*-- BIG DESKTOP (rarely used, but can be useful) --*/
+@media(min-width: 1280px) {
+     .purchase-box {
+          display: block;
+     }
+
+     .basket {
+          display: none;
+     }
+}

@@ -11,7 +11,7 @@
     </div>
 
     <div class="border-t border-b border-gray-300 py-5">
-        <form action="/Ordered?nonsense=1" method="POST" class="form flex flex-col" name="myForm">
+        <form action="/Ordered" method="POST" class="form flex flex-col" name="myForm">
             @csrf
 
 
