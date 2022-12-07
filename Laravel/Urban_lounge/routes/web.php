@@ -60,6 +60,8 @@ Route::get('/preview/{id}/', [EventlistController::class, 'edit']);
 
 Route::get('/Jobs',[JobController::class, 'index'])->name('jobs');
 
+Route::post('/jobs',[ApplicantController::class, 'store']);
+
 Route::get('/Profile/{id}/update', [userController::class, 'update1']);
 
 Route::get('/Profile/{id}/update', [userController::class, 'update2']);

@@ -177,6 +177,16 @@ else {
 }
 
 
+var job = document.getElementsByClassName("job-title").innerHTML;
+
+var apply_button = document.querySelectorAll(".apply-button");
+
+apply_button.forEach(function (btn) {
+     btn.addEventListener("click", jobs);
+});
+
+
+
 
 
 

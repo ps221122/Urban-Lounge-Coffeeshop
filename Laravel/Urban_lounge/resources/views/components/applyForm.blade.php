@@ -12,7 +12,7 @@
     </div>
 
     <div class="border-t border-b border-gray-300 py-5">
-        <form action="/Jobs" method="POST" class="applicant-form flex flex-col" name="myForm">
+        <form action="/jobs" method="POST" class="applicant-form flex flex-col" name="myForm">
             @csrf
 
             <input type="text" name="position"
