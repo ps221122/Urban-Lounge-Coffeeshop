@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap');
+
+body {
+     font-family: 'Times New Roman', Times, serif;
+     width: 100%;
+     overflow: auto;
+}
+
+nav {
+     font-family: 'Times New Roman', Times, serif;
+     width: 100%;
+     /* overflow: hidden; */
+}
+
+body::-webkit-scrollbar {
+     display: none;
+}
+
+.profile_block {
+     margin-top: -40rem;
+}
+
+
+.scroller {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 70px;
+}
+
+.timer {
+     display: flex;
+     margin: 0 auto;
+     justify-content: center;
+     font-weight: 700;
+
+}
+
+
+
+.form-box {
+     background: rgba(255, 255, 255, 0.5);
+     -webkit-backdrop-filter: blur(10px);
+     backdrop-filter: blur(10px);
+     border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.index-header {
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.title-about {
+     bottom: 45%;
+     position: absolute;
+     margin-left: 45%;
+     font-size: 85px;
+     color: white;
+     text-decoration: underline;
+}
+
+#welcome-text {
+     bottom: 45%;
+     position: absolute;
+     animation: linear infinite alternate;
+     animation-name: run;
+     animation-duration: 15s;
+}
+
+input[type=radio] {
+     height: 20px;
+     width: 100px;
+}
+
+.userCard {
+     width: 62rem;
+}
+
+#canvas {
+     background: url('https://marclopezavila.github.io/planet-defense-game/img/space.jpg') no-repeat;
+     width: 100%;
+     height: 100%;
+     background-size: cover;
+}
+
+#canvas.playing {
+     cursor: url('https://marclopezavila.github.io/planet-defense-game/img/aim_red.png') 17.5 17.5, auto !important;
+}
+
+.openingBoxContainer {
+     position: relative;
+     font-family: monospace;
+     color: rgb(255, 255, 255);
+     margin-top: 7rem;
+     margin-bottom: -5rem;
+     filter: contrast(15);
+     text-align: center;
+     margin-right: 50%;
+}
+
+#sign {
+     font-style: italic;
+}
+
+.receipt-box {
+     margin: 15rem;
+}
+
+
+
+
+.login-box h1 {
+     margin: 0 0 30px;
+     padding: 0;
+     text-align: center;
+
+}
+
+.bottle-title {
+     font-size: 26px;
+     font-family: var(--italic-font);
+     font-style: italic;
+     margin-bottom: 14px;
+     transition-delay: 0.2s;
+}
+
+.bottle-subtitle {
+     font-size: 15px;
+     line-height: 1.5;
+     margin-bottom: 24px;
+     letter-spacing: -0.01em;
+     transition-delay: 0.3s;
+}
+
+
+
+
+
+.firstBox {
+     width: 400px;
+}
+
+.firstBox1 {
+     width: 430px;
+}
+
+#item1 {
+     background-color: #e7dfcf;
+     padding: 25px;
+     border-radius: 25px;
+}
+
+#item2 {
+     background-color: #e9bf8b;
+     padding: 25px;
+     border-radius: 25px;
+}
+
+#item3 {
+     background-color: #b6d6c8;
+     padding: 25px;
+     border-radius: 25px;
+}
+
+#item4 {
+     background-color: #e86357;
+     padding: 25px;
+     border-radius: 25px;
+}
+
+.card {
+     background: rgba(255, 255, 255, 0.73);
+     border-radius: 16px;
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(10.2px);
+     -webkit-backdrop-filter: blur(10.2px);
+     border: 1px solid rgba(255, 255, 255, 0.74);
+     margin-left: 10px;
+     margin-bottom: 50px;
+     margin-right: 20px;
+}
+
+.box-user-dashboard {
+     background-color: transparent;
+}
+
+.purchase-box {
+     margin-left: -115px;
+     padding-left: 30px;
+     padding-right: 30px;
+}
+
+.modal__header {
+     border-bottom: 1px solid rgb(49, 48, 48);
+     border-radius: 10%;
+}
+
+.modal__footer {
+     border-top: 1px dotted rgb(131, 129, 129);
+     border-radius: 2%;
+}
+
+.category-title {
+     margin-bottom: 95px;
+}
+
+.innerView {
+     display: flex;
+     justify-content: space-between;
+}
+
+
+.bottle-bg {
+     width: 320px;
+     height: 395px;
+     object-fit: cover;
+     border-radius: 160px;
+}
+
+.secondBox {
+     margin-left: 30rem;
+     position: relative;
+     flex-shrink: 0;
+}
+
+.bottle-img {
+     position: absolute;
+     top: 15%;
+     left: 0;
+     height: 385px;
+}
+
+.outerBox {
+     height: 500px;
+}
+
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+     .purchase-box {
+          display: block;
+     }
+
+     .basket {
+          display: none;
+     }
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+
+     .carouselBox {
+          display: none;
+     }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+     .purchase-box {
+          display: none;
+     }
+
+     #sign {
+          width: max-content;
+          font-size: 19px;
+          padding-top: 15px;
+     }
+
+     #profile {
+          display: none
+     }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+     .purchase-box {
+          display: none;
+     }
+
+     #sign {
+          width: max-content;
+          font-size: 19px;
+          padding-top: 15px;
+     }
+
+     .basket {
+          display: block;
+     }
+
+     #profile {
+          display: none
+     }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+     .purchase-box {
+          display: none;
+     }
+
+     #sign {
+          width: max-content;
+          font-size: 19px;
+          padding-top: 15px;
+     }
+
+     .basket {
+          display: block;
+     }
+
+     body {
+          font-size: 15px;
+     }
+
+     #profile {
+          display: none
+     }
+}
+
+
+
+/*-- TABLET --*/
+@media(min-width: 641px) {
+     .basket {
+          display: block;
+     }
+
+     body {
+          font-size: 20px;
+     }
+}
+
+/*-- SMALL DESKTOP --*/
+@media(min-width: 768px) {
+     .purchase-box {
+          display: none;
+     }
+
+     #sign {
+          width: max-content;
+          font-size: 35px;
+          padding-top: 15px;
+     }
+}
+
+/*-- DESKTOP --*/
+@media(min-width: 992px) {}
+
+/*-- BIG DESKTOP (rarely used, but can be useful) --*/
+@media(min-width: 1280px) {
+     .purchase-box {
+          display: block;
+     }
+
+     .basket {
+          display: none;
+     }
+}
