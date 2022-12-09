@@ -187,9 +187,3 @@ apply_button.forEach(function (btn) {
 
 
 
-
-
-
-
-
-
