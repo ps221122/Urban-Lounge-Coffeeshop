@@ -100,7 +100,7 @@
                         <li>
                             <div class="flex">
                                 @auth
-                                    <a href="{{ url('/dashboard') }}"
+                                    <a href="{{ url('/Dashboard') }}"
                                         class="text-sm text-black underline dark:text-black">{{ Auth::user()->name }}</a>
                                 @else
                                     <a href="{{ route('login') }}"

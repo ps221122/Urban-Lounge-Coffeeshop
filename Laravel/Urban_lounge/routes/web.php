@@ -8,6 +8,8 @@ use App\Http\Controllers\PersonController;
 use App\Http\Controllers\MenulistController;
 use App\Http\Controllers\EventlistController;
 use App\Http\Controllers\CartController;
+use App\Mail\TestEmail;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\userController;
 
 
@@ -102,8 +104,24 @@ Route::get('/Profile', function () {
    return view('source.profile');
 })->name('profile');
 
+
+Route::get('send-email', function(){
+    $mailData = [
+        "name" => "Test NAME",
+        "dob" => "12/12/1990"
+    ];
+
+    Mail::to("Info@UrbanNeunen.nl")->send(new TestEmail($mailData));
+
+    // dd("Mail Sent Successfully!");
+});
+
+Auth::routes([
+    "vertify"=>true
+]);
+
 Route::get('/Dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->middleware(['auth'])->name('dashboard')->middleware('vertified');
 
 require __DIR__.'/auth.php';
