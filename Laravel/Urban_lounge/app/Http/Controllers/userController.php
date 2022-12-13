@@ -70,7 +70,7 @@ class userController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update1(Request $request, $id)
+    public function emailUpdate(Request $request, $id)
     {
     //  $request->validate([ 
     //       'u_email'  => 'required',
@@ -89,7 +89,7 @@ class userController extends Controller
          return redirect('/Dashboard');
     }
 
-     public function updateImage(Request $request, $id)
+     public function imageUpdate(Request $request, $id)
     {
      $request->validate([ 
           'image'  => 'required',

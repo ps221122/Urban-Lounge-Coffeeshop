@@ -7,6 +7,8 @@ use App\Models\Order;
 use App\Models\OrderDetail;
 use App\Models\Menulist;
 use App\Models\Eventlist;
+use App\Mail\TestEmail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
 class PersonController extends Controller
@@ -88,11 +90,11 @@ class PersonController extends Controller
             $orderDetail->save();
     
         }
+
         $cartItems = \Cart::getContent();
 
-
         return view('source.result', ['person'=>$person, 'product'=>$cartItems]);
-         
+ 
      }
 
 

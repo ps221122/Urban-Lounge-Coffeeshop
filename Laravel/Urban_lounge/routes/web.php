@@ -64,9 +64,9 @@ Route::get('/Jobs',[JobController::class, 'index'])->name('jobs');
 
 Route::post('/jobs',[ApplicantController::class, 'store']);
 
-Route::get('/Profile/{id}/update', [userController::class, 'update1']);
+Route::get('/Profile/{id}/update', [userController::class, 'emailUpdate']);
 
-Route::get('/Profile/{id}/update', [userController::class, 'update2']);
+Route::get('/Profile/{id}/update', [userController::class, 'imageUpdate']);
 
 Route::post('/change-password', [userController::class, 'updatePassword'])->name('update-password');
 
@@ -105,7 +105,7 @@ Route::get('/Profile', function () {
 })->name('profile');
 
 
-Route::get('send-email', function(){
+Route::get('send', function(){
     $mailData = [
         "name" => "Test NAME",
         "dob" => "12/12/1990"
@@ -122,6 +122,21 @@ Auth::routes([
 
 Route::get('/Dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard')->middleware('vertified');
+})->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/clear', function() {
+
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('config:cache');
+    Artisan::call('view:clear');
+    Artisan::call('route:clear');
+
+    return "Cleared!";
+
+});

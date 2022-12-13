@@ -16,7 +16,7 @@
 
                 <!-- image -->
                 <x-input id="image" class="mt-1 block w-full" type="hidden" name="image"
-                    value="https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_960_720.jpg"/>
+                    value="https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_960_720.jpg" />
 
 
 
@@ -44,6 +44,7 @@
 
                     <x-input id="password" class="mt-1 block w-full" type="password" name="password" required
                         autocomplete="new-password" />
+
                 </div>
 
                 <!-- Confirm Password -->

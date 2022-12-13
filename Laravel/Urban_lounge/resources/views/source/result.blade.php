@@ -87,6 +87,9 @@
                             </td>
                         </tr>
                     @endforeach
+                    <form action="send-email">
+                        <button>Confirm</button>
+                    </form>
                 </tbody>
             </table>
         </div>
