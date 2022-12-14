@@ -1,6 +1,6 @@
 @section('title', 'Dashboard')
 <x-app-layout>
-    <div class="index-header my-10 lg:h-screen lg:w-screen" id="header">
+    <div class="index-header my-8 lg:h-screen lg:w-screen" id="header">
         <img class="lg:h-full lg:w-full" src="https://cdn.pixabay.com/photo/2015/09/09/18/01/black-932213_960_720.jpg"
             alt="image">
         <div class="profile_block flex items-center">

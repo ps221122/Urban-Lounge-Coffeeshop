@@ -56,6 +56,8 @@ Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear'
 
 Route::post('Order',[PersonController::class, 'store']);
 
+//Route::get('Order',[PersonController::class, 'sendTestNotification']);
+
 Route::get('/Preview/{id}/', [MenulistController::class, 'edit']);
 
 Route::get('/preview/{id}/', [EventlistController::class, 'edit']);
@@ -103,18 +105,6 @@ Route::get('/Planet Defense', function () {
 Route::get('/Profile', function () {
    return view('source.profile');
 })->name('profile');
-
-
-Route::get('send', function(){
-    $mailData = [
-        "name" => "Test NAME",
-        "dob" => "12/12/1990"
-    ];
-
-    Mail::to("Info@UrbanNeunen.nl")->send(new TestEmail($mailData));
-
-    // dd("Mail Sent Successfully!");
-});
 
 Auth::routes([
     "vertify"=>true

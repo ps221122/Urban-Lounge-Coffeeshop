@@ -161,22 +161,6 @@ function jobs(event) {
      // console.log();
 }
 
-let url = window.location.href;
-
-if (url == 'http://127.0.0.1:8000/Order') {
-     const min = Math.floor(Math.random() * 5) + 60;
-
-     const sec = Math.floor(Math.random() * 1) + 60;
-
-
-     document.getElementById("demo").innerHTML = "Your waiting time is: " + min + ":" + sec;
-
-}
-else {
-     console.log("hi");
-}
-
-
 var job = document.getElementsByClassName("job-title").innerHTML;
 
 var apply_button = document.querySelectorAll(".apply-button");
@@ -186,4 +170,31 @@ apply_button.forEach(function (btn) {
 });
 
 
+function startTimer(duration, display) {
+     var timer = duration, minutes, seconds;
+     setInterval(function () {
+          minutes = parseInt(timer / 60, 10);
+          seconds = parseInt(timer % 60, 10);
 
+          minutes = minutes < 10 ? "0" + minutes : minutes;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
+
+          display.textContent = minutes + ":" + seconds;
+
+          if (--timer < 0) {
+               alert("Your meal has been deliverd, please come again!");
+               timer = duration;
+          }
+     }, 1000);
+     // if (display == "00:00") {
+     //      alert("Your meal has been deliverd, please come again!")
+     // }
+}
+
+window.onload = function () {
+     var fiveMinutes = 60 * 60,
+          display = document.querySelector('#time');
+     startTimer(fiveMinutes, display);
+
+
+};

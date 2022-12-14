@@ -2,7 +2,7 @@
 @section('title', 'Order')
 
 @section('content')
-    <section class="mx-96 my-96">
+    <section class="my-40 lg:mx-96 lg:my-96">
 
         <form>
             <div class="group relative z-0 mb-6 w-full">
@@ -30,7 +30,7 @@
                         class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
                         placeholder=" " disabled />
                     <label for="floating_phone"
-                        class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 dark:text-gray-900 peer-focus:dark:text-blue-500">+{{ $person->tel }}</label>
+                        class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 dark:text-gray-900 peer-focus:dark:text-blue-500">{{ $person->tel }}</label>
                 </div>
                 <div class="group relative z-0 mb-6 w-full">
                     <input type="text" name="floating_company" id="floating_company"
@@ -87,9 +87,6 @@
                             </td>
                         </tr>
                     @endforeach
-                    <form action="send-email">
-                        <button>Confirm</button>
-                    </form>
                 </tbody>
             </table>
         </div>
@@ -100,8 +97,7 @@
         </div>
 
         <div class="timer">
-            <p id="demo"></p>
+            <p id="demo">Your waiting time is: <span id="time">60:00</span></p>
         </div>
-
     </section>
 @endsection

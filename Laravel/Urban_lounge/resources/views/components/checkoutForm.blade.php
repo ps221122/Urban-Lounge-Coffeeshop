@@ -13,7 +13,7 @@
     <div class="border-t border-b border-gray-300 py-5">
         <form action="/Order" method="POST" class="form flex flex-col" name="myForm">
             @csrf
-
+            
 
 
 
@@ -24,7 +24,7 @@
 
             <label class="text-white" for="phone">Phone number:</label>
             <input class="mb-6 mt-2 rounded-lg px-1 text-black" type="tel" name="tel" id="tel"
-                placeholder="Enter phone number" pattern="^\(?([+]31|0031|0)-?6(\s?|-)([0-9]\s{0,3}){8}$">
+                placeholder="Enter phone number">
 
 
             <label class="text-white" for="Uemail">Email:</label>
@@ -55,7 +55,6 @@
                     <input type="hidden" value="{{ $item->quantity }}" name="unit[]">
                 </div>
             @endforeach
-
         </form>
     </div>
 </div>
