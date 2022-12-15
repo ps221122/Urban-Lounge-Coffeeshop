@@ -3,7 +3,11 @@
 
 @section('content')
     <section class="my-40 lg:mx-96 lg:my-96">
-
+        <div class="flex items-center justify-center lg:-mt-32">
+            <h1 class="text-lg font-semibold italic underline lg:text-3xl">Order confirmation</h1>
+            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_jtl6gife.json" background="transparent"
+                speed="1" style="width: 100px; height: 100px; border-radius:50%;" loop autoplay></lottie-player>
+        </div>
         <form>
             <div class="group relative z-0 mb-6 w-full">
                 <input disabled type="email" name="floating_email" id="floating_email"
