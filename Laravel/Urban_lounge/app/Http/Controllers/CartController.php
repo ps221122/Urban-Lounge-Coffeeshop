@@ -8,6 +8,7 @@ class CartController extends Controller
 {
     public function cartList()
     {
+
         $cartItems = \Cart::getContent();
         // dd($cartItems);
         return view('source.cart', compact('cartItems'));
@@ -64,4 +65,24 @@ class CartController extends Controller
 
         return redirect()->route('cart.list');
     }
+
+    ///-------------------------------------------------- explanation{
+
+    //1) Setup laravelshoppingcart package "Cart"
+
+    //2) grabs all request from menu page and return to cartlist where its being displayed
+
+    //3) grabs all request from menu page and return to cartlist where its being displayed even if it's  already there it just updates the quantity of that product.
+
+    //4) grabs the id where the remove button has been click and remove it from out of the cart
+
+
+    //5) just clear every id and request and product that is displayed in the cart and remove
+
+
+    //6) session is the message that is displayed at the top showing the customer has done something right that works.
+
+    //7) The compact() function creates an array from variables and their values.
+
+    //}
 }

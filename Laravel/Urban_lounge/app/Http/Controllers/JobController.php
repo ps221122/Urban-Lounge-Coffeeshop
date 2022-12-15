@@ -14,6 +14,7 @@ class JobController extends Controller
      */
     public function index()
     {
+        //grabs all job and return it to blade
         $jobs =Job::all();
          return view('components.jobs', ['jobs'=>$jobs]);
     }

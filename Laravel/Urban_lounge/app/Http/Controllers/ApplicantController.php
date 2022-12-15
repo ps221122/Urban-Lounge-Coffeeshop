@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Applicant;
+use App\Notifications\JobEmailNotification;
 
 class ApplicantController extends Controller
 {
@@ -47,6 +48,8 @@ class ApplicantController extends Controller
         $newApplicant->city=$request->input('city');
 
         $newApplicant->save();
+
+        $newApplicant->notify(new JobEmailNotification());//send email
 
         return redirect('/Home');
     }

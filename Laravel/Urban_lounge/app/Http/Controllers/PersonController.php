@@ -70,6 +70,7 @@ class PersonController extends Controller
         // 1)get product id that have been submitted.
         // 2)get product title that have been submitted.
         // 3)loop.
+        //4)save
 
 
         $productid=$request->input('id');
@@ -91,7 +92,13 @@ class PersonController extends Controller
             $orderDetail->save();
     
         }
-         
+             //fourth step ->
+
+             //1) get all product from cart alongside the customer that order it.
+             //2) sends email to customer thanking for the purchase.
+             //3) return to result where customer info and purchase can be seen.
+
+
         $cartItems = \Cart::getContent();
 
         $person->notify(new OrderEmailNotification($cartItems));

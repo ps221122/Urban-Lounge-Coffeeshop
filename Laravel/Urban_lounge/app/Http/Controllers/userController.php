@@ -72,11 +72,11 @@ class userController extends Controller
      */
     public function emailUpdate(Request $request, $id)
     {
-    //  $request->validate([ 
-    //       'u_email'  => 'required',
-    //       'u_name'  => 'required',
+     $request->validate([ 
+          'u_email'  => 'required',
+          'u_name'  => 'required',
          
-    //     ]);
+        ]);
         $user= User::where('id',$id)->first();
         $user->name=$request ->input('u_name');
         $user->email=$request ->input('u_email');

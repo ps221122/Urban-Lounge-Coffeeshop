@@ -29,7 +29,7 @@
 
             <label class="text-lg tracking-wider text-white" for="phone">Phone number:</label>
             <input class="mb-6 mt-2 rounded-lg px-1 text-black" type="tel" name="tel" id="tel"
-                placeholder="Enter phone number" pattern="^\(?([+]31|0031|0)-?6(\s?|-)([0-9]\s{0,3}){8}$">
+                placeholder="Enter phone number">
 
 
             <label class="text-lg tracking-wider text-white" for="Usermail">Email:</label>

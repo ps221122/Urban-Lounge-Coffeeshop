@@ -12,6 +12,7 @@
                     src="{{ $eventid->image }}">
                 <div class="mt-6 w-full lg:mt-0 lg:w-1/2 lg:py-6 lg:pl-10">
                     <h2 class="title-font text-sm tracking-widest text-gray-500">{{ $eventid->ticket }} tickets left</h2>
+                    <h2 class="title-font text-sm tracking-widest text-gray-500">On {{ $eventid->date }}</h2>
                     <h1 class="title-font mb-1 text-3xl font-medium text-gray-900">{{ $eventid->name }}</h1>
                     <div class="mb-4 flex">
                         <span class="flex items-center">

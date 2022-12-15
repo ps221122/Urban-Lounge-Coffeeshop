@@ -1,5 +1,6 @@
 console.log("running");
-setTime();
+timeDisplay();
+countdownTimer();
 
 
 
@@ -20,6 +21,35 @@ function checkoutClicked(items) {
 
      if (url == 'http://127.0.0.1:8000/cart') {
           displayFormBox();
+
+     }
+     else {
+          console.log("hi");
+     }
+
+}
+
+function timeDisplay() {
+     let url = window.location.href;
+
+     if (url == 'http://127.0.0.1:8000/Breakfast#breakfast') {
+          setTime();
+
+     }
+     else {
+          console.log("hi");
+     }
+
+}
+function countdownTimer() {
+     let url = window.location.href;
+
+     if (url == 'http://127.0.0.1:8000/Order') {
+          window.onload = function () {
+               var fiveMinutes = 60 * 60,
+                    display = document.querySelector('#time');
+               startTimer(fiveMinutes, display);
+          };
 
      }
      else {
@@ -56,6 +86,7 @@ function setTime(params) {
      var Hours = objDate.getHours() * 100 + objDate.getMinutes();
      var day;
      var sign = document.getElementById("sign");
+
      switch (new Date().getDay()) {
           case 0: //Sunday
                if (sign) {
@@ -191,10 +222,25 @@ function startTimer(duration, display) {
      // }
 }
 
-window.onload = function () {
-     var fiveMinutes = 60 * 60,
-          display = document.querySelector('#time');
-     startTimer(fiveMinutes, display);
 
 
-};
+
+//-------------------------------------------------- all function steps and with what they do{
+// settime{
+//1) grabs today's date also the time then loop trought the switch case statement checking if it monday---sunday and display the message.
+//2) this only happens if the url is on a specific page  avoiding every other page therefor avoiding error.
+//}
+
+//countdownTimer{
+ // just timer counting down from 60 min when it reaches 0 it display the alert message.
+//}
+
+
+//checkoutClicked{
+// checks the url and return the checkout form for customer to fill and finish the order
+//}
+
+//jobs{
+// checks the url and return the apply form for potentiial applicants to fill and finish applying for a specif position
+//}
+//}

@@ -1,0 +1,71 @@
+This is a detailed instruction on to installation.
+
+
+
+--------------------------------------------------------Cart{
+1)     composer require "darryldecode/cart"
+
+2)     Open config/app.php and add this line to your Aliases
+     'Cart' => Darryldecode\Cart\Facades\CartFacade::class
+
+3) Create Product Model with Migration if you don't already have the database setup.
+
+4)Create Product Seeder if you don't already have the database setup.
+
+5) display products from database using controller
+
+6)php artisan make:controller CartController 
+
+7) copy code and make small adjustment.
+
+8) url::https://larainfo.com/blogs/laravel-8-add-to-cart-step-by-step-example 
+
+for better understanding go to url.
+
+}
+
+
+
+
+---------------------------------------------------------->tailwindcss{
+
+}
+
+
+----------------------------------------------------------->flowbite{
+
+}
+
+----------------------------------------------------------->>bootstrap icons{
+
+}
+
+----------------------------------------------------------->>fontawesome icons{
+
+}
+
+---------------------------------------------------------->>lottiefiles{
+
+}
+
+
+----------------------------------------------------------->laravel ui{
+
+}
+
+
+---------------------------------------------------------->>images{
+
+}
+
+----------------------------------------------------------->>mailtrap{
+
+}
+
+
+---------------------------------------------------------->laravel breeze{
+     
+}
+
+
+

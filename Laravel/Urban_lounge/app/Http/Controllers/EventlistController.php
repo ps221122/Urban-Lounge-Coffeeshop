@@ -14,6 +14,7 @@ class EventlistController extends Controller
      */
     public function index()
     {
+        // grabs all events and return it to blade.
          $event=Eventlist::all();
     
         return view('source.events', ['event'=>$event]);
@@ -48,7 +49,9 @@ class EventlistController extends Controller
      */
     public function show($id)
     {
-        
+        //grabs specific product with id and return all info connected to product
+        $event=Eventlist::where('id', $id)->first();
+        return view('components.preview',['eventid'=>$event]);
 
     }
 
@@ -60,8 +63,7 @@ class EventlistController extends Controller
      */
     public function edit($id)
     {
-        $event=Eventlist::where('id', $id)->first();
-        return view('components.preview',['eventid'=>$event]);
+        
     }
 
     /**

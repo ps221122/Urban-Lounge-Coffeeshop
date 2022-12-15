@@ -12,6 +12,7 @@ class EmptyController extends Controller
      */
     public function index()
     {
+        //... just returning quote and author from link  
             $data = Http::WithOptions(['verify' => false])->get('https://inspiration.goprogram.ai/');
         //   dd($data);
           $data= json_decode($data);

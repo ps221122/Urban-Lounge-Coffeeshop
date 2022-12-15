@@ -15,6 +15,8 @@ class MenulistController extends Controller
      */
     public function index()
     {
+        // grabs each specific menu categories and return it to blade.
+
         $breakfast=Menulist::where('categoryid',1)->get();
         $pizza=Menulist::where('categoryid',2)->get();
         $vegan=Menulist::where('categoryid',3)->get();
@@ -57,7 +59,14 @@ class MenulistController extends Controller
      */
     public function show($id)
     {
-        //
+        //grabs specific product with id and return all info connected to product
+        $menu=Menulist::where('id', $id)->first();
+
+         $descriptionid=Menulist::where('id', $id)->first('description');
+
+         $descriptionid=Description::where('id',$id)->first();
+
+        return view('components.menuPreview',['menu'=>$menu,'descriptionid'=>$descriptionid]);
     }
 
     /**
@@ -68,13 +77,7 @@ class MenulistController extends Controller
      */
     public function edit($id)
     {
-        $menu=Menulist::where('id', $id)->first();
-
-         $descriptionid=Menulist::where('id', $id)->first('description');
-
-         $descriptionid=Description::where('id',$id)->first();
-
-        return view('components.menuPreview',['menu'=>$menu,'descriptionid'=>$descriptionid]);
+        
     }
 
     /**

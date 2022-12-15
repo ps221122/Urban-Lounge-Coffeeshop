@@ -58,9 +58,9 @@ Route::post('Order',[PersonController::class, 'store']);
 
 //Route::get('Order',[PersonController::class, 'sendTestNotification']);
 
-Route::get('/Preview/{id}/', [MenulistController::class, 'edit']);
+Route::get('/Preview/{id}/', [MenulistController::class, 'show']);
 
-Route::get('/preview/{id}/', [EventlistController::class, 'edit']);
+Route::get('/preview/{id}/', [EventlistController::class, 'show']);
 
 Route::get('/Jobs',[JobController::class, 'index'])->name('jobs');
 
