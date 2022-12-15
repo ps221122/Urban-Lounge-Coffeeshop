@@ -47,7 +47,7 @@
                                     class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-200 dark:hover:text-blue-800">Pizza</a>
                             </li>
                             <li>
-                                <a href="{{ route('breakfast') }}#breakfast"
+                                <a href="{{ route('vegan') }}#vegan"
                                     class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-200 dark:hover:text-blue-800">Vegan</a>
                             </li>
                             <li>
@@ -67,6 +67,10 @@
                                 <a href="{{ route('alcohol') }}#alcohol"
                                     class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-200 dark:hover:text-blue-800">Alcoholic
                                     beverage</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('specials') }}#specials"
+                                    class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-200 dark:hover:text-blue-800">Specials</a>
                             </li>
                         </ul>
                         <div class="py-1">

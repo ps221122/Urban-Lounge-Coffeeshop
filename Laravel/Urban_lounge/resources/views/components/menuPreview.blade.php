@@ -72,7 +72,7 @@
                             </a>
                         </span>
                     </div>
-                    <p class="leading-relaxed">{{ $descriptionid->description }}</p>
+                    <p class="leading-relaxed">{{ $menu->description }}</p>
                     <div class="flex justify-between">
                         <span class="title-font text-2xl font-medium text-gray-900">€{{ $menu->price }}</span>
 

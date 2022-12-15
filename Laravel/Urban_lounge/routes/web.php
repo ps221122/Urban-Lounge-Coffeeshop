@@ -42,6 +42,8 @@ Route::get('/Alcohol',[MenulistController::class, 'index'])->name('alcohol');
 
 Route::get('/Dessert',[MenulistController::class, 'index'])->name('dessert');
 
+Route::get('/Specials',[MenulistController::class, 'index'])->name('specials');
+
 Route::get('/Events',[EventlistController::class, 'index','store'])->name('events');
 
 Route::get('cart', [CartController::class, 'cartList'])->name('cart.list');
@@ -58,7 +60,7 @@ Route::post('Order',[PersonController::class, 'store']);
 
 //Route::get('Order',[PersonController::class, 'sendTestNotification']);
 
-Route::get('/Preview/{id}/', [MenulistController::class, 'show']);
+Route::get('/Preview/{id}/', [MenulistController::class, 'edit']);
 
 Route::get('/preview/{id}/', [EventlistController::class, 'show']);
 

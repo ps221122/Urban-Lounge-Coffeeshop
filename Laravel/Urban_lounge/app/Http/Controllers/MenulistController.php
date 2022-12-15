@@ -25,9 +25,10 @@ class MenulistController extends Controller
         $beverage=Menulist::where('categoryid',6)->get();
         $alcohol=Menulist::where('categoryid',7)->get();
         $dessert=Menulist::where('categoryid',8)->get();
+        $specials=Menulist::where('categoryid',10)->get();
        
      
-        return view('source.menu',['breakfast'=>$breakfast, 'pizza'=>$pizza, 'vegan'=>$vegan, 'pasta'=>$pasta, 'dinner'=>$dinner,'alcohol'=>$alcohol, 'beverage'=>$beverage,'dessert'=>$dessert]);
+        return view('source.menu',['breakfast'=>$breakfast, 'pizza'=>$pizza, 'vegan'=>$vegan, 'pasta'=>$pasta, 'dinner'=>$dinner,'alcohol'=>$alcohol, 'beverage'=>$beverage,'dessert'=>$dessert,'specials'=>$specials]);
     }
 
     /**
@@ -59,14 +60,7 @@ class MenulistController extends Controller
      */
     public function show($id)
     {
-        //grabs specific product with id and return all info connected to product
-        $menu=Menulist::where('id', $id)->first();
-
-         $descriptionid=Menulist::where('id', $id)->first('description');
-
-         $descriptionid=Description::where('id',$id)->first();
-
-        return view('components.menuPreview',['menu'=>$menu,'descriptionid'=>$descriptionid]);
+        //
     }
 
     /**
@@ -77,7 +71,10 @@ class MenulistController extends Controller
      */
     public function edit($id)
     {
-        
+            //grabs specific product with id and return all info connected to product
+        $menu=Menulist::where('id', $id)->first();
+
+        return view('components.menuPreview',['menu'=>$menu]);
     }
 
     /**
