@@ -72,8 +72,10 @@ class MenulistController extends Controller
     public function edit($id)
     {
             //grabs specific product with id and return all info connected to product
-        $menu=Menulist::where('id', $id)->first();
 
+
+        $menu=Menulist::where('id', $id)->first();
+        
         return view('components.menuPreview',['menu'=>$menu]);
     }
 
